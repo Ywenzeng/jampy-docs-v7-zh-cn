@@ -18,8 +18,8 @@ buttons to a view form:
   function on_view_form_created(item) {
       item.table_options.multiselect = false;
       if (!item.lookup_field) {    
-          var print_btn = item.add_view_button('Print', {image: 'icon-print'}),
-              email_btn = item.add_view_button('Send email', {image: 'icon-pencil'});
+          var print_btn = item.add_view_button('Print', {image: 'bi bi-printer'}),
+              email_btn = item.add_view_button('Send email', {image: 'bi bi-mailbox'});
           email_btn.click(function() { send_email() });
           print_btn.click(function() { print(item) });
           item.table_options.multiselect = true;
