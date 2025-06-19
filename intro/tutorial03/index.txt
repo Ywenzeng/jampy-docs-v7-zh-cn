@@ -34,15 +34,18 @@ dialog box, we will name the new item "To do list" and add the two fields
 
 
 .. note::
-    Now the most important part is to create the field which "connects" the Detail with it's Master.
-    This is the distinctive difference to Jam.py v5, where Details were legacy function.
+    The most important step now is to create the field that "links" the Detail to its Master.
+    This is a key difference from Jam.py v5, where Detail records were handled as a legacy feature.
 
-Add field "ContactID" as a lookup to "Contacts" table.
+For example, create field "ContactID":
 
 .. image:: /intro/_images/new_detail_lookup_id_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: new_detail_lookup_id_jampy.png
+
+
+The "ID" field is a :doc:`lookup field </programming/data/lookup_fields>` to "Contacts" table.
 
 
 .. image:: /intro/_images/new_detail_lookup_id_field_jampy.png
@@ -54,6 +57,15 @@ Add field "ContactID" as a lookup to "Contacts" table.
 After saving the "To do list", select the "Contacts" journal and click the 
 **Details** button in the right pane to open the 
 :doc:`Details Dialog </admin/items/details_dialog>`.
+
+
+
+.. image:: /intro/_images/new_detail_to_do_jampy.png
+	:scale: 50%
+	:align: center
+	:alt: new_detail_to_do_jampy.png
+
+
 Click the right arrow button to add the "To do list" to the "Contacts" details 
 and the **OK** button to save changes.
 
