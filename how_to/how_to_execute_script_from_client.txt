@@ -87,3 +87,8 @@ display it:
 
 
 On this example, the Sphinx ``make`` command is used to build Jam.py Docs.
+
+
+.. image:: /how_to/_images/how_to_run_python_script_jampy.png
+	:align: center
+	:alt: how_to_run_python_script_jampy.png
