@@ -69,6 +69,14 @@ This is the recommended way to install Jam.py.
 .. _standalone pip installer: http://www.pip-installer.org/en/latest/installing.html#install-pip
 
 
+For Python verson => 3.13, please install ``standard-imghdr`` as well:
+
+   .. code-block:: console
+   
+    sudo pip install standard-imghdr
+
+
+
 Installing an official release manually
 ---------------------------------------
 

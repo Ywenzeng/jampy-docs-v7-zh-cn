@@ -82,8 +82,13 @@ the following command::
     ...\> python -m pip install jam.py-v7
 
 
-
 This will download and install the latest Jam.py release.
+
+For Python verson => 3.13, please install ``standard-imghdr`` as well::
+
+    ...\> python -m pip install standard-imghdr
+
+
 
 After the installation has completed, you can verify your Jam.py installation
 by executing ``pip list`` in the command prompt.
