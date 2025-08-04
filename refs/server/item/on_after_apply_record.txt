@@ -20,6 +20,11 @@ procedure during the execution of the apply method on the
 or
 :doc:`server <m_apply>`.
 
+
+On Demo application this event is used to recalculate Invoices.
+
+Code within Invoice ``Server module``:
+
 .. code-block:: py
 
     def on_after_apply_record(item, delta, params, connection):
@@ -27,10 +32,13 @@ or
             calc_invoice(delta, connection)
 
 
+
 See also
 ========
 
 :doc:`Server side programming </programming/server/index>`
+
+:doc:`on_after_before_record events </refs/server/item/on_before_apply_record>`
 
 :doc:`on_apply events </programming/server/on_apply_events>`
 
