@@ -30,19 +30,20 @@ Example
 The following code is used in the 
 :doc:`Demo project </intro/demo_project>`
 to asynchronously open **invoice_table** detail dataset after
-the **Invoice** journal record has changed:
+the **Invoice** journal record has changed. It also disables the buttons:
 
 .. code-block:: js
 
-    var ScrollTimeOut;
-    
+    var scroll_timeout;
+
     function on_after_scroll(item) {
-        clearTimeout(ScrollTimeOut);
-        ScrollTimeOut = setTimeout(
+        clearTimeout(scroll_timeout);
+        scroll_timeout = setTimeout(
             function() {
-                item.invoice_table.open(function() {});
-            },
-            100
+                if (item.view_form && item.rec_count) {
+                    item.view_form.find("#delete-btn, #paid-btn").prop("disabled", item.paid.value);
+                }
+            }, 50
         );
     }
 

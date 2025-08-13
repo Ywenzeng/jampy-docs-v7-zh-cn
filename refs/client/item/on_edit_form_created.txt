@@ -19,6 +19,19 @@ method when the form has been created but not shown yet.
 
 The ``item`` parameter is the item that triggered the event.
 
+The following code is used in the 
+:doc:`Demo project </intro/demo_project>`
+Invoices table to make read only the field ``paid``, and to remove the footer:
+
+
+.. code-block:: js
+
+    function on_edit_form_created(item) {
+        item.read_only = item.paid.value;
+        item.edit_form.find('.form-footer').remove();
+    }
+ 
+
 See also
 ========
 

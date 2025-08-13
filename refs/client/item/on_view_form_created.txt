@@ -19,6 +19,9 @@ method when form has been created but not shown yet.
 
 The ``item`` parameter is the item that triggered the event.
 
+The **on_view_form_created** code is used in the 
+:doc:`Demo project </intro/demo_project>`.
+
 See also
 ========
 

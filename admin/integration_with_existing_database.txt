@@ -53,5 +53,4 @@ For importing existing database tables:
   
 .. note::
 
-    This is a new feature, so if you have some comments, suggestions or found
-    some bugs please send a message.
+    The indexes are not imported.

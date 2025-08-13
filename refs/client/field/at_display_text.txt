@@ -41,11 +41,12 @@ Example
 
 .. code-block:: js
 
-    function on_get_field_text(field) {
-        if (field.field_name === 'customer') {
+    function on_field_get_text(field) {
+        if (field.field_name === 'customer' && field.value) {
             return field.owner.firstname.lookup_text + ' ' + field.lookup_text;
         }
     }
+
 
 See also
 ========

@@ -28,7 +28,7 @@ event handler to perform some actions when obtaining a dataset
 Write an on_before_open event handler to take specific action immediately 
 before an application obtains an dataset from the server. 
 
-on_before_open is called by :doc:`open <m_open>` method. 
+``on_before_open`` is called by :doc:`open <m_open>` method. 
 
 See also 
 ========
