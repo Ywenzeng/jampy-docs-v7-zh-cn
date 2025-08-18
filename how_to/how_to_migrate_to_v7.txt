@@ -2,7 +2,7 @@
 How to migrate v5 project to v7
 ==================================
 
-For any v5 project, backup index.html file first and copy index.html and template.html from v7 Jam.py Demo into the application folder.
+For any v5 project, backup **index.html** file first and copy **index.html** and **template.html** from v7 Jam.py ``Demo`` application into the application folder.
 
 Uninstall the v5 Jam.py and install the v7.
 
@@ -18,7 +18,9 @@ Address the following:
 
    Obviously, disabling the "Edit Lock" does not need anything. There is no option on project Parameters to create the "Lock Item".
 
-#. The next issue is templates. The Jam.py v7 is expecting the template.html file within the application folder. Due to Bootstrap 5 usage, some minor differences will arise with moving the existing templates from Jam.py v5 index.html file to template.html file.
+#. The next issue is templates. The Jam.py v7 is expecting the **templates.html** file within the application folder. Due to Bootstrap 5 usage, some minor differences will arise with moving the existing templates from Jam.py v5 **index.html** file to **templates.html** file.
+
+#. **index.html** also needs changing, due to Boostrap 5 dependencies. Please see below example.
 
 #. Foreign Key support is dropped at v7. This means if there are any Foreign Keys created at V5, there will be no option to manage it at v7.
 
@@ -29,4 +31,36 @@ Address the following:
 #. Jam.py V7 is now utilising the Python dependencies and will automatically install needed libraries with the initial install. This is different to v5, where all dependencies were "locked in" with the Jam.py distribution, enabling a single ``jam`` folder for deployment with the application.
 
 
-#. For applications with Jam.py version 5.x or below, replace the Task/Client module code with Task/Client module code from Demo application or the new v7 project. Than, add a custom the code from v5 Task/Client module, if there was any.
+#. For applications with Jam.py version 5.x or below, replace the **Task/Client** module code with **Task/Client** module code from ``Demo`` application or the new v7 project. Than, add a custom code from v5 **Task/Client** module, if there was any. 
+
+For example, ``Demo`` application **index.html** file contains:
+
+.. code-block:: html
+
+        <link href="jam/css/bootstrap-cerulean.css" rel="stylesheet">            <!--do not modify-->
+        <link href="jam/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="jam/css/bootstrap-modal.css" rel="stylesheet">
+        <link href="jam/css/datepicker.css" rel="stylesheet">
+        ...
+        <script src="jam/js/bootstrap.js"></script>
+        <script src="jam/js/bootstrap-modal.js"></script>
+        <script src="jam/js/bootstrap-modalmanager.js"></script>
+        <script src="jam/js/bootstrap-datepicker.js"></script>
+        <script src="jam/js/jquery.maskedinput.js"></script>    
+        <script src="jam/js/jam.js"></script>
+
+Change to:
+
+.. code-block:: html
+
+        <link href="jam/css/bs5/bootstrap.css" rel="stylesheet">
+        <link href="jam/css/bs5/bootstrap-icons.css" rel="stylesheet">
+        <link href="jam/css/zebra_datepicker/bootstrap/zebra_datepicker.min.css" rel="stylesheet">
+        ...
+        <script src="jam/js/bs5/bootstrap.bundle.js"></script>
+        <script src="jam/js/zebra_datepicker.js"></script>
+        <script src="jam/js/jquery.maskedinput.js"></script>
+        <script type="module" src="jam/js/jam.js"></script>
+
+The rest of **index.html** file change should be minimal. 
+
