@@ -71,11 +71,6 @@ The virtual environment will be activated and you'll see "(project-name)" next
 to the command prompt to designate that. Each time you start a new command
 prompt, you'll need to activate the environment again.
 
-Now we can create the new project and run it::
-
-    ...\> project-name\Scripts\jam-project.py
-    ...\> python server.py
-
 
 Install Jam.py
 ==============
@@ -98,6 +93,24 @@ For Python verson => 3.13, please install ``standard-imghdr`` as well::
 
 After the installation has completed, you can verify your Jam.py installation
 by executing ``pip list`` in the command prompt.
+
+
+Now we can create the new project and run it::
+
+    ...\> project-name\Scripts\jam-project.py
+    ...\> python server.py
+
+
+You’ll see the similar output on the command line::
+
+    User Guide: https://jampy-docs-v7.readthedocs.io/
+    WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+     * Running on all addresses (0.0.0.0)
+     * Running on http://127.0.0.1:8080
+     * Running on http://127.0.0.1:8080
+    Press CTRL+C to quit
+
+
 
 
 

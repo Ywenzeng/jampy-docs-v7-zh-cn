@@ -46,6 +46,17 @@ To start the Jam.py web server, run the ``server.py`` script.
     use it in your browser in the next steps.
 
 
+You’ll see the similar output on the command line::
+
+    User Guide: https://jampy-docs-v7.readthedocs.io/
+    WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+     * Running on all addresses (0.0.0.0)
+     * Running on http://127.0.0.1:8080
+     * Running on http://127.0.0.1:8080
+    Press CTRL+C to quit
+
+
+
 Open a Web browser and go to “/builder.html” on your local domain – e.g.:
 
 .. code-block:: console
