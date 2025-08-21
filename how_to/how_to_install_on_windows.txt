@@ -17,7 +17,7 @@ versions, the steps would be similar. You will need to be familiar with using
 the Windows command prompt.
 
 
-.. _Django Docs: https://docs.djangoproject.com/
+.. _Django Docs: https://docs.djangoproject.com/en/5.2/howto/windows/
 
 Install Python
 ==============
@@ -70,6 +70,12 @@ and set up the virtual environment. To activate the environment, run::
 The virtual environment will be activated and you'll see "(project-name)" next
 to the command prompt to designate that. Each time you start a new command
 prompt, you'll need to activate the environment again.
+
+Now we can create the new project and run it::
+
+    ...\> project-name\Scripts\jam-project.py
+    ...\> python server.py
+
 
 Install Jam.py
 ==============

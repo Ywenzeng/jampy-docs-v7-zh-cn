@@ -16,12 +16,14 @@ The following files and folders will be created in the directory::
     /
         css/
         js/
-        img/
         reports/
         static/
+        locks/
         admin.sqlite
+        langs.sqlite
         server.py
         index.html
+        templates.html
         wsgi.py
 
 
