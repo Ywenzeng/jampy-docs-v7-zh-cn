@@ -152,7 +152,7 @@ in the Application builder.
 	:alt: Jam.py Application builder
 
 
-.. warning::
+.. important::
 
         As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
         ``Jam.py`` framework ``version`` number. 
