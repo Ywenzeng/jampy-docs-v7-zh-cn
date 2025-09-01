@@ -50,8 +50,11 @@ Now you should see the project tree in the left panel.
 	:align: center
 	:alt: Project Application builder
 
-As seen on top right corner, The Name of the application is displayed, as well as the version number, and 
-``Jam.py`` framework version number. 
+
+.. warning::
+
+        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
+        ``Jam.py`` framework ``version`` number. 
 
 Open a new page, type
 

@@ -152,8 +152,10 @@ in the Application builder.
 	:alt: Jam.py Application builder
 
 
-As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
-``Jam.py`` framework version number. 
+.. warning::
+
+        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
+        ``Jam.py`` framework ``version`` number. 
 
 
 Now, to see the project itself, create a new page in the browser and type in the 
