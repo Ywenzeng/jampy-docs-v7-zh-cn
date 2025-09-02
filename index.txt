@@ -28,6 +28,18 @@ Just select what is needed for any device and off you go.
     the commands is required.
 
 
+Feed the LLM
+==============
+
+The LLMS-full.txt is released:
+
+https://jampy-docs-v7.readthedocs.io/en/latest/llms-full.txt
+
+and:
+
+https://jampy-docs-v7.readthedocs.io/en/latest/llms.txt
+
+
 How the documentation is organized
 ==================================
 
