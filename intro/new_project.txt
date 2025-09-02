@@ -10,6 +10,13 @@ Go into the directory and run from command line:
 
     $ jam-project.py
 
+For Windows users, ``jam-project.py`` command is in ``Scripts`` folder, ie. 
+folder above this one:
+
+.. code-block:: console
+
+    ...\> ..\project-name\Scripts\jam-project.py
+
 
 The following files and folders will be created in the directory::
 
@@ -35,6 +42,13 @@ To start the Jam.py web server, run the ``server.py`` script.
     $ ./server.py
 
 
+For Windows users:
+
+.. code-block:: console
+
+    ...\>server.py
+
+
 .. note::
     You can specify a port as parameter, for example 
     
@@ -55,6 +69,15 @@ You’ll see the similar output on the command line::
      * Running on http://127.0.0.1:8080
     Press CTRL+C to quit
 
+
+If we open a Web browser and visit the app, the below message will display:
+
+
+.. warning::
+
+    Information
+    
+    The creation of the project has not been completed yet. Please run the Application Builder.
 
 
 Open a Web browser and go to “/builder.html” on your local domain – e.g.:
