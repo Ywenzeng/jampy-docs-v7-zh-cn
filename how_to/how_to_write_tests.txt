@@ -106,7 +106,7 @@ Create the file **js/test_users.js** with the tests and visit the application on
         127.0.0.1:8080/index.html
 
 All unit tests will run and display the results. The database tests.sqlite will be updated with a 
-new user. The ``DELETED`` field withing the table will be set to 1 for each row, if the table was
-created with ``Soft delete`` option.
+new user. The ``DELETED`` field within the table will be set to 1 for new row, if the table was
+created with ``Soft delete`` option. If not, the new record will be deleted.
 
-
+If all good to go, create a Github ``pull`` request with the changes.
