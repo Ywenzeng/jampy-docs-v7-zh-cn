@@ -47,7 +47,6 @@ migrated v5 application. The Jam.py v7 application will use the Lookup fields fo
 master as details, normally as Foreign Keys fields.
 
 
-
 Detail class, used to create details, is an ancestor of the Item class and 
 inherits all its attributes, methods and events.
 
