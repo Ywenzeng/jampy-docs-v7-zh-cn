@@ -13,7 +13,6 @@ The biggest difference to Jam.py V5 is :doc:`routing </admin/routing>` support a
 In addition, the complete interface for Desktop or Mobile devices is driven by no-code approach. 
 Just select what is needed for any device and off you go.
 
-
 .. admonition:: Objectives
 
     Installing Python and Jam.py, choosing the database and the Web server and making Application Design decisions.
@@ -42,7 +41,7 @@ https://jampy-docs-v7.readthedocs.io/en/latest/llms.txt
 
 The Github Jam.py repository:
 
-https://github.com/jam-py-v5/jam-py/
+https://github.com/jam-py-v5/jam-py-v7
 
 
 
@@ -72,7 +71,7 @@ Jam.py classes APIs.
 accomplish common tasks.
 
 Please visit the
-:doc:`table of contents <contents>` or even 
+:doc:`table of contents <contents>` or even.
 
 `Jam.py Application Design Tips`_, for a detailed steps how to build the applications or migrate from MS Access.
 
@@ -90,7 +89,7 @@ Video Tutorials
 If you are new to Jam.py, we highly recommend that you watch these video tutorials. The videos are referring to
 Jam.py V5. There are minimal changes to the User interface compared to V7.
 
-It is recommended to watch these videos with a resolution of 1080p
+It is recommended to watch these videos with a resolution of 1080p.
 
 
 Tutorial 1 - `Working with files and images`_ 
