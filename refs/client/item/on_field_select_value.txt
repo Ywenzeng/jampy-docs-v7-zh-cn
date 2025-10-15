@@ -18,6 +18,8 @@ the application creates a copy of the lookup item of the field and
 triggers ``on_field_select_value`` event. Use ``on_field_select_value`` to 
 specify fields that will be displayed, set up filters for the lookup item, before
 it will be opened.
+In short, ``on_field_select_value`` is used to locate the record on the lookup table.
+
 
 The ``field`` parameter is the field whose data will be selected.
 
@@ -34,6 +36,29 @@ Example
             lookup_item.view_options.fields = ['firstname', 'lastname', 'address', 'phone'];
         }
     }
+
+
+
+Or, generic code with different ID for each table:
+
+.. code-block:: js
+
+
+    function on_field_select_value(field, lookup_item) {
+        const field_map = {
+            album: 'id',
+            genre: 'genreid',
+            artist: 'artist_id'
+        };
+    
+        const target_field = field_map[field.field_name];
+        if (target_field && field.value) {
+            const where = {};
+            where[target_field + '__eq'] = field.value;
+            lookup_item.set_where(where);
+        }
+    }
+
 
 
 See also
