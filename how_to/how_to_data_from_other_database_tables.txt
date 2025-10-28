@@ -14,7 +14,7 @@ You can do it the following way:
 * Import tables information as described in the
   :doc:`Integration with existing database </admin/integration_with_existing_database>`
   
-* Select project node in the task tree, click **Database** button arestore previous values.
+* Select project node in the task tree, click **Database** button and restore previous values.
 
 Then in the ``Server module`` of the new items, add code to read and write 
 the data to the database tables.
