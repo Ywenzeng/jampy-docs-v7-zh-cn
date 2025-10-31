@@ -51,7 +51,7 @@ event handler sets the user_id to the ID of the user that appended or modified
 the records.
 
 You can use a more general approach and add the following code to the server
-module of the task. Then a multi-tenancy will be applied to every item that have 
+module of the task. Then a multi-tenancy will be applied to every item that has 
 a user_id field:
 
 .. code-block:: py
