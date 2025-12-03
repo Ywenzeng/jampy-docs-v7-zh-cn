@@ -133,7 +133,7 @@ Example for MSSQL:
       
       def on_open(item, params):
           connection = item.task.create_connection_ex(mssql, database='jam7', \
-              user='sa', password='Glo13log', server='127.0.0.1', port='1433')
+              user='sa', password='password', server='127.0.0.1', port='1433')
           try:
               sql = item.get_select_query(params, mssql)
               rows = item.task.select(sql, connection, mssql)
@@ -143,7 +143,7 @@ Example for MSSQL:
       
       def on_apply(item, delta, params):
           connection = item.task.create_connection_ex(mssql, database='jam7', \
-              user='sa', password='Glo13log', server='127.0.0.1', port='1433')
+              user='sa', password='password', server='127.0.0.1', port='1433')
           try:
               sql = delta.apply_sql(params, mssql)
               result = item.task.execute(sql, None, connection, mssql)
