@@ -2,6 +2,7 @@
 How can I use data from some other database(s) tables
 =====================================================
 
+
 You can use data from other database tables.
 
 First you must specify table name and fields information.
@@ -122,6 +123,34 @@ from task client module:
             connection.close()
         return result
 
+
+Example for MSSQL:
+
+.. code-block:: py
+
+      import pymssql
+      from jam.db import mssql
+      
+      def on_open(item, params):
+          connection = item.task.create_connection_ex(mssql, database='jam7', \
+              user='sa', password='Glo13log', server='127.0.0.1', port='1433')
+          try:
+              sql = item.get_select_query(params, mssql)
+              rows = item.task.select(sql, connection, mssql)
+          finally:
+              connection.close()
+          return rows, ''
+      
+      def on_apply(item, delta, params):
+          connection = item.task.create_connection_ex(mssql, database='jam7', \
+              user='sa', password='Glo13log', server='127.0.0.1', port='1433')
+          try:
+              sql = delta.apply_sql(params, mssql)
+              result = item.task.execute(sql, None, connection, mssql)
+          finally:
+              connection.close()
+          return result
+
 .. note::
   Do not set History attribute to True for this tables. If you do so you'll get
   the exception. History table must be one for all databases that you use in 
@@ -130,4 +159,6 @@ from task client module:
   ``on_open`` and ``on_apply`` event handlers for it.
 
 .. note::
-  The above procedure was not tested with Jam.py V7.
+  The above procedures were not tested with Jam.py V7.
+  
+  The simple solution is to use the database synonyms.
