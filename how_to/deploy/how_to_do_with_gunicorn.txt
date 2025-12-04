@@ -1,12 +1,12 @@
-===================================
-How to do with Nginx with Gunicorn?
-===================================
+==============================================
+How to do with Nginx with Gunicorn or uvicorn?
+==============================================
 
 Green Unicorn (gunicorn) is an HTTP/WSGI server designed to serve fast clients 
 or sleepy applications. That is to say; behind a buffering front-end server 
 such as nginx or lighttpd.
 
-By default, gunicorn will listen on 127.0.0.1. Navigate to jam App folder, or 
+By default, ``gunicorn`` will listen on 127.0.0.1. Navigate to jam App folder, or 
 use (ie in scripts, cron job, etc)
 
 .. code-block:: console
@@ -39,6 +39,30 @@ To start jam.py on all interfaces and port 8081:
   
 Spin up 5 workers if u like with --workers=5
 
+For ``uvicorn``, we need to modify the wsgi.py file and also install ``asgiref``. 
+
+Lets call it asgi.py with below content:
+
+.. code-block:: py
+    
+    from jam.wsgi import create_application
+    from asgiref.wsgi import WsgiToAsgi
+    application = WsgiToAsgi(create_application(__file__))
+
+
+To start jam.py on ``localhost`` and port 8000:
+
+.. code-block:: console
+
+    uvicorn asgi:application
+    INFO:     Started server process [16576]
+    INFO:     Waiting for application startup.
+    INFO:     ASGI 'lifespan' protocol appears unsupported.
+    INFO:     Application startup complete.
+    INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+
+
+
 Nginx: 
 
 comment out default location in /etc/nginx/sites-enabled/default (Linux Mint):
@@ -69,7 +93,8 @@ and add:
   
     }
     
-add in /etc/nginx/nginx.conf 127.0.0.1:8081 if this is your Gunicorn server address and port:
+add in /etc/nginx/nginx.conf 127.0.0.1:8081 if this is your ``Gunicorn`` or ``uvicorn``
+server address and port:
 
 .. code-block:: nginx
 
@@ -89,11 +114,11 @@ This also enables to have different App servers on different ports
                         |  `--> App. Server II.  127.0.0.1:8082
                          `----> App. Server III. 127.0.0.1:8083
                          
-Restart nginx and viola!
+Restart ``nginx`` and viola!
 
-Congratulations! We can now test Nginx with Jam.py.
+Congratulations! We can now test ``Nginx`` with Jam.py.
 
-Now, certs:
+Now, ``certificates``:
 
 in /etc/nginx/sites-enabled/jam
 we can have something like this to pass everything from http to https to 8001 
@@ -150,6 +175,6 @@ port (or any other as per above):
 
 That's it!
 
-Congratulations! We can now test Nginx with Jam.py on https port!
+Congratulations! We can now test ``Nginx`` with ``Jam.py`` on https port!
 
 *This was initialy published by Dražen Babić on* https://github.com/jam-py/jam-py/issues/67
