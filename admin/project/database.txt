@@ -59,6 +59,8 @@ Examples of database setups
     * If using IBM_,  ``ibm_db`` and ``ibm_db_dbi`` package is needed.
 
     * If using Firebird,  ``fdb`` package is needed.
+    
+    * If using Databricks, ``databricks-sql-connector`` is needed.
 
 
 .. _Jam.py Design Tips: https://jampy-application-design-tips.readthedocs.io/
