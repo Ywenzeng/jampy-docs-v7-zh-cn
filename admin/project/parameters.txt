@@ -27,6 +27,8 @@ On the General tab, you can specify general parameters of the project:
 * **Debugging** - if this checkbox is checked, the Werkzeug library debugger will
   be invoked when an error on the server occurs.
 
+* **Show SELECT SQL** - if this checkbox is checked, the SELECT SQL will be displayed.
+
 * **Language** - use it to open Language Dialog. See 
   :doc:`Language support </admin/language_support>`
 

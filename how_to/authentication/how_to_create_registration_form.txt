@@ -154,3 +154,10 @@ The task server module has the following ``on_ext_request`` event handler:
 It checks if there is 'register' in url and then looks if there is no user 
 with the login and then register the user.
 
+
+See also
+========
+
+:doc:`on_ext_request </refs/server/task/on_ext_request>`
+
+

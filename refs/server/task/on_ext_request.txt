@@ -68,3 +68,8 @@ See also
 ========
 
 :doc:`on_request <on_request>`
+
+:doc:`How to create registration form </how_to/authentication/how_to_create_registration_form>`
+
+:doc:`How I can process a request or get some data from other application or service </how_to/how_to_request_from_other_application>`
+
