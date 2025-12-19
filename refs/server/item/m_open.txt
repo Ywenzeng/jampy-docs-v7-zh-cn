@@ -182,21 +182,6 @@ methods:
 
 
 .. code-block:: py
-    
-    import datetime
-    
-def get_sales(item):
-    date1 = datetime.datetime.now() - datetime.timedelta(days=3*365)
-    date2 = datetime.datetime.now()
-    invoices = item.task.invoices.copy()
-
-    invoices.set_fields(['customer', 'date', 'total'])
-    invoices.set_where({'date__ge': date1, 'date__le': date2});
-    invoices.set_order_by(['customer', 'date']);
-    invoices.open();
-
-
-.. code-block:: py
 
     def get_sales(task) {
         sales = task.invoices.copy()
