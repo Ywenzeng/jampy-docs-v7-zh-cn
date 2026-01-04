@@ -2,12 +2,12 @@
 How to deploy project on PythonAnywhere
 =======================================
 
-* Use pip to install Jam.py. To do this, open the bash console and run the 
-  following command (for Python 3.7):
+* Use pip to install Jam.py. To do this, open up a new **Bash** console from the **Consoles** Tab and run:
 
   .. code-block:: console
   
-    pip3.7 install --user jam.py
+    mkvirtualenv --python=/usr/bin/python3.13 my-virtualenv  # use whichever python version you prefer
+    pip install jam.py-v7
   
 * Create a zip archive of your project folder, upload the archive in the **Files** 
   tab and unzip it.
@@ -15,14 +15,15 @@ How to deploy project on PythonAnywhere
   We assume that you are registered as *username* and your project is now located 
   in the */home/username/project_folder* directory.
 
-* Open the **Web** Tab. Add a new web app. In the Code section specify
+* Open the **Web** Tab. Add a new web app. 
+  In the **Code** section specify:
 
   * Source code: */home/username/project_folder*
 
   * Working directory: */home/username/project_folder*
 
-  In the WSGI configuration file:/var/www/username_pythonanywhere_com_wsgi.py file
-  add the following code
+  * WSGI configuration file: */var/www/username_pythonanywhere_com_wsgi.py* file,
+  delete everything and add just the following code:
 
   .. code-block:: py
 
@@ -36,4 +37,26 @@ How to deploy project on PythonAnywhere
     from jam.wsgi import create_application
     application = create_application(path)
 
-* Reload the server.
+
+
+  In the **Static files** section, specify the Jam.py static files location and 
+  the path. For example:
+
+  .. code-block:: console
+  
+      URL: /static/
+      Directiory: /home/username/project_folder/static
+  
+
+  In the **Virtualenv** section, specify the virtual environment path created
+  with above **mkvirtualenv** command. For example:
+
+  .. code-block:: console
+  
+      /home/username/.virtualenvs/my-virtualenv/
+
+  In the **Force HTTPS** section, enable HTTPS.
+
+
+* Reload the server on **Reload** section.
+* To debug the process, review the logs on **Logs** section.
