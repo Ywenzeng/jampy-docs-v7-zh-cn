@@ -65,7 +65,8 @@ https://github.com/jam-py-v5/jam-py-v7
 
 要将本文档下载为单个 PDF 文件，请访问：
 
-https://jampy-docs-v7.readthedocs.io/_/downloads/en/latest/pdf/
+
+https://jampy-docs-v7.readthedocs.io/_/downloads/zh-cn/latest/pdf/
 
 视频教程
 ===============
