@@ -1,141 +1,123 @@
-=======================
-Jam.py V7 documentation
-=======================
+========================
+Jam.py V7 文档
+========================
 
-Introduction
+简介
 ==============
 
+欢迎使用 Jam.py！如果您是 Jam.py 或无代码、低代码或多代码 Web 应用程序开发的新手，这里可以找到关于 Jam.py V7 的文档。
 
-Welcome to Jam.py! If you are new to Jam.py or no-code, low-code or more-code Web application development, this is the place to find documentation about the Jam.py V7. 
+与 Jam.py V5 最大的区别在于增加了 :doc:`路由 </admin/routing>` 支持和采用了 Bootstrap 5，从而实现对移动设备的现代化支持（详见 :doc:`版本 7 </releases/version_7/index>`）。
 
-The biggest difference to Jam.py V5 is :doc:`routing </admin/routing>` support and Bootstrap 5, enabling modern support for mobile devices (see :doc:`version 7 </releases/version_7/index>`).
+此外，用于桌面或移动设备的完整界面都采用无代码方式驱动。
+只需为任何设备选择所需的功能，即可开始使用。
 
-In addition, the complete interface for Desktop or Mobile devices is driven by a no-code approach. 
-Just select what is needed for any device and off you go.
+.. admonition:: 目标
 
-.. admonition:: Objectives
+    安装 Python 和 Jam.py，选择数据库和 Web 服务器，并做出应用程序设计决策。
 
-    Installing Python and Jam.py, choosing the database and the Web server and making Application Design decisions.
+.. admonition:: 读者对象
 
-.. admonition:: Audience
+    Web 开发爱好者或开发人员，对 Web 开发或部署经验有限或无经验。
 
-    Web development enthusiasts or developers, with a limited or no experience with the Web development, or deployment.
+.. admonition:: 前提条件
 
-.. admonition:: Prerequisites
+    建议具备一些 Python 和 JavaScript 知识。需要掌握命令行提示符的基本知识，并能够输入命令。
 
-    Some Python and JavaScript knowledge is recommended. The general knowledge about the Command Line prompt, and typing
-    the commands is required.
-
-
-Feed the LLM
+为 LLM 提供资料
 ==============
 
-The LLMS-full.txt is released:
+已发布 LLMS-full.txt 文件：
 
 https://jampy-docs-v7.readthedocs.io/en/latest/llms-full.txt
 
-and:
+以及：
 
 https://jampy-docs-v7.readthedocs.io/en/latest/llms.txt
 
-
-The Github Jam.py repository:
+GitHub 上的 Jam.py 代码仓库：
 
 https://github.com/jam-py-v5/jam-py-v7
 
-
-
-Documentation Layout Overview
+文档结构概览
 ==================================
 
-Here is an overview of the documentation layout, to
-help you find out where to look for specific details:
+以下是文档结构的概览，以帮助您找到特定内容的所在位置：
 
-:doc:`Getting started <intro/index>` topics describe how to install the framework, create 
-a new project, develop a web application step-by-step, and deploy it.
+:doc:`入门指南 <intro/index>` 主题描述了如何安装框架、创建新项目、逐步开发 Web 应用程序并部署它。
 
-:doc:`Programming guides<programming/index>`
-discuss key topics and concepts at a fairly high level and provide useful 
-background information and explanation.
+:doc:`编程指南 <programming/index>`
+在较高层次上讨论关键主题和概念，并提供有用的背景信息和解释。
 
-:doc:`Business application builder <admin/index>` is a detailed description of 
-the Application Builder used for application development and database 
-administration.
+:doc:`业务应用程序构建器 <admin/index>` 是对用于应用程序开发和数据库管理的应用程序构建器的详细描述。
 
-:doc:`Class reference guides <refs/index>` contain technical reference for 
-Jam.py classes APIs.
+:doc:`类参考指南 <refs/index>` 包含 Jam.py 类 API 的技术参考。
 
-:doc:`FAQ <faq/index>` topics covers most frequently asked questions.
+:doc:`常见问题 <faq/index>` 主题涵盖了最常被问到的问题。
 
-:doc:`How to <how_to/index>` contains code examples that can be useful to quickly
-accomplish common tasks.
+:doc:`操作指南 <how_to/index>` 包含一些代码示例，对于快速完成常见任务可能很有用。
 
-Please visit the
-:doc:`table of contents <contents>` or even
+请访问 :doc:`目录 <contents>`，或者查看
 
-`Jam.py Application Design Tips`_, for detailed steps how to build the applications or migrate from MS Access.
+`Jam.py 应用程序设计技巧`_，以获取关于如何构建应用程序或从 MS Access 迁移的详细步骤。
 
-.. _`Jam.py Application Design Tips`: https://jampy-application-design-tips.readthedocs.io/
+.. _`Jam.py 应用程序设计技巧`: https://jampy-application-design-tips.readthedocs.io/
 
-
-To download this document as a single PDF, please visit:
+要将本文档下载为单个 PDF 文件，请访问：
 
 https://jampy-docs-v7.readthedocs.io/_/downloads/en/latest/pdf/
 
-
-Video Tutorials
+视频教程
 ===============
 
-If you are new to Jam.py, we highly recommend that you watch these video tutorials. The videos are referring to
-Jam.py V5. There are minimal changes to the User interface compared to V7.
+如果您是 Jam.py 的新手，我们强烈建议您观看这些视频教程。这些视频针对 Jam.py V5，与 V7 相比，用户界面的变化极小。
 
-It is recommended to watch these videos with a resolution of 1080p.
+建议以 1080p 分辨率观看这些视频。
 
+教程 1 - `处理文件和图像`_
 
-Tutorial 1 - `Working with files and images`_ 
+.. _`处理文件和图像`: https://youtu.be/9rFXPyfN0Hg
 
-.. _`Working with files and images`: https://youtu.be/9rFXPyfN0Hg
+教程 2 - `处理明细数据`_
 
-Tutorial 2 - `Working with details`_ 
+.. _`处理明细数据`: https://youtu.be/sbvxE-vEfsM
 
-.. _`Working with details`: https://youtu.be/sbvxE-vEfsM
+教程 3 - `用户、角色、审计追踪/变更历史`_
 
-Tutorial 3 - `Users, roles, audit trail/change history`_ 
+.. _`用户、角色、审计追踪/变更历史`: https://youtu.be/60LiWZa0CpY
 
-.. _`Users, roles, audit trail/change history`: https://youtu.be/60LiWZa0CpY
+教程 4 - `任务树`_
 
-Tutorial 4 - `Task tree`_ 
+.. _`任务树`: https://youtu.be/hsSKqEh6vL4
 
-.. _`Task tree`: https://youtu.be/hsSKqEh6vL4
+教程 5 - `表单`_
 
-Tutorial 5 - Forms_
+.. _`表单`: https://youtu.be/3sh-TSt52P0
 
-.. _Forms: https://youtu.be/3sh-TSt52P0
+教程 6 - `表单事件`_
 
-Tutorial 6 - `Form events`_
- 
-.. _`Form events`: https://youtu.be/DY463lcv0R4
+.. _`表单事件`: https://youtu.be/DY463lcv0R4
 
-Tutorial 7 - `Data aware controls`_
- 
-.. _`Data aware controls`: https://youtu.be/fMTq8P4XdGw
+教程 7 - `数据感知控件`_
 
-Tutorial 8 - `Datasets`_
- 
-.. _`Datasets`: https://youtu.be/gHTYj7h9ljI
+.. _`数据感知控件`: https://youtu.be/fMTq8P4XdGw
 
-Tutorial 9 - `Datasets Part 2`_
- 
-.. _`Datasets Part 2`: https://youtu.be/1bUGmgBfrNw
+教程 8 - `数据集`_
 
-Tutorial 10 - `Fields and filters`_
- 
-.. _`Fields and filters`: https://youtu.be/ahXqlZrA0fQ
+.. _`数据集`: https://youtu.be/gHTYj7h9ljI
 
-Tutorial 11 - `Client-server interactions`_
- 
-.. _`Client-server interactions`: https://youtu.be/nLOhdA2FX0I
+教程 9 - `数据集 第 2 部分`_
 
-Tutorial 12 - `Working with data on the server`_
- 
-.. _`Working with data on the server`: https://youtu.be/dDK78lIjHHY
+.. _`数据集 第 2 部分`: https://youtu.be/1bUGmgBfrNw
+
+教程 10 - `字段和过滤器`_
+
+.. _`字段和过滤器`: https://youtu.be/ahXqlZrA0fQ
+
+教程 11 - `客户端-服务器交互`_
+
+.. _`客户端-服务器交互`: https://youtu.be/nLOhdA2FX0I
+
+教程 12 - `在服务器上处理数据`_
+
+.. _`在服务器上处理数据`: https://youtu.be/dDK78lIjHHY
