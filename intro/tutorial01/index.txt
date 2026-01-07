@@ -1,9 +1,9 @@
 ===============================
-Tutorial. Part 1. First project
+教程。第一部分：第一个项目
 ===============================
 
-Now, we’ll walk you through the creation of a basic  Customer Relationship
-Management (CRM) application. Please follow the steps below:
+现在，我们将引导您创建一个基本的客户关系管理（CRM）应用程序。请按照以下步骤操作：
+
 
 .. toctree::
    :maxdepth: 1

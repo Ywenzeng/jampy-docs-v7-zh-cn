@@ -1,32 +1,30 @@
 =======
-Indexes
+索引
 =======
 
-Let's set the default sorting of records of the "Contacts" journal.
-To do so, click the 
-:doc:`Order </admin/items/order_dialog>`
-button.
+让我们设置"Contacts"（联系人）日志记录的默认排序。
+为此，点击
+:doc:`排序 </admin/items/order_dialog>`
+按钮。
 
-By default the records are displayed in the order they were created. To change this,
-move some of the column headers from the list on the right to the list on the left
-using the **left** button, and change their priority using the **up** and **down**
-buttons (higher priority on the top).
+默认情况下，记录按创建顺序显示。要更改此设置，
+使用 **left**（左箭头）按钮将右侧列表中的某些列标题移动到左侧列表中，
+并使用 **up**（上箭头）和 **down**（下箭头）按钮更改其优先级（优先级高的在顶部）。
 
 .. image:: /intro/_images/order_dlg_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Contacts order
+	:alt: 联系人排序
 
-In the example above, we set the default sorting to be
-descending contact date.
+在上面的示例中，我们设置默认排序为
+按联系日期降序排列。
 
-We can create a corresponding index for the “Contacts” journal database table. 
-Click the **Indices** button to open
-:doc:`Indices Dialog </admin/items/indices_dialog>` 
-and then click the **New** button and specify the index in a similar way:
+我们可以为"Contacts"（联系人）日志数据库表创建相应的索引。
+点击 **Indices**（索引）按钮打开
+:doc:`索引对话框 </admin/items/indices_dialog>`，
+然后点击 **New**（新建）按钮并以类似方式指定索引：
 
 .. image:: /intro/_images/index_dlg_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: New index
-
+	:alt: 新建索引

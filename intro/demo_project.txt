@@ -1,33 +1,30 @@
 ============
-Demo project
+演示项目
 ============
 
-The framework has a full fledged demo application that demonstrates programming 
-techniques used in the framework. 
+该框架包含一个功能完整的演示应用程序，展示了框架中使用的编程技术。
 
-The demo is located in the demo folder of the Jam.py package downloaded from Github. There is also a standalone or an 
-portable application for Windows x64 provided `here <https://github.com/platipusica/jampy-exe/releases/download/Pump/jampy_win_64.exe>`_.
+演示程序位于从 Github 下载的 Jam.py 软件包的 demo 文件夹中。此外，还提供了一个适用于 Windows x64 的独立版或便携式应用程序，可从 `此处 <https://github.com/platipusica/jampy-exe/releases/download/Pump/jampy_win_64.exe>`_ 获取。
 
-The portable application depends on LibreOffice for Reports and nothing more. Just run it and point the browser as per below.
+该便携式应用程序仅依赖 LibreOffice 生成报告，无需其他配置。只需运行它，并按照以下步骤在浏览器中访问即可。
 
-To start the demo application go to the demo folder and run *server.py* script.
+要启动演示应用程序，请进入 demo 文件夹并运行 *server.py* 脚本。
 
 .. code-block:: console
 
     $ ./server.py
 
 
-Open a Web browser and enter
+打开 Web 浏览器，在地址栏中输入：
 
 .. code-block:: console
 
 	127.0.0.1:8080
 
-in the address bar.
 
-To see the
-:doc:`Application builder </admin/index>`,
-open a new page in a browser and enter
+要查看
+:doc:`应用程序构建器 </admin/index>`，
+请在浏览器中打开一个新页面并输入：
 
 .. code-block:: console
 
@@ -38,10 +35,10 @@ open a new page in a browser and enter
 .. image:: /intro/_images/demo_jampy.png
 	:scale: 70 %
 	:align: center
-	:alt: Demo application
+	:alt: 演示应用程序
 
 
 .. image:: /intro/_images/demo_admin_jampy.png
 	:scale: 70 %
 	:align: center
-	:alt: Application builder of demo project
+	:alt: 演示项目的应用程序构建器

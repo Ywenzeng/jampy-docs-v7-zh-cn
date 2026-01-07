@@ -1,9 +1,9 @@
 ===============
-Getting started
+入门指南
 ===============
 
-Here you can learn how to install the framework, create a new project, 
-develop a web application and deploy it.
+在这里，您可以学习如何安装框架、创建新项目、开发 Web 应用程序并部署它。
+
 
 .. toctree::
    :maxdepth: 1

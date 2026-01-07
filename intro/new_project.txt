@@ -1,24 +1,23 @@
 ==================
-Creating a project
+创建项目
 ==================
 
-Create a new directory. 
+创建一个新目录。
 
-Go into the directory and run from command line:
+进入该目录并从命令行运行：
 
 .. code-block:: console
 
     $ jam-project.py
 
-For Windows users, ``jam-project.py`` command is in ``Scripts`` folder, ie. 
-folder above this one:
+对于 Windows 用户，``jam-project.py`` 命令位于 ``Scripts`` 文件夹中，即该目录的上层文件夹：
 
 .. code-block:: console
 
     ...\> ..\project-name\Scripts\jam-project.py
 
 
-The following files and folders will be created in the directory::
+目录中将创建以下文件和文件夹：::
 
     /
         css/
@@ -34,7 +33,7 @@ The following files and folders will be created in the directory::
         wsgi.py
 
 
-To start the Jam.py web server, run the ``server.py`` script.
+要启动 Jam.py Web 服务器，请运行 ``server.py`` 脚本。
 
 
 .. code-block:: console
@@ -42,7 +41,7 @@ To start the Jam.py web server, run the ``server.py`` script.
     $ ./server.py
 
 
-For Windows users:
+对于 Windows 用户：
 
 .. code-block:: console
 
@@ -50,17 +49,16 @@ For Windows users:
 
 
 .. note::
-    You can specify a port as parameter, for example 
+    你可以指定端口作为参数，例如：
     
     .. code-block:: console
     
         $ ./server.py 8081
         
-    By default, the port is 8080. If you specify another port, you need to
-    use it in your browser in the next steps.
+    默认端口是 8080。如果你指定了其他端口，在后续步骤中需要在浏览器中使用该端口。
 
 
-You’ll see the similar output on the command line::
+你将在命令行上看到类似输出：::
 
     User Guide: https://jampy-docs-v7.readthedocs.io/
     WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
@@ -70,76 +68,61 @@ You’ll see the similar output on the command line::
     Press CTRL+C to quit
 
 
-If we open a Web browser and visit the app, the below message will display:
+如果我们打开 Web 浏览器访问该应用，将显示以下信息：
 
 
 .. image:: _images/run_builder_jampy.png
-	:alt: Jam.py new project
+	:alt: Jam.py 新项目
 
 
-Open a Web browser and go to “/builder.html” on your local domain – e.g.:
+打开 Web 浏览器，访问本地域名的 "/builder.html" —— 例如：
 
 .. code-block:: console
 
     127.0.0.1:8080/builder.html
     
-You should see the language selection dialog. This defines the language used for the
-user interface. You can select the language from the list of default languages, or
-import your own, using the "folder" icon to the right of the input field. See the
-:doc:`Language support </admin/language_support>` page for more information.
-Select your language and press the OK button.
+你应该会看到语言选择对话框。这定义了用户界面使用的语言。你可以从默认语言列表中选择语言，或者使用输入字段右侧的"文件夹"图标导入自己的语言文件。更多信息请参阅
+:doc:`语言支持 </admin/language_support>` 页面。
+选择你的语言，然后点击确定按钮。
 
 .. image:: _images/lang_jampy.png
-	:alt: Jam.py language dialog
+	:alt: Jam.py 语言对话框
 
-Next is the new project dialog. Fill in:
+接下来是新项目对话框。请填写：
 
-* **Caption** - the project name that will appear to users.
-* **Name** - the name of project (task) that will be used in the code (Python or JS)
-  to get access to the task object. This should be a short and valid python identifier.
-  This name is also used as a prefix when creating a table in the project database.
-* **DB type** - select a database type. If the database is not Sqlite, it must be
-  created in advance and its attributes should be entered in the 
-  corresponding form fields. 
-  To see examples of Database setup, follow the :doc:`link </admin/project/database>`.
+* **Caption** - 将向用户显示的项目名称。
+* **Name** - 项目（任务）的名称，将在代码（Python 或 JS）中用于访问任务对象。这应是一个简短且有效的 Python 标识符。在项目数据库中创建表时，此名称也用作前缀。
+* **DB type** - 选择数据库类型。如果数据库不是 Sqlite，必须提前创建，并在相应的表单字段中输入其属性。
+  查看数据库设置示例，请访问 :doc:`此链接 </admin/project/database>`。
 
 .. image:: _images/project_params_jampy.png
 	:align: center
-	:alt: New project setup
+	:alt: 新项目设置
 
-When you press OK, the connection to the database will be checked, and in case 
-of failure an error message will be displayed.
+点击确定后，将检查数据库连接，如果失败则会显示错误消息。
 
 
-Examples of database setups
+数据库设置示例
 ===========================
 
-.. admonition:: Adapted from `Jam.py Design Tips`_
+.. admonition:: 改编自 `Jam.py Design Tips`_
 
-    Jam.py supports many different database servers. For example PostgreSQL_, 
-    MariaDB_, MySQL_, MSSQL_, Oracle_, Firebird_, IBM_, SQLite_, Databricks_
-    and SQLite with SQLCipher_.
+    Jam.py 支持多种不同的数据库服务器。例如 PostgreSQL_、MariaDB_、MySQL_、MSSQL_、Oracle_、Firebird_、IBM_、SQLite_、Databricks_ 以及使用 SQLCipher_ 的 SQLite。
 
-    If you are developing a small project or something you don't plan to deploy in
-    a production environment, SQLite is generally the best option as it doesn't
-    require running a separate server. However, SQLite has many differences from
-    other databases, so if you are working on something substantial, it's
-    recommended to develop with the same database that you plan on using in
-    production.
+    如果你正在开发一个小型项目或不打算在生产环境中部署的内容，SQLite 通常是最佳选择，因为它不需要运行单独的服务器。然而，SQLite 与其他数据库有许多不同之处，因此如果你正在开发一个重要的项目，建议使用与生产环境计划相同的数据库进行开发。
 
 
-    In addition to a database backend, we need to make sure the Python
-    database bindings are installed.
+    除了数据库后端，我们还需要确保安装了 Python 数据库绑定。
 
-    * If using PostgreSQL, the ``psycopg2`` or ``psycopg2-binary`` package is needed. 
-    * If using MySQL or MariaDB, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient`` package is needed, as well as database client development files. 
-    * If using MSSQL, the ``pymssql`` is needed.
-    * If using Oracle, the `cx_Oracle`_ is needed, as well as Python headers (development files).
-    * If using SQLCipher_ (TBA),  ``sqlcipher3-binary`` package is needed for Linux. There is a standalone DLL for Windows available.
-    * If using IBM_ (TBA),  ``ibm_db`` and ``ibm_db_dbi`` package is needed.
-    * If using Firebird,  ``fdb`` package is needed.
-    * If using Databricks, ``databricks-sql-connector`` is needed.
-    * To generate reports, **LibreOffice** must be installed.
+    * 如果使用 PostgreSQL，需要 ``psycopg2`` 或 ``psycopg2-binary`` 包。
+    * 如果使用 MySQL 或 MariaDB，Python 2.x 需要 ``MySQLdb``。对于 Python 3.x，需要 ``mysql-connector-python`` 和 ``mysqlclient`` 包，以及数据库客户端开发文件。
+    * 如果使用 MSSQL，需要 ``pymssql``。
+    * 如果使用 Oracle，需要 `cx_Oracle`_ 以及 Python 头文件（开发文件）。
+    * 如果使用 SQLCipher_（待补充），Linux 需要 ``sqlcipher3-binary`` 包。Windows 有独立的 DLL 可用。
+    * 如果使用 IBM_（待补充），需要 ``ibm_db`` 和 ``ibm_db_dbi`` 包。
+    * 如果使用 Firebird，需要 ``fdb`` 包。
+    * 如果使用 Databricks，需要 ``databricks-sql-connector``。
+    * 要生成报告，必须安装 **LibreOffice**。
 
 
 .. _Jam.py Design Tips: https://jampy-application-design-tips.readthedocs.io/
@@ -158,38 +141,32 @@ Examples of database setups
     
 .. note::
 
-    For a **SQLite** database, when an item field is deleted or renamed, or foreign
-    key is created, the  
-    :doc:`Application builder </admin/index>`
-    creates a new table and copies records from the old one into it.
+    对于 **SQLite** 数据库，当删除或重命名字段，或创建外键时，
+    :doc:`应用程序构建器 </admin/index>`
+    会创建一个新表并将记录从旧表复制到其中。
     
-    For **SQLite** database, Jam.py doesn’t support importing of metadata into an 
-    existing project (project with tables in the database). 
-    You can only import metadata into a new project.
+    对于 **SQLite** 数据库，Jam.py 不支持将元数据导入到现有项目（数据库中已有表的项目）中。
+    你只能将元数据导入到新项目中。
+
+关于数据库设置的更多信息，请参阅 :doc:`项目管理 </admin/project/database>`。
 
 
 
-More about the database setups is within the :doc:`Project management </admin/project/database>`.
-
-
-
-If all goes well, a new project will be created and the project tree will appear 
-in the Application builder.    
+如果一切顺利，将创建一个新项目，项目树将显示在应用程序构建器中。
 
 
 .. image:: _images/adm_new_project_jampy.png
 	:align: center
-	:alt: Jam.py Application builder
+	:alt: Jam.py 应用程序构建器
 
 
 .. important::
 
-        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
-        ``Jam.py`` framework ``version`` number. 
+        如右上角所示，显示应用程序的名称、使用的数据库名称、应用程序版本号以及
+        ``Jam.py`` 框架的 ``版本`` 号。
 
 
-Now, to see the project itself, create a new page in the browser and type in the 
-address bar:
+现在，要查看项目本身，请在浏览器中新建一个页面，并在地址栏中输入：
 
 .. code-block:: console
 
@@ -198,4 +175,5 @@ address bar:
 
 .. image:: _images/empty_project_jampy.png
 	:align: center
-	:alt: Jam.py project
+	:alt: Jam.py 项目
+

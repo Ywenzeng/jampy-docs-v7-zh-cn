@@ -1,36 +1,36 @@
 =======
-Filters
+过滤器
 =======
 
-:doc:`Filters </programming/data/filters>`
-are used to select records from the database table according to the specified criteria.
+:doc:`过滤器 </programming/data/filters>`
+用于根据指定条件从数据库表中选择记录。
 
-Click the **Filters** button to open the
-:doc:`Filters Dialog </admin/items/filters_dialog>`.
+点击 **Filters**（过滤器）按钮打开
+:doc:`过滤器对话框 </admin/items/filters_dialog>`。
 
 .. image:: /intro/_images/filters_dlg_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Filters dialog
+	:alt: 过滤器对话框
 
-Now click the **New** button and fill out the following form:
+现在点击 **New**（新建）按钮并填写以下表单：
 
 .. image:: /intro/_images/new_filter_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: New filter
+	:alt: 新建过滤器
 
-Similarly, create a few other filters:
+类似地，创建其他几个过滤器：
 
 .. image:: /intro/_images/all_filters_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: All filters
+	:alt: 所有过滤器
 	
-When we refresh the project page, the **Filters** button appears in the 
-header of the "Contacts" form. Clicking this button opens the "Filters" dialog box:
+当我们刷新项目页面时，**Filters**（过滤器）按钮将出现在
+"Contacts"（联系人）表单的标题栏中。点击此按钮将打开"Filters"（过滤器）对话框：
 
 .. image:: /intro/_images/contacts_filters_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Contacts filters
+	:alt: 联系人过滤器

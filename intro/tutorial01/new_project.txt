@@ -1,71 +1,68 @@
 ===========
-New project
+新建项目
 ===========
 
-We'll assume that jam.py is already installed. If not, see 
-:doc:`Installation </intro/install>`
-guide how to do it.
+我们假设 jam.py 已经安装。如果尚未安装，请参阅
+:doc:`安装指南 </intro/install>`
+了解如何安装。
 
-First create a folder for the new project. In this folder, execute the
-``jam-project.py`` script to create the project structure.
+首先为新项目创建一个文件夹。在此文件夹中，执行
+``jam-project.py`` 脚本来创建项目结构。
 
 .. code-block:: console
 
     $ jam-project.py
 
-After that, run the ``server.py`` script that ``jam-project.py`` created:
+之后，运行 ``jam-project.py`` 创建的 ``server.py`` 脚本：
 
 .. code-block:: console
 
     $ ./server.py
 
-Now, to complete the creation of the project, open the web browser and go to 
+现在，要完成项目的创建，请打开 Web 浏览器并访问
 
 .. code-block:: console
 
     127.0.0.1:8080/builder.html
 
-to open the Application Builder. You should see the language selection dialog.
-
+以打开应用程序构建器。您应该会看到语言选择对话框。
 
 .. image:: /intro/_images/lang_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Select language dialog
+	:alt: 选择语言对话框
 
-Use the browse button to select **English**, and click the **OK** button.
-The project parameters dialog box appears.
+使用浏览按钮选择 **English**，然后点击 **OK** 按钮。
+项目参数对话框将出现。
 
 .. image:: /intro/_images/project_params_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Project params
+	:alt: 项目参数
 
-Fill out the form as in the picture above, and click **OK**.
-Now you should see the project tree in the left panel.
-
+如上图所示填写表单，然后点击 **OK**。
+现在您应该在左侧面板中看到项目树。
 
 .. image:: /intro/_images/adm_new_project_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Project Application builder
-
+	:alt: 项目应用程序构建器
 
 .. important::
 
-        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
-        ``Jam.py`` framework ``version`` number. 
+        如右上角所示，显示应用程序的名称、使用的数据库名称、应用程序版本号以及
+        ``Jam.py`` 框架的 ``版本`` 号。
 
-Open a new page, type
+打开一个新页面，在地址栏中输入
 
 .. code-block:: console
 
 	127.0.0.1:8080
 
-in the address bar and press Enter.
-A new project appears with an empty menu.
+并按 Enter 键。
+将出现一个具有空菜单的新项目。
 
 .. image:: /intro/_images/empty_project_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Empty project
+	:alt: 空项目

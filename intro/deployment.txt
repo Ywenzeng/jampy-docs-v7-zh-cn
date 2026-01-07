@@ -1,15 +1,11 @@
 ===========
-Deployment 
+部署
 ===========
 
-Jam.py deployment with Apache and mod_wsgi
+使用 Apache 和 mod_wsgi 部署 Jam.py
 ==========================================
 
-
-Once you’ve got ``mod_wsgi`` installed and activated, edit your Apache server’s 
-httpd.conf file and add the following. If you are using a version of Apache older 
-than 2.4, replace **Require all granted** with **Allow from all** and also add 
-the line **Order deny,allow** above it.
+一旦你安装并激活了 ``mod_wsgi``，请编辑你的 Apache 服务器的 httpd.conf 文件并添加以下内容。如果你使用的是 Apache 2.4 之前的版本，请将 **Require all granted** 替换为 **Allow from all**，并在其上方添加一行 **Order deny,allow**。
 
 .. code-block:: apache
 
@@ -29,24 +25,16 @@ the line **Order deny,allow** above it.
     </Directory>
     
 
-The first bit in the ``WSGIScriptAlias`` line is the base URL path you want to
-serve your application at (``/`` indicates the root url), and the second is the
-location of a "WSGI file" -- see below -- on your system, usually inside of
-your project package (``mysite`` in this example). This tells Apache to serve
-any request below the given URL using the WSGI application defined in that
-file.
+``WSGIScriptAlias`` 行中的第一部分是你想用来服务应用程序的基础 URL 路径（``/`` 表示根 URL），第二部分是系统中 "WSGI 文件" 的位置——见下文——通常位于你的项目包内（本例中为 ``mysite``）。这告诉 Apache 使用该文件中定义的 WSGI 应用程序来处理给定 URL 下的任何请求。
 
-The ``WSGIPythonPath`` line ensures that your project package is available for
-import on the Python path; in other words, that ``import mysite`` works.
+``WSGIPythonPath`` 行确保你的项目包可以在 Python 路径上被导入；换句话说，确保 ``import mysite`` 能够正常工作。
 
-The ``<Directory>`` piece just ensures that Apache can access your
-:file:`wsgi.py` file.
+``<Directory>`` 部分只是确保 Apache 能够访问你的 :file:`wsgi.py` 文件。
 
-The next lines ensure that anything in the ``/static/`` URL space is explicitly 
-served as a static files.
+接下来的几行确保 ``/static/`` URL 空间内的任何内容都被明确地作为静态文件提供。
 
-See also
+另请参阅
 ========
 
-See the additional information on the deployment in the 
-:doc:`How to deploy </how_to/deploy/index>`
+关于部署的更多信息，请参见
+:doc:`如何部署 </how_to/deploy/index>`

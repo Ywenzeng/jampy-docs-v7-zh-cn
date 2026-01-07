@@ -1,64 +1,62 @@
 ============
-Installation
+安装
 ============
 
-Install python
+安装 Python
 ==============
 
-Jam.py requires python. If it is not installed you can get the latest 
-version of Python at https://www.python.org/download/ 
+Jam.py 需要 Python。如果尚未安装，您可以在 https://www.python.org/download/ 获取最新版本的 Python。
 
-You can use the following versions of Python with Jam.py:
+您可以将以下 Python 版本与 Jam.py 一起使用：
 
-Python 3:
+Python 3：
 
-* Python 3.4 and newer
+* Python 3.4 及更高版本
 
-You can verify that Python is installed by typing ``python`` from your shell; 
-you should see something like::
+您可以通过在 shell 中输入 ``python`` 来验证 Python 是否已安装；
+您应该会看到类似以下内容：::
 
     Python 2.7.12 (default, Nov 19 2016, 06:48:10) 
     [GCC 5.4.0 20160609] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
     >>> 
     
-For Python 3 installed try to type ``python3``::
+如果安装了 Python 3，请尝试输入 ``python3``：::
 
     Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
     [GCC 5.4.0 20160609] on linux
     Type "help", "copyright", "credits" or "license" for more information.
     >>>     
 
-Install Jam.py
+安装 Jam.py
 ====================
 
-Installing an official release with `pip`
+使用 `pip` 安装官方发行版
 -----------------------------------------
 
-This is the recommended way to install Jam.py.
+这是安装 Jam.py 的推荐方式。
 
-1. Install pip_. The easiest is to use the `standalone pip installer`_. If your
-   distribution already has ``pip`` installed, you might need to update it if
-   it's outdated. (If it's outdated, you'll know because installation won't
-   work.)
+1. 安装 pip_。最简单的方法是使用 `standalone pip installer`_。如果您的
+   系统已经安装了 ``pip``，但版本过旧，则可能需要更新它。
+   （如果版本过旧，在安装时会发现问题。）
 
-2. If you're using Linux, Mac OS X or some other flavour of Unix, enter the
-   command: 
+2. 如果您使用的是 Linux、Mac OS X 或其他类 Unix 系统，请在
+   shell 提示符下输入命令：
    
    .. code-block:: console
    
     sudo pip install jam.py-v7
     
-   at the shell prompt. 
+   
 
 
-   If you're using Windows, start a command shell with administrator privileges 
-   and run the command::
+   如果您使用的是 Windows，请以管理员权限启动命令提示符，
+   并运行命令：::
 
     ...\> python -m pip install jam.py-v7
 
 
-   This will install Jam.py in your Python installation's ``site-packages`` directory.
+   这会将 Jam.py 安装到您 Python 安装目录的 ``site-packages`` 目录中。
 
 
 .. _pip: http://www.pip-installer.org/
@@ -67,27 +65,26 @@ This is the recommended way to install Jam.py.
 
 
 
-Installing an official release manually
+手动安装官方发行版
 ---------------------------------------
 
-1. Download the package archive. 
+1. 下载软件包归档文件。
 
-2. Create a new directory and unpack the archive there. 
+2. 创建一个新目录，并将归档文件解压到该目录中。
 
-3. Go into the directory and run the setup command from command line
+3. 进入该目录，从命令行运行安装命令：
 
 .. code-block:: console
 
    $ python setup.py install
     
-This will install Jam.py in your Python installation’s site-packages directory.
+这会将 Jam.py 安装到您 Python 安装目录的 site-packages 目录中。
 
 .. note::
-	On some unix like systems you may need to switch to root or run: 
-	sudo python setup.py install
+    在某些类 Unix 系统上，您可能需要切换到 root 用户或运行：
+    sudo python setup.py install
 
-.. admonition:: Python on Windows
+.. admonition:: Windows 上的 Python
 
-    If you are just starting with Jam.py and using Windows, you may find
-    :doc:`How to install Jam.py on Windows <../how_to/how_to_install_on_windows>` useful.
-
+    如果您是 Jam.py 的初学者并且使用 Windows，您可能会发现
+    :doc:`如何在 Windows 上安装 Jam.py <../how_to/how_to_install_on_windows>` 很有用。

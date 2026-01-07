@@ -1,72 +1,69 @@
 ============
-Lookup lists
+查找列表
 ============
 
-Now we create a 
-:doc:`lookup List </admin/lookup_lists>`
-"Status".  Lookup lists are used to create "dropdown" field, with a limited
-set of possible values.
+现在我们来创建一个
+:doc:`查找列表 </admin/lookup_lists>`
+"Status"（状态）。查找列表用于创建"下拉"字段，其值域为有限的可选值集合。
 
-Select the "Task" node in the project tree and click the **Lookup lists** button.
+在项目树中选择"Task"（任务）节点，然后点击 **Lookup lists**（查找列表）按钮。
 
 .. image:: /intro/_images/lookup_lists_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Lookup lists
+	:alt: 查找列表
 
-It is initially empty. Click the **New** button to create a new list.
-Specify the new lookup list name and add a list of integer-text pairs:
+初始状态下它是空的。点击 **New**（新建）按钮创建一个新列表。
+指定新查找列表的名称，并添加一个整数-文本对列表：
 
 .. image:: /intro/_images/lookup_list_ready_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Lookup list entries
+	:alt: 查找列表条目
 	
-Save the Lookup	Lists with the **OK** button, then edit the "Contacts" journal
-to add the new "Status" field.
+使用 **OK**（确定）按钮保存查找列表，然后编辑"Contacts"（联系人）日志，
+添加新的"Status"（状态）字段。
 
 .. image:: /intro/_images/status_field_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Status field
+	:alt: 状态字段
 
-As for lookup fields, set the caption and name and leave the type empty. Then go to
-the **Lookup** tab, and set the **Lookup value list** attribute to the "Status" lookup list:
-
+对于查找字段，设置标题和名称，并将类型留空。然后转到
+**Lookup**（查找）选项卡，将 **Lookup value list**（查找值列表）属性设置为"Status"（状态）查找列表：
 
 .. image:: /intro/_images/status_lookup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Status lookup field
+	:alt: 状态查找字段
 	
-Finally, before saving, open the "Customer" field we created earlier,
-and set the **Required** attribute (in the "Field" tab) and the **Typeahead** attribute
-(in the "Lookup" tab). When the **Typeahead** is checked, autocompletion/typeahead is
-enabled for the lookup field.
+最后，在保存之前，打开我们之前创建的"Customer"（客户）字段，
+设置 **Required**（必填）属性（在"Field"（字段）选项卡中）和 **Typeahead**（预输入）属性
+（在"Lookup"（查找）选项卡中）。当勾选 **Typeahead**（预输入）时，
+将为查找字段启用自动补全/预输入功能。
 
 .. image:: /intro/_images/customer_required_attr_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Customer attributes
+	:alt: 客户属性
 
 .. image:: /intro/_images/customer_typeahead_attr_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Customer typeahead attribute
+	:alt: 客户预输入属性
 
-
-While we are here, set **Default value** of the "Contact date" field to "CURRENT DATETIME",
-so that the date will be automatically initialised to the current date and time.
+在这里，我们还可以将"Contact date"（联系日期）字段的 **Default value**（默认值）设置为"CURRENT DATETIME"（当前日期时间），
+这样日期将自动初始化为当前日期和时间。
 
 .. image:: /intro/_images/contact_date_default_value_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Contact date field default value
+	:alt: 联系日期字段默认值
 
-We can likewise select a **Default value** for the "Status" field, by selecting a value
-in the drop-down lists.
+同样，我们可以为"Status"（状态）字段选择 **Default value**（默认值），
+方法是在下拉列表中选择一个值。
 
 .. image:: /intro/_images/status_default_value_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Status field default value
+	:alt: 状态字段默认值
