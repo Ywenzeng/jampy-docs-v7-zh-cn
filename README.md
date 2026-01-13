@@ -84,13 +84,10 @@ Jam.py 是一个面向对象、事件驱动的框架，具有层次结构、模�
 ## 文档
 
 V7 的所有更新文档在线地址为
-https://jampy-docs-v7.readthedocs.io/
+https://jampy-docs.readthedocs.io/projects/V7/zh-cn/latest
 
-巴西葡萄牙语翻译已开始于
-https://jampy-docs-v7-br-pt.readthedocs.io/
-
-请访问 https://jampy-docs-v7.readthedocs.io/en/latest/intro/install.html 了解 Python 和
-框架的安装，或 https://jampy-docs-v7.readthedocs.io/en/latest/intro/new_project.html 了解如何创建
+请访问 https://jampy-docs.readthedocs.io/projects/V7/zh-cn/latest/intro/install.html 了解 Python 和
+框架的安装，或 https://jampy-docs.readthedocs.io/projects/V7/zh-cn/latest/intro/new_project.html 了解如何创建
 新项目。
 
 Jam.py 应用程序设计技巧请访问 https://jampy-application-design-tips.readthedocs.io/
