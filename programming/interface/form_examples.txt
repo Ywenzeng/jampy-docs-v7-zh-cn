@@ -1,20 +1,20 @@
 =============
-Form examples
+表单示例
 =============
 
-Currently, the Framework uses `Bootstrap 5`_ with a simple and easy to use grid
-system that uses 12 columns and allows you to create any kind of layouts.
-It is responsive and have many components, such as dropdowns, 
-dropdown buttons, button groups, navs, navbars, tabs, breadcrumbs, badges,
-progress bars, etc.
+目前，框架使用 `Bootstrap 5`_，它具有一个简单易用的网格
+系统，使用 12 列，允许您创建任何类型的布局。
+它是响应式的，并包含许多组件，如下拉菜单、
+下拉按钮、按钮组、导航、导航栏、选项卡、面包屑、徽章、
+进度条等。
 
 .. _`Bootstrap 5`: https://getbootstrap.com/docs/5.0/
 
-Default edit form template
+默认编辑表单模板
 --------------------------
 
-This template is used for creating edit forms, if an item and its owner don't 
-have their own edit form template
+如果项目及其所有者没有
+自己的编辑表单模板，则使用此模板创建编辑表单。
 
 .. code-block:: html
 
@@ -32,22 +32,22 @@ have their own edit form template
         </div>
     </div>
 
-The event below is located in the task client module and is triggered 
-for any item whose edit form has just been created. 
+下面的事件位于任务客户端模块中，当任何项目的
+编辑表单刚刚创建时会触发该事件。
 
-It uses the
+它使用
 :doc:`create_inputs </refs/client/item/m_create_inputs>`
-method to create inputs in the div with class "edit-body". But before that it 
-checks if ``init_inputs`` function is defined in the item's client module, that 
-can be used to specify the options parameter of the method.
+方法在 class 为 "edit-body" 的 div 中创建输入控件。但在此之前，它
+检查项目的客户端模块中是否定义了 ``init_inputs`` 函数，该函数
+可用于指定方法的 options 参数。
 
-It uses the  
+它使用
 :doc:`create_inputs </refs/client/item/m_create_inputs>`
-method to create input controls in the div with the "edit-body" class. 
-But before that, it checks whether the init_inputs function is defined in the 
-client module of the element, which can be used to specify the method options.
+方法在 class 为 "edit-body" 的 div 中创建输入控件。
+但在此之前，它检查项目中是否定义了 init_inputs 函数，
+该函数可用于指定方法的选项。
 
-It then assigns the jQuery events to the OK and Cancel buttons.
+然后，它为 OK 和 Cancel 按钮分配 jQuery 事件。
 
 .. code-block:: js
 
@@ -70,20 +70,20 @@ It then assigns the jQuery events to the OK and Cancel buttons.
         });
     }
 
-The edit form for **Albums** catalog looks as follows: 
+**Albums** （专辑）目录的编辑表单如下所示：
 
 .. image:: /programming/_images/default_edit_form_template_jampy.png
 	:align: center
-	:alt: Default edit form template
+	:alt: 默认编辑表单模板
 
 .. note::
     
-    If there are no buttons with the corresponding ids, 
-    the code above does not generate exceptions.
+    如果没有具有相应 id 的按钮，
+    上述代码不会生成异常。
 
-    If you want to overwrite JQuery events for buttons declared in the client 
-    module of the task, in the corresponding event of the client module of the 
-    item, you can do this using the jQuery ``off`` method:
+    如果您想在项目的客户端模块的相应事件中，
+    覆盖任务客户端模块中声明的按钮的 JQuery 事件，
+    可以使用 jQuery 的 ``off`` 方法：
 
     .. code-block:: js
     
@@ -91,14 +91,13 @@ The edit form for **Albums** catalog looks as follows:
             .off('click.task')
             .on('click', function() { some_other_function(item) });    
 
-    If there is no corresponding container in the form, the ``create_inputs`` 
-    method does nothing.
+    如果表单中没有相应的容器，``create_inputs``
+    方法不会执行任何操作。
 
-Edit form template with tabs
+带选项卡的编辑表单模板
 ----------------------------
 
-This example uses the Bootstrap 3 tabs. It needs update due to
-href not used for Boostrap 5:
+此示例使用 Bootstrap 3 的选项卡。由于 Bootstrap 5 不使用 href，需要进行更新：
 
 .. code-block:: html
 
@@ -128,8 +127,8 @@ href not used for Boostrap 5:
         </div>
     </div>
 
-The following event handler is declared in the **Customers** item client module.
-It creates input controls for panes, corresponding to tabs: 
+以下事件处理程序声明在 **Customers** （客户）项目的客户端模块中。
+它为与选项卡对应的窗格创建输入控件：
 
 .. code-block:: js
 
@@ -148,16 +147,17 @@ It creates input controls for panes, corresponding to tabs:
     	    {fields: ['phone', 'fax', 'email']}
     	);
     }
-    
+
 .. image:: /programming/_images/edit_form_template_with_tabs_jampy.png
 	:align: center
-	:alt: Edit form template with tabs
+	:alt: 带选项卡的编辑表单模板
 
-
-Edit form template using grid layout
+使用网格布局的编辑表单模板
 ------------------------------------
 
-This example uses the Bootstrap grid system:
+
+此示例使用 Bootstrap 网格系统：
+
 
 .. code-block:: html
 
@@ -174,7 +174,7 @@ This example uses the Bootstrap grid system:
     </div>
 
 
-or:
+或：
 
 
 .. code-block:: html
@@ -220,7 +220,7 @@ or:
 
 
 
-With headers around each section, like “Track Info” / “Technical Info”:
+每个部分周围都有标题，例如“Track Info”（曲目信息）/“Technical Info”（技术信息）：
 
 .. code-block:: html
 
@@ -258,27 +258,25 @@ With headers around each section, like “Track Info” / “Technical Info”:
 	:alt: Edit form template using grid layout with headers
 
 
-Catalogs view form template
+目录查看表单模板
 -----------------------------------
 
-In this example there is a div with class "form-header". 
+在这个例子中，有一个 class 为 "form-header" 的 div。
 
-The element with id "form-title" is used in the 
+id 为 "form-title" 的元素在任务的
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-method of the task to display the caption of an item and assign to it a JQuery 
-onclick event to execute view method to recreate the view form.
+方法中用于显示项目的标题，并为其分配一个 JQuery
+onclick 事件来执行 view 方法以重新创建查看表单。
 
-The elements with id "selected-div" and "search-form" are used in the
-:doc:`on_view_form_created </refs/client/group/on_view_form_created>` of the
-catalogs group to display current value of a lookup field when the right button
-is clicked to select a value and to implement search functionality of catalogs
-correspondingly
+id 为 "selected-div" 和 "search-form" 的元素在目录组的
+:doc:`on_view_form_created </refs/client/group/on_view_form_created>` 中用于
+在点击右侧按钮选择值时显示查找字段的当前值，并相应地实现目录的搜索功能。
 
-The div with class "view-table" is used in the 
+class 为 "view-table" 的 div 在任务的
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-event handler of the task to create a table to display item's data by using
+事件处理程序中用于通过
 :doc:`create_table </refs/client/item/m_create_table>` 
-method:
+方法创建一个表格来显示项目数据：
 
 .. code-block:: js
 
@@ -290,12 +288,13 @@ method:
         item.open(true);
     }
 
-The div with id "report-btn"  is used in the 
+id 为 "report-btn" 的 div 在任务的
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-event handler of the task to fill dropdown button menu items with reports defined
-in the 
+事件处理程序中用于用项目
 :doc:`Reports Dialog </admin/items/reports_dialog>`
-of the item (if they exist).
+中定义的报告填充下拉按钮菜单项（如果它们存在）。
+
+
 
 .. code-block:: html
 
@@ -345,12 +344,14 @@ of the item (if they exist).
 	:align: center
 	:alt: Catalogs view form template
 
-View form template with buttons at the top
+
+按钮在顶部的查看表单模板
 ------------------------------------------
 
-In this example the form footer div is removed and buttons are placed to the
-form header div. The **Actions** dropdown button is created. The code is the same
-as in previous example.
+在此示例中，移除了表单页脚 div，并将按钮放置在
+表单标题 div 中。创建了 **Actions** （操作）下拉按钮。代码与
+上一个示例相同。
+
 
 .. code-block:: html
 
@@ -386,15 +387,18 @@ as in previous example.
 .. image:: /programming/_images/view_template_btns_top_jampy.png
 	:align: center
 	:alt: View form template with buttons at the top
+
 	
-View form template with detail
+带明细表的查看表单模板
 ------------------------------
 
-In this example the div with class "view-table" is removed and added two
-divs "view-master" and "view-detail" tables for master and detail items
-are created in the 
+在此示例中，移除了 class 为 "view-table" 的 div，并在
+**Invoices** （发票）日志的客户端模块中声明的
 :doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-event handler declared in the client module of **Invoices** journal:
+事件处理程序中为
+主表和明细表项目创建了两个 div："view-master" 和 "view-detail" 表格：
+
+
 
 .. code-block:: js
 

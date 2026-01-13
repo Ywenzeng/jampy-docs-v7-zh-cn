@@ -1,9 +1,8 @@
 ============
-Form options
+表单选项
 ============
 
-For each type of form an item has an attribute that controls the modal form 
-behavior:
+对于每种类型的表单，项目都有一个控制模态表单行为的属性：
 
 * :doc:`view_options </refs/client/item/at_view_options>`
 
@@ -13,49 +12,43 @@ behavior:
 
 * :doc:`param_options </refs/client/report/at_param_options>`
 
-This is an object that has the following attributes, specifying parameters of the 
-modal form:
+这是一个对象，具有以下属性，用于指定模态表单的参数：
 
-* ``width`` - the width of the modal form, the default value is 560 px,
-* ``title`` - the title of the modal form, the default value is the value of a
+* ``width`` - 模态表单的宽度，默认值为 560 px，
+* ``title`` - 模态表单的标题，默认值为
   :doc:`item_caption </refs/client/abstr_item/at_item_caption>`
-  attribute,
-* ``close_button`` - if true, the close button will be created in the upper-right 
-  corner of the form, the default value is true,
-* ``close_caption`` - if true and close_button is true, will display 'Close - [Esc]'
-  near the button
-* ``close_on_escape`` - if true, pressing on the Escape key will trigger the 
-  corresponding close_form  method.
-* ``close_focusout`` - if true, the corresponding close_form method will be called 
-  when a form loses focus
-* ``template_class`` - if specified, the div with this class will be searched in 
-  the task 
+  属性的值，
+* ``close_button`` - 如果为 true，将在表单的右上角创建关闭按钮，默认值为 true，
+* ``close_caption`` - 如果为 true 且 close_button 为 true，将在按钮附近显示 'Close - [Esc]'（关闭 - [Esc]）
+* ``close_on_escape`` - 如果为 true，按下 Escape 键将触发相应的 close_form 方法。
+* ``close_focusout`` - 如果为 true，当表单失去焦点时，将调用相应的 close_form 方法
+* ``template_class`` - 如果指定，将在任务的
   :doc:`templates </refs/client/task/at_templates>` 
-  attribute and used as a form html template when creating a form
-* ``label_on_top`` - the label displayed on top
-  
-The 
+  属性中搜索具有此 class 的 div，并在创建表单时用作表单 html 模板
+* ``label_on_top`` - 在顶部显示的标签
+
 :doc:`edit_options </refs/client/item/at_edit_options>` 
-has a ``fields`` attribute, that specify a list of field names that the
+有一个 ``fields`` 属性，用于指定字段名称列表，
+如果其 ``options`` 参数的 ``fields`` 属性未指定，则
 :doc:`create_inputs </refs/client/item/m_create_inputs>`
-method will use, if ``fields`` attribute of its ``options`` parameter is not 
-specified, the default value is a list of field names set in the 
+方法将使用此列表，默认值是在应用程序构建器的
 :doc:`Edit Form Dialog </admin/items/edit_form_dialog>`
-in the Application builder. 
+中设置的字段名称列表。
 
-The 
 :doc:`view_options </refs/client/item/at_view_options>` 
-has a ``fields`` attribute, that specify a list of field names that the
+有一个 ``fields`` 属性，用于指定字段名称列表，
+如果其 ``options`` 参数的 ``fields`` 属性未指定，则
 :doc:`create_table </refs/client/item/m_create_table>`
-method will use, if ``fields`` attribute of its ``options`` parameter is not 
-specified, the default value is a list of field names set in the 
+方法将使用此列表，默认值是在应用程序构建器的
 :doc:`View Form Dialog </admin/items/view_form_dialog>`
-in the Application builder. 
+中设置的字段名称列表。
 
-The width of the modal form, created in the following example, will be 700 px.
+在以下示例中创建的模态表单的宽度将为 700 px。
 
 .. code-block:: js
 
     function on_edit_form_created(item) {
         item.edit_options.width = 700;
     }
+
+

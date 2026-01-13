@@ -2,12 +2,13 @@
 templates.html
 ==============
 
-When some method creates a form, the application finds a corresponding html template in this file.
+当某些方法创建表单时，应用程序会在此文件中查找相应的 html 模板。
 
-You can define your own form templates to create your own custom forms. See 
-:doc:`Form templates <form_templates>`.
+您可以定义自己的表单模板来创建自定义表单。请参阅
+:doc:`表单模板 <form_templates>`。
 
-The default ``template.html`` content:
+默认的 ``template.html`` 内容：
+
 
 .. code-block:: html
 

@@ -1,47 +1,43 @@
 ===================
-Data-aware controls
+数据感知控件
 ===================
 
-To create a table to display an item's dataset use 
+要创建一个表格来显示项目的数据集，请使用
 :doc:`create_table </refs/client/item/m_create_table>`
-method:
+方法：
 
 .. code-block:: js
 
     item.create_table(item.view_form.find(".view-table"), table_options);
-    
-To create data controls to edit fields of the of the dataset use
+
+要创建数据控件来编辑数据集的字段，请使用
 :doc:`create_inputs </refs/client/item/m_create_inputs>`
-method:
+方法：
 
 .. code-block:: js
 
     item.create_inputs(item.edit_form.find(".edit-body"), input_options);
-    
-These methods have two parameters - **container** and **options**. The first 
-parameter is a JQuery container in which the controls will be placed. The second 
-- options, satisfying the way the data will be displayed. For detailed 
-information see their API reference.
 
-The methods are usually used in the **on_view_form_created** and  
-**on_edit_form_created** event handlers.
+这些方法有两个参数——**container**（容器）和 **options**（选项）。第一个
+参数是一个 JQuery 容器，控件将放置在其中。第二个
+——选项，满足数据显示的方式。详细信息
+请参阅它们的 API 参考。
 
-All visual controls (tables, inputs, checkboxes), created by this methods
-are data-aware. This means that they immediately reflect any changes of the 
-item dataset.
+这些方法通常在 **on_view_form_created** 和
+**on_edit_form_created** 事件处理程序中使用。
 
-Sometimes it is necessary to disable this interaction. To do so use the 
+所有由这些方法创建的可视控件（表格、输入框、复选框）
+都是数据感知的。这意味着它们会立即反映项目数据集的任何更改。
+
+有时需要禁用这种交互。为此，请分别使用
 :doc:`disable_controls </refs/client/item/m_disable_controls>`
-and 
+和
 :doc:`enable_controls </refs/client/item/m_enable_controls>`
-methods respectively. 
+方法。
 
-Videos
+视频
 ======
 
-`Data aware controls`_
+`Data aware controls`_（数据感知控件）
  
 .. _`Data aware controls`: https://youtu.be/fMTq8P4XdGw
-
-
-

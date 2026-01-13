@@ -1,60 +1,55 @@
 =======
-Filters
+过滤器
 =======
 
-For each item that have access to a database table a list of filter objects can 
-be created.
+对于每个可以访问数据库表的项目，都可以创建一个过滤器对象列表。
 
-To create filters use 
-an :doc:`Filters Dialog </admin/items/filters_dialog>` of the Application builder.
+要创建过滤器，请使用
+应用程序构建器的 :doc:`过滤器对话框 </admin/items/filters_dialog>`。
 
-Filters provide a convenient way for users to visually specify parameters of the
-request made by the application to the project database
+过滤器为用户提供了一种便捷的方式来可视化指定
+应用程序向项目数据库发出请求的参数。
 
-Each filter has the following attributes:
+每个过滤器都有以下属性：
 
-* ``owner`` – an item that owners this filter,
-* ``filter_name`` — the name of the filter that can be used in programming code
-* ``filter_caption`` - the name of the filter used in the visual representation 
-  in the client application,
-* ``filter_type`` — type of the filter, see 
-  :doc:`Filtering records <filtering_records>`,
-* ``visible`` — if the value of this attribute is ``true``, a visual 
-  representation of this filter will be created by the 
+* ``owner`` – 拥有此过滤器的项目，
+* ``filter_name`` — 过滤器的名称，可在编程代码中使用
+* ``filter_caption`` - 过滤器的名称，用于客户端应用程序中的可视化表示
+* ``filter_type`` — 过滤器的类型，请参阅
+  :doc:`筛选记录 <filtering_records>`，
+* ``visible`` — 如果此属性的值为 ``true``，当未指定 ``filters`` 选项时，
   :doc:`create_filter_inputs </refs/client/item/m_create_filter_inputs>`
-  method, when a ``filters`` option is not specified,
-* value — a value of the filter,
+  方法将为此过滤器创建可视化表示，
+* value — 过滤器的值，
 
-All filters of the item are attributes of the ``filters`` of its object.
-By using ``filter_name`` we can get access to the filter object:
+项目的所有过滤器都是其对象 ``filters`` 的属性。
+通过使用 ``filter_name``，我们可以访问过滤器对象：
 
 .. code-block:: js
 
     invoices.filters.invoicedate1.value = new Date()
 
-Another way to get access to the filter is to use
+另一种访问过滤器的方法是使用
 :doc:`filter_by_name </refs/client/item/m_filter_by_name>`
-method:
+方法：
 
 .. code-block:: js
 
     invoices.filter_by_name('invoicedate').value = new Date()
 
-
-See also
+另请参阅
 ========
 
-:doc:`Dataset <dataset>`
+:doc:`数据集 <dataset>`
 
-:doc:`Filtering records <filtering_records>`
+:doc:`筛选记录 <filtering_records>`
 
-
-Client
-------
+客户端
+-------
 
 :doc:`filters </refs/client/item/at_filters>`
 
-:doc:`Filter class </refs/client/filter_api>`
+:doc:`Filter 类 </refs/client/filter_api>`
 
 :doc:`assign_filters </refs/client/item/m_assign_filters>`
 
@@ -64,12 +59,12 @@ Client
 
 :doc:`filter_by_name </refs/client/item/m_filter_by_name>`
 
-Server
-------
+服务器端
+--------
 
 :doc:`filters </refs/server/item/at_filters>`
 
-:doc:`Filter class </refs/server/filter_api>`
+:doc:`Filter 类 </refs/server/filter_api>`
 
 :doc:`clear_filters </refs/server/item/m_clear_filters>`
 

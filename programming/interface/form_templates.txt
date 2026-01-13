@@ -1,52 +1,50 @@
 ==============
-Form templates
+表单模板
 ==============
 
-Form templates of the project are located in the 
+项目的表单模板位于
 :doc:`templates.html <templates_html>`
-file. This file is located in the root directory of a project,
-and accessed/modified by click on ``templates [F9]`` on :doc:`Task </admin/task>`  tree.
+文件中。该文件位于项目的根目录中，
+可通过点击 :doc:`Task </admin/task>` 树上的 ``templates [F9]`` 来访问/修改。
 
 .. image:: /programming/_images/forms_template_jampy.png
 	:align: center
-	:alt: Forms Template
+	:alt: 表单模板
 
-
-When 
+当执行
 :doc:`load </refs/client/task/m_load>` 
-method is executed, the file is processed and stored in the
+方法时，文件被处理并作为 JQuery 对象存储在
 :doc:`templates </refs/client/task/at_templates>`
-attribute as a JQuery object.
+属性中。
 
-To add a form template for an item you should add a div with the ``name-suffix``
-class in the templates div, where ``name`` is the 
+要为项目添加表单模板，您应该在 templates div 中添加一个 class 为 ``name-suffix``
+的 div，其中 ``name`` 是项目的
 :doc:`item_name </refs/client/abstr_item/at_item_name>`
-of the item and ``suffix`` 
-is the form type: view, edit, filter, param. 
+，而 ``suffix`` 
+是表单类型：view（查看）、edit（编辑）、filter（过滤）、param（参数）。
 
-For example:
+例如：
 
 .. code-block:: html
 
 	<div class="invoices-edit">
 		...
 	</div>
-	
-is an edit form template of the **invoices** item. 
 
-For a detail before its name there should be the name of its master, 
-separated by a hyphen: 
+是 **invoices** （发票）项目的编辑表单模板。
+
+对于明细表，其名称前应加上其主表的名称，
+并用连字符分隔：
 
 .. code-block:: html
 
 	<div class="invoices-invoice_table-edit">
 		...
 	</div>
-	
-If an item doesn't have a form template then the form template of its owner, if 
-defined, will be used. 
 
-So the template
+如果项目没有表单模板，则将使用其所有者的表单模板（如果已定义）。
+
+因此，模板
 
 .. code-block:: html
 
@@ -54,14 +52,12 @@ So the template
 		...
 	</div>
 
-will be used to create edit forms of items that **Journals** group owns and that 
-do not have its own edit form template. 
+将用于创建 **Journals** （日志）组所拥有且没有自己的编辑表单模板的项目的编辑表单。
 
-If, after searching this way, no template was found for an item, the template
-with the ``default-suffix`` class will 
-be used to create a form. 
+如果通过这种方式搜索后，没有为项目找到模板，则将使用 class 为 ``default-suffix`` 的模板
+来创建表单。
 
-So the template
+因此，模板
 
 .. code-block:: html
 
@@ -69,12 +65,11 @@ So the template
 		...
 	</div>
 
-will be used to create edit forms for items that have no templates defined for 
-them and their owners.
+将用于为那些没有为其及其所有者定义模板的项目创建编辑表单。
 
-When a new project is created the index.html already contains such templates.
+创建新项目时，index.html 已经包含此类模板。
 
-Below is an example of default edit form template from index.html file:
+下面是 index.html 文件中默认编辑表单模板的示例：
 
 .. code-block:: html
 
@@ -93,6 +88,6 @@ Below is an example of default edit form template from index.html file:
         </div>
     </div>
 
-There are more template examples in the
-:doc:`Form examples <form_examples>`
-section.
+更多模板示例，请参阅
+:doc:`表单示例 <form_examples>`
+部分。

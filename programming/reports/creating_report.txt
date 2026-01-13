@@ -1,14 +1,13 @@
 =================
-Creating a report
+创建报告
 =================
 
-To add a new report to Jam.py project, choose the Reports node in the project 
-tree, the click the New button and fill in the caption, name and the template file 
-name of the report.
+要向 Jam.py 项目添加新报告，请在项目树中选择 Reports（报告）节点，
+然后点击 New（新建）按钮，并填写报告的标题、名称和模板文件名。
 
 .. image:: /programming/_images/new_report_jampy.png
 	:align: center
-	:alt: Creating a report
+	:alt: 创建报告
 
-If a **visible** checkbox is set, the default code adds the report to the 
-**Reports** menu of the project.
+如果设置了 **visible** （可见）复选框，默认代码会将报告添加到项目的
+**Reports** （报告）菜单中。

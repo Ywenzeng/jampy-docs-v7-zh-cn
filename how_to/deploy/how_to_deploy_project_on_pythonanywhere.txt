@@ -36,6 +36,7 @@ How to deploy project on PythonAnywhere
   * WSGI configuration file: */var/www/username_pythonanywhere_com_wsgi.py* file,
   delete everything and add just the following code:
 
+
   .. code-block:: py
 
     import os

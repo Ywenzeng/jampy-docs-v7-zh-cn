@@ -1,15 +1,16 @@
 ========================
-Initializing application
+初始化应用程序
 ========================
 
-The
 :doc:`on_page_loaded </refs/client/task/on_page_loaded>`
-event is the first event triggered by an application on the client.
+事件是应用程序在客户端触发的第一个事件。
 
-The new project uses 
+新项目使用
 :doc:`on_page_loaded </refs/client/task/on_page_loaded>`
-event handler to dynamically build the application's main menu and attach the
-on click event handler to menu items using JQuery.
+事件处理程序来动态构建应用程序的主菜单，并使用 JQuery 为菜单项附加
+点击事件处理程序。
+
+
 
 .. code-block:: js
 
@@ -43,8 +44,8 @@ on click event handler to menu items using JQuery.
         });
 
 
-This event handler uses JQuery to select elements from the 
-:doc:`index.html <index_html>` to set their attributes and assign events. 
+此事件处理程序使用 JQuery 从
+:doc:`index.html <index_html>` 中选择元素，以设置它们的属性并分配事件。
 
 .. code-block:: html
 
@@ -70,6 +71,6 @@ This event handler uses JQuery to select elements from the
         </div>
 
 
-Finally, the 
+最后，调用任务的
 :doc:`create_menu </refs/client/task/m_create_menu>`
-method of the task is called to dynamically create the main project menu.
+方法来动态创建项目主菜单。

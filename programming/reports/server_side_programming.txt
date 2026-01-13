@@ -1,19 +1,18 @@
 ==============================
-Server-side report programming
+服务器端报告编程
 ==============================
 
-When a server gets a request from a client to generate report, it first of all 
-creates a copy of the report and then this copy calls the 
+当服务器收到客户端生成报告的请求时，它首先
+创建报告的副本，然后该副本调用
 :doc:`generate </refs/server/report/m_generate>` 
-method. 
+方法。
 
-This method triggers the
+此方法会触发
 :doc:`on_before_generate </refs/server/report/on_before_generate>` 
-event. In this event handler developer should write a code that generates the 
-content of the report.
+事件。在此事件处理程序中，开发人员应编写生成报告内容的代码。
 
-For example for the **invoice** report of the Demo application this event is as 
-follows:
+例如，演示应用程序的 **invoice** （发票）报告的事件处理程序如下：
+
 
 .. code-block:: py
 
@@ -45,50 +44,46 @@ follows:
         tax = invoices.tax.display_text
         total = invoices.total.display_text
         report.print_band('summary', locals())
+
     
-First, we use the
+首先，我们使用
 :doc:`copy </refs/server/item/m_copy>`
-method to create a copy of the invoices journal.
+方法创建 invoices（发票）日志的副本。
 
 .. code-block:: py
 
     invoices = report.task.invoices.copy()
 
-We create the copy because multiple users can simultaneously generate the same 
-report in parallel threads.
+我们创建副本是因为多个用户可以在并行线程中同时生成相同的报告。
 
-Then we call the set_where method of the copy:
+然后，我们调用副本的 set_where 方法：
 
 .. code-block:: py
 
     invoices.set_where(id=report.id.value)
 
-where report.id.value is report id parameter, the value of which we set in the 
+其中 report.id.value 是报告的 id 参数，我们在客户端的
 :doc:`on_before_print_report </refs/client/report/on_before_print_report>`
-event handler on the client and which is equal to the current **id** field 
-value of the **invoice** journal.
+事件处理程序中设置了其值，该值等于 **invoice** （发票）日志当前 **id** 字段的值。
 
-Then, using the 
+然后，使用
 :doc:`open </refs/server/item/m_open>`
-method, we obtain the records on the server. After that the 
+方法，我们在服务器上获取记录。之后，使用
 :doc:`print_band </refs/server/report/m_print_band>`
-method is used to print title band:
+方法打印标题栏：
 
 .. code-block:: py
 
     report.print_band('title', locals())
 
-But before that we assign values to four local variables: customer, address, 
-city and date that correspond to programmable cells in the title band in the 
-report template.
+但在此之前，我们为四个局部变量赋值：customer（客户）、address（地址）、
+city（城市）和 date（日期），这些变量对应报告模板中标题栏的可编程单元格。
 
-Then the same way we generate detail and summary bands.
+然后，以相同的方式生成明细栏和汇总栏。
 
-When the report is generated and the value of report 
+报告生成后，如果客户端设置的报告
 :doc:`extension </refs/client/report/at_extension>`
-attribute, set on the client, is not equals 'pdf' the server converts the ods 
-file using **LibreOffice**.
+属性值不等于 'pdf'，服务器会使用 **LibreOffice** 转换 ods 文件。
 
-Once the report is generated it is stored in a report folder of the static 
-directory and the server sends the client the report file url.
+报告生成后，它将存储在 static 目录的 report 文件夹中，服务器会向客户端发送报告文件的 url。
 

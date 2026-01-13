@@ -1,49 +1,47 @@
 ===================
-Navigating datasets
+浏览数据集
 ===================
 
-Each active dataset has a cursor, or pointer, to the current row in the dataset. 
-The current row in a dataset is the one whose values can be manipulated by 
-``edit``, ``insert``, and ``delete`` methods, and the one, whose field values, 
-data-aware controls on a form currently show.
+每个活动数据集都有一个游标或指针，指向数据集中的当前行。
+数据集中的当前行是可以通过
+``edit``、``insert`` 和 ``delete`` 方法操作的行，也是其字段值
+当前显示在表单上数据感知控件中的行。
 
-You can change the current row by moving the cursor to point at a different row. 
-The following table lists methods you can use in application code to move to 
-different records:
+您可以通过将游标移动到指向不同的行来更改当前行。
+下表列出了您可以在应用程序代码中用于移动到
+不同记录的方法：
 
 .. csv-table:: 
-   :header: Client method, Server method, Description
+   :header: 客户端方法, 服务器端方法, 描述
    :widths: 10, 10, 80
 
-   :doc:`first </refs/client/item/m_first>`, :doc:`first </refs/server/item/m_first>`, "Moves the cursor to the first row in an item dataset."
-   :doc:`last </refs/client/item/m_last>`, :doc:`last </refs/server/item/m_last>`, "Moves the cursor to the last row in an item dataset."
-   :doc:`next </refs/client/item/m_next>`, :doc:`next </refs/server/item/m_next>`, "Moves the cursor to the next row in an item dataset."
-   :doc:`prior </refs/client/item/m_prior>`, :doc:`prior </refs/server/item/m_prior>`, "Moves the cursor to the previous row in an item dataset."
+   :doc:`first </refs/client/item/m_first>`, :doc:`first </refs/server/item/m_first>`, "将游标移动到项目数据集的第一行。"
+   :doc:`last </refs/client/item/m_last>`, :doc:`last </refs/server/item/m_last>`, "将游标移动到项目数据集的最后一行。"
+   :doc:`next </refs/client/item/m_next>`, :doc:`next </refs/server/item/m_next>`, "将游标移动到项目数据集的下一行。"
+   :doc:`prior </refs/client/item/m_prior>`, :doc:`prior </refs/server/item/m_prior>`, "将游标移动到项目数据集的上一行。"
 
-
-In addition to these methods, the following table describes two methods that 
-provide useful information when iterating through the records in a dataset:
-
-.. csv-table:: 
-   :header: Client method, Server method, Description
-   :widths: 10, 10, 80
-   
-   :doc:`bof </refs/client/item/m_bof>`, :doc:`bof </refs/server/item/m_bof>`,  "If the method returns true, the cursor is at the first row in the dataset, otherwise, the cursor is not known to be at the first row in the dataset."
-   :doc:`eof </refs/client/item/m_eof>`, :doc:`eof </refs/server/item/m_eof>`,  "If the method returns true, the cursor is at the last row in the dataset, otherwise, the cursor is not known to be at the last row in the dataset."
-
-Each time the cursor move to another record in the dataset the following events
-are triggered:
+除了这些方法之外，下表描述了两种在遍历数据集记录时
+提供有用信息的方法：
 
 .. csv-table:: 
-   :header: Client event, Server event, Description
+   :header: 客户端方法, 服务器端方法, 描述
    :widths: 10, 10, 80
    
-   :doc:`on_before_scroll </refs/client/item/on_before_scroll>`, ``on_before_scroll``,  "Occurs before an application scrolls from one record to another."
-   :doc:`on_after_scroll </refs/client/item/on_after_scroll>`, ``on_after_scroll``,  "Occurs after an application scrolls from one record to another."
+   :doc:`bof </refs/client/item/m_bof>`, :doc:`bof </refs/server/item/m_bof>`,  "如果该方法返回 true，则游标位于数据集的第一行；否则，未知游标是否位于数据集的第一行。"
+   :doc:`eof </refs/client/item/m_eof>`, :doc:`eof </refs/server/item/m_eof>`,  "如果该方法返回 true，则游标位于数据集的最后一行；否则，未知游标是否位于数据集的最后一行。"
 
-Using this methods we can navigate a dataset. For example,
+每次游标在数据集中移动到另一条记录时，都会触发以下事件：
 
-on the client:
+.. csv-table:: 
+   :header: 客户端事件, 服务器端事件, 描述
+   :widths: 10, 10, 80
+   
+   :doc:`on_before_scroll </refs/client/item/on_before_scroll>`, ``on_before_scroll``,  "在应用程序从一条记录滚动到另一条记录之前发生。"
+   :doc:`on_after_scroll </refs/client/item/on_after_scroll>`, ``on_after_scroll``,  "在应用程序从一条记录滚动到另一条记录之后发生。"
+
+使用这些方法，我们可以浏览数据集。例如，
+
+在客户端：
 
 .. code-block:: js
 
@@ -54,8 +52,8 @@ on the client:
             customers.next();
         }
     }
-    
-on the server:
+
+在服务器端：
 
 .. code-block:: py
 
@@ -65,13 +63,13 @@ on the server:
             print customers.firstname.value, customers.lastname.value
             customers.next()
 
-Shorter ways to navigate dataset
+更简洁的浏览数据集方式
 ================================
 
-There is the :doc:`each </refs/client/item/m_each>` method on the client that can 
-be used to navigate a dataset:
+客户端上有 :doc:`each </refs/client/item/m_each>` 方法，可用于
+浏览数据集：
 
-For example:
+例如：
 
 .. code-block:: js
 
@@ -85,7 +83,7 @@ For example:
         });
     }
 
-On the server we can iterate dataset rows the following way:
+在服务器端，我们可以通过以下方式遍历数据集行：
 
 .. code-block:: py
 
@@ -96,6 +94,6 @@ On the server we can iterate dataset rows the following way:
                 break
             print c.firstname.value, c.lastname.value
 
-Both functions will output customer names for the first 10 records in the dataset.
+两个函数都将输出数据集中前 10 条记录的客户姓名。
 
-In both cases the **c** and **customers** are pointers to the same object.
+在这两种情况下，**c** 和 **customers** 都是指向同一对象的指针。

@@ -105,14 +105,14 @@
 :doc:`过滤器 <filters>`
 
 客户端
-------
+--------
 
 :doc:`open </refs/client/item/m_open>`
 
 :doc:`set_where </refs/client/item/m_set_where>`
 
 服务器端
-------
+--------
 
 :doc:`open </refs/server/item/m_open>`
 

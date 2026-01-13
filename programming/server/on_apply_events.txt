@@ -1,21 +1,20 @@
 ===============
-on_apply events
+on_apply 事件
 ===============
 
-When the ``apply`` method of the item is called 
-on the :doc:`client </refs/client/item/m_apply>` or the 
-:doc:`server </refs/server/item/m_apply>`, the server application, by default,
-generates SQL query, based on changes made to the dataset and executes it.
+当在 :doc:`客户端 </refs/client/item/m_apply>` 或
+:doc:`服务器端 </refs/server/item/m_apply>` 调用项目的 ``apply`` 方法时，
+服务器应用程序默认会根据对数据集所做的更改生成 SQL 查询并执行它。
 
-This behavior can be changed by writing an 
+可以通过在项目服务器模块中编写
 :doc:`on_apply </refs/server/item/on_apply>`
-event handler in the item server module.
+事件处理程序来更改此行为。
 
-Sometimes it becomes necessary to execute some code, when changes are saved, for 
-all items. In this case the ``on_apply`` event handler of the task (declared 
-in the task server module) can be used.
+有时需要在保存更改时为所有项目执行一些代码。
+在这种情况下，可以使用任务的 ``on_apply`` 事件处理程序（声明
+在任务服务器模块中）。
 
-The following code describes how these events are handled:
+以下代码描述了如何处理这些事件：
 
 .. code-block:: py
 
@@ -30,21 +29,19 @@ The following code describes how these events are handled:
   #...
   return result
 
-It checks if the task has an ``on_apply`` event handler. If the ``on_apply`` 
-event handler is declared in the task server module, it is executed.
+它会检查任务是否有 ``on_apply`` 事件处理程序。如果 ``on_apply``
+事件处理程序声明在任务服务器模块中，则执行它。
 
-If the ``on_apply`` event handler of the task is not declared or the result 
-of the event handler returns ``None``, the method checks whether the item has an 
+如果任务的 ``on_apply`` 事件处理程序未声明或事件处理程序的结果
+返回 ``None``，该方法会检查项目是否有
 :doc:`on_apply </refs/server/item/on_apply>`
-event handler. If it is declared in the item server module, it is executed.
+事件处理程序。如果它声明在项目服务器模块中，则执行它。
 
-If the result returned by the item event handler is ``None``, the 
-``apply_delta`` method of the item is called that generates SQL query,
-execute it and returns the result
+如果项目事件处理程序返回的结果是 ``None``，则调用项目的
+``apply_delta`` 方法，该方法会生成 SQL 查询，
+执行它并返回结果。
 
-
-Example
+示例
 =======
 
-:doc:`Here is an example how on_apply can be used </how_to/how_to_multitenancy>`
-
+:doc:`这是一个如何使用 on_apply 的示例 </how_to/how_to_multitenancy>`

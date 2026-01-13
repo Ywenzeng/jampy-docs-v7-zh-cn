@@ -1,32 +1,28 @@
 ================
-Report templates
+报告模板
 ================
 
-To create a report, you must first prepare a report template in LibreOffice Calc. 
+要创建报告，首先必须在 LibreOffice Calc 中准备报告模板。
 
-The template files are located in the report folder of the project directory. 
+模板文件位于项目目录的 report 文件夹中。
 
-The following figure shows a template of the Invoice report. 
-
+下图显示了 Invoice（发票）报告的模板。
 
 .. image:: /programming/_images/template_jampy.png
 	:align: center
-	:alt: Invoice report template
+	:alt: 发票报告模板
 
+Jam.py 中的报告是面向栏的。
 
-Reports in Jam.py are band-oriented. 
+每个报告模板都分为若干栏。要设置栏，请使用模板电子表格的最左侧列。
 
-Each report template is divided into bands. To set bands use the leftmost column 
-of a template spreadsheet. 
+在 Invoice（发票）报告模板中，有三个栏：**title**（标题）、**detail**（明细）和
+**summary**（汇总）。
 
-In the Invoice report template there are three bands: **title**, **detail** and 
-**summary**. 
+此外，模板可以包含可编程单元格。
 
-In addition, templates can have programmable cells. 
+例如，在 Invoice 报告模板中，I7 单元格包含文本
+%(date)s。
 
-For example, in the template of Invoice report the I7 cell contains the text 
-%(date)s. 
-
-Programmable cell begins with **%**, then follows the name of the cell in 
-the parenthesis which is followed by character **s**.	
-
+可编程单元格以 **%** 开头，然后是括号中的单元格名称，
+后跟字符 **s**。

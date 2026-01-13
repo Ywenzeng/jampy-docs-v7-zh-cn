@@ -1,56 +1,52 @@
 ===========
-Form events
+表单事件
 ===========
 
-After the form is created and the HTML form template is added to the DOM, 
-the application triggers the following form events during the life cycle of 
-the form:
+表单创建完成且 HTML 表单模板添加到 DOM 后，
+应用程序会在表单的生命周期内触发以下表单事件：
 
-* ``on_view_form_created`` - the event is triggered when the form has been created but not shown yet
+* ``on_view_form_created`` - 当表单已创建但尚未显示时触发此事件
 
-* ``on_view_form_shown`` -the event is triggered when the the form has been shown
+* ``on_view_form_shown`` - 当表单已显示时触发此事件
 
-* ``on_view_form_close_query`` - the event is triggered when an attempt is made to close the form
+* ``on_view_form_close_query`` - 当尝试关闭表单时触发此事件
 
-* ``on_view_form_closed`` - the event is triggered when the form has been closed
+* ``on_view_form_closed`` - 当表单已关闭时触发此事件
 
-* ``on_view_form_keydown`` - the event is triggered when the keydown event occurs for the form
+* ``on_view_form_keydown`` - 当表单发生 keydown 事件时触发此事件
 
-* ``on_view_form_keyup`` - the event is triggered when the keyup event occurs for the form
+* ``on_view_form_keyup`` - 当表单发生 keyup 事件时触发此事件
 
-For other form types - edit, filter and param, replace 'view' with the form type, 
-for example ``on_edit_form_created`` for edit form.
+对于其他表单类型——edit（编辑）、filter（过滤）和 param（参数），将 'view' 替换为表单类型，
+例如，编辑表单的 ``on_edit_form_created``。
 
-We will first explain how to use the ``on_view_form_created`` event.
+我们将首先解释如何使用 ``on_view_form_created`` 事件。
 
-When the user clicks on menu item the application executes the
-:doc:`view </refs/client/item/m_view>`
-method of corresponding task tree item, this method creates a form using its HTML 
-form template and triggers first the 
-:doc:`on_view_form_created </refs/client/task/on_view_form_created>` event of 
-the task.
+当用户点击菜单项时，应用程序执行
+相应任务树项目的 :doc:`view </refs/client/item/m_view>`
+方法，该方法使用其 HTML 表单模板创建表单，并首先触发任务的
+:doc:`on_view_form_created </refs/client/task/on_view_form_created>` 事件。
 
-When you create a new project, the task client module already contains the 
-code, including the  
+当您创建一个新项目时，任务客户端模块已包含
+代码，其中包括
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-event handler. This event handler is executed each time the view form is created
-and defines the default behavior of view forms. 
+事件处理程序。每次创建查看表单时都会执行此事件处理程序，
+并定义查看表单的默认行为。
 
-You can open the task client module to see this event handler. 
-If you need to change the default behavior for all view forms of the project, 
-you should do it here.
+您可以打开任务客户端模块查看此事件处理程序。
+如果您需要更改项目中所有查看表单的默认行为，
+应在此处进行更改。
 
-Below we describe the major steps it performs:
+下面我们描述其主要执行步骤：
 
-* Initializes the
+* 初始化
   :doc:`view_form </refs/client/item/at_view_form>`
-  and
+  和
   :doc:`table_options </refs/client/item/at_table_options>`
-  that are used by some methods when view form and table are created.
+  ，这些属性在创建查看表单和表格时被某些方法使用。
 
-* Assigns JQuery event handlers for default buttons to methods of the item,
-  depending on the user rights. In the example below the delete button is.
-  Initialized:
+* 根据用户权限，将默认按钮的 JQuery 事件处理程序分配给项目的方法。
+  在下面的示例中，初始化了删除按钮：
 
   .. code-block:: js
 
@@ -64,11 +60,11 @@ Below we describe the major steps it performs:
         item.view_form.find("#delete-btn").prop("disabled", true);
     }
 
-* Executes the
+* 执行项目的
   :doc:`on_view_form_created </refs/client/group/on_view_form_created>`
-  event handler of the item group and.
+  事件处理程序，以及项目的
   :doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-  of the item if they are defined:
+  事件处理程序（如果已定义）：
 
   .. code-block:: js
 
@@ -80,30 +76,27 @@ Below we describe the major steps it performs:
         item.on_view_form_created(item);
     }
 
-* Creates a table to display the item data and tables for details if they have 
-  been specified by calling ``create_view_tables`` method
+* 创建一个表格来显示项目数据，并为明细表创建表格（如果已通过调用 ``create_view_tables`` 方法指定）
 
-* Executes 
+* 执行
   :doc:`open </refs/client/item/m_open>`
-  method, that gets the item dataset from the server.
+  方法，从服务器获取项目数据集。
   
-* Finally returns true to prevent calling of the ``on_view_form_created`` of the
-  owner group and the item because the were already called see the 
-  ``_process_event`` method below.
+* 最后返回 true，以防止调用所有者组和项目的 ``on_view_form_created`` 事件处理程序，因为它们已被调用（参见下面的 ``_process_event`` 方法）。
   
-After we initialized buttons and before creating tables we call the 
-``on_view_form_created`` event handler of the item itself.
+在我们初始化按钮之后、创建表格之前，我们调用了
+项目本身的 ``on_view_form_created`` 事件处理程序。
 
-For example, in the client module of the tracks item of the demo app 
-the following 
+例如，在演示应用程序的 tracks（曲目）项目的客户端模块中，
+定义了以下
 :doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-event handler is defined. In it we
-change the height attribute of the 
+事件处理程序。在其中，我们
+更改了
 :doc:`table_options </refs/client/item/at_table_options>`
-, create the copy of the
-invoice_table set its attributes and call its
+的 height（高度）属性，创建了
+invoice_table（发票表格）的副本，设置其属性，并调用其
 :doc:`create_table </refs/client/item/m_create_table>`
-method that creates a table to display its data. 
+方法来创建一个表格以显示其数据。
 
 .. code-block:: js
 
@@ -118,32 +111,29 @@ method that creates a table to display its data.
     item.alert('Double-click the record in the bottom table to see track sales.');
   }
 
-The module also has the 
+
+该模块还有一个
 :doc:`on_after_scroll </refs/client/item/on_after_scroll>`
-event handler that will be executed when
-the user moves to the other track and will get the sales of this track. 
+事件处理程序，当
+用户移动到另一首曲目时将执行此处理程序，并获取该曲目的销售数据。
 
-This example explains the principle of form events usage.
+这个示例解释了表单事件的使用原理。
 
-The order of triggering of events depends on the type of event.
+事件的触发顺序取决于事件的类型。
 
-
-The order in which events are generated depends on the type of event.
-
-Close query events 
+关闭查询事件
 ==================
 
-When user tries to close the form the on_close_query event is first triggered 
-(if defined) for the item.   
+当用户尝试关闭表单时，首先会为项目触发 on_close_query 事件
+（如果已定义）。
 
-If the event handler returns true the application closes the form,
-else if the event handler returns false the application leaves the form open,
-otherwise the on_close_query event is triggered (if defined) the same way 
-for the item group and then for the task.
+如果事件处理程序返回 true，应用程序将关闭表单，
+否则，如果事件处理程序返回 false，应用程序将保持表单打开，
+否则，会以相同方式为项目组和任务触发 on_close_query 事件（如果已定义）。
 
-For example, by default there is the 
+例如，默认情况下，任务客户端模块中有一个
 :doc:`on_edit_form_close_query </refs/client/item/on_edit_form_close_query>`
-event handler in the task client module:
+事件处理程序：
 
 .. code-block:: js
 
@@ -168,12 +158,11 @@ event handler in the task client module:
       return result;
   }
 
-This code checks whether the record has been modified and then opens 
-"Yes No Cancel" dialog.
+此代码检查记录是否已被修改，然后打开
+"是 否 取消" 对话框。
 
-If we want to close the form without this dialog we can defined the following
-event handler in the client module of the item:
-
+如果我们想在不显示此对话框的情况下关闭表单，可以在项目的客户端模块中定义以下
+事件处理程序：
 
 .. code-block:: js
 
@@ -182,18 +171,16 @@ event handler in the client module of the item:
       return true;
   }
 
-
-Keydown, keyup events
+Keydown、Keyup 事件
 =====================
 
-These events are triggered the same way as Close query events, starting from the item,
-but if the event handler returns true, the event handlers of the group and task 
-are not executed.
+这些事件的触发方式与关闭查询事件相同，从项目开始，
+但如果事件处理程序返回 true，则不会执行组和任务的
+事件处理程序。
 
-For example, by default there is the 
+例如，默认情况下，任务客户端模块中有一个
 :doc:`on_edit_form_keyup </refs/client/item/on_edit_form_keyup>`
-event handler in the task client module:
-
+事件处理程序：
 
 .. code-block:: js
 
@@ -204,11 +191,10 @@ event handler in the task client module:
       }
   }
 
-This code saves the changes of the record to the database table when user 
-presses Ctrl+Enter.
+此代码在用户按下 Ctrl+Enter 时将记录的更改保存到数据库表。
 
-Suppose we want to save the changes when user presses Enter. Then we write the
-following event handler in the item client module:
+假设我们希望在用户按下 Enter 时保存更改。那么我们在项目客户端模块中编写
+以下事件处理程序：
 
 .. code-block:: js
 
@@ -220,20 +206,16 @@ following event handler in the item client module:
       }
   }
 
-In this case the event handler of the task won't be called when the user press
-Enter.
+在这种情况下，当用户按下 Enter 时，任务的事件处理程序将不会被调用。
 
-
-All other events
+所有其他事件
 ================
 
-For other events, the event handler of the task is called first, if it doesn't 
-return true, the event handler of the group is executed if it doesn't 
-return true the event handler of the item is called.
+对于其他事件，首先调用任务的事件处理程序，如果它没有
+返回 true，则执行组的事件处理程序（如果它没有
+返回 true），然后调用项目的事件处理程序。
 
-
-This mechanism is implemented the ``_process_event`` method of the Item class in 
-the *jam.js* module.
+此机制由 *jam.js* 模块中 Item 类的 ``_process_event`` 方法实现。
 
 .. code-block:: js
 

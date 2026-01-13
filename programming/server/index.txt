@@ -1,56 +1,56 @@
 =======================
-Server side programming
+服务器端编程
 =======================
 
-In most cases, the client sends a request to the server when  following methods 
-of an item are executed:
+在大多数情况下，当执行项目的以下方法时，客户端会向服务器发送请求：
 
 * :doc:`open </refs/client/item/m_open>`
 * :doc:`apply </refs/client/item/m_apply>`
 * :doc:`print </refs/client/report/m_print>`
 * :doc:`server </refs/client/abstr_item/m_server>`
 
-In these cases the client sends to the server the 
+在这些情况下，客户端向服务器发送项目任务的
 :doc:`ID </refs/client/abstr_item/at_id>`
-of the item's task, the
+、项目的
 :doc:`ID </refs/client/abstr_item/at_id>`
-of the item, the type of the request and its parameters.
+、请求类型及其参数。
 
-The server on receiving the request, based on passed IDs, finds the task 
-(it can be Project task or Application builder task) and the item on the server, 
-executes the corresponding method with passed parameters and returns the result of
-the execution to the client. The server method can trigger events that can 
-modify its default behavior.
+服务器收到请求后，根据传递的 ID，找到服务器上的任务
+（可以是项目任务或应用程序构建器任务）和项目，
+使用传递的参数执行相应方法，并将执行结果
+返回给客户端。服务器方法可以触发事件，这些事件可以
+修改其默认行为。
 
-Every item of the task tree have the 
+任务树中的每个项目都有
 :doc:`environ </refs/server/abstr_item/at_environ>`
-and
+和
 :doc:`session </refs/server/abstr_item/at_session>`
-attributes that store context of the current request.
+属性，用于存储当前请求的上下文。
 
-The most common server events are:
+最常见的服务器事件有：
 
-* :doc:`on_created </refs/server/task/on_created>` - The event is triggered by the task when it has just been created by the server application. It can be used to initialize the project.
+* :doc:`on_created </refs/server/task/on_created>` - 当任务刚刚被服务器应用程序创建时，由任务触发此事件。可用于初始化项目。
 
-* :doc:`on_apply events <on_apply_events>` - These events are triggered when the ``apply`` method of the item is called on the :doc:`client </refs/client/item/m_apply>` or the :doc:`server </refs/server/item/m_apply>`
-* :doc:`on_open_events <on_open_events>` - These events are triggered when the ``open`` method of the item is called on the :doc:`client </refs/client/item/m_open>` or the :doc:`server </refs/server/item/m_open>`
+* :doc:`on_apply 事件 <on_apply_events>` - 当在 :doc:`客户端 </refs/client/item/m_apply>` 或 :doc:`服务器端 </refs/server/item/m_apply>` 调用项目的 ``apply`` 方法时触发这些事件。
+* :doc:`on_open_events <on_open_events>` - 当在 :doc:`客户端 </refs/client/item/m_open>` 或 :doc:`服务器端 </refs/server/item/m_open>` 调用项目的 ``open`` 方法时触发这些事件。
 
-* :doc:`on_generate </refs/server/report/on_generate>` - "The event is triggered when the :doc:`print </refs/client/report/m_print>` method of a report is called on the client.
+* :doc:`on_generate </refs/server/report/on_generate>` - 当在客户端调用报告的 :doc:`print </refs/client/report/m_print>` 方法时触发此事件。
 
 .. note::
-    Note that the task tree on the server is immutable, you can not change the 
-    attributes of the items in the task tree.
+    请注意，服务器上的任务树是不可变的，您不能更改
+    任务树中项目的属性。
 
-    You must use the
+    您必须使用
     :doc:`copy </refs/server/item/m_copy>`
-    method to create a copy of an item. This copy is an exact copy of an item 
-    at the time of creating of the task tree. It is not added to the 
-    :doc:`task tree </programming/task_tree>`
-    and will be destroyed by Python garbage collector when no longer needed. 
+    方法来创建项目的副本。此副本是创建任务树时项目的
+    精确复制品。它不会添加到
+    :doc:`任务树 </programming/task_tree>`
+    中，并且在不再需要时会被 Python 垃圾回收器销毁。
 
 .. toctree::
     :maxdepth: 1
 
     on_apply_events
     on_open_events
-    
+
+
