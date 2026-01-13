@@ -1,46 +1,38 @@
 ==============
-Filters Dialog
+过滤器对话框
 ==============
 
-Use **Filters Dialog** to create and modify item filters. See 
-:doc:`Filters </programming/data/filters>`
+使用 **Filters Dialog** （过滤器对话框）创建和修改项目过滤器。请参阅
+:doc:`过滤器 </programming/data/filters>`
 
 .. image:: /admin/_images/filters_dialog_jampy.png
 	:align: center
-	:alt: Filters Dialog
-	
-To add or edit a filter click on the appropriate button on the form. The 
-following form will appear:
+	:alt: 过滤器对话框
 
+要添加或编辑过滤器，请点击表单上的相应按钮。将出现以下表单：
 
 .. image:: /admin/_images/filter_editor_jampy.png
 	:align: center
-	:alt: Filter Editor
+	:alt: 过滤器编辑器
 
-Fill in the following fields:
+填写以下字段：
 
-* **Field** - the field which will be used to filter records.
+* **Field** （字段）- 将用于筛选记录的字段。
 
-* **Caption** - the filter name that appears to users.
+* **Caption** （标题）- 向用户显示的过滤器名称。
 
-* **Name** - the name of the filter that will be used in programming code to 
-  get access to the filter object. It should be a valid python identifier.
+* **Name** （名称）- 过滤器的名称，将在编程代码中用于访问过滤器对象。它应该是一个有效的 Python 标识符。
 
-* **Filter type** - select filter type.
+* **Filter type** （过滤器类型）- 选择过滤器类型。
 
-* **Placeholder** - use this attribute to specify the placeholder that will be
-  displayed by the field input.
+* **Placeholder** （占位符）- 使用此属性指定字段输入将显示的占位符。
 
-* **Help** - if any text / html-message is specified, a question mark will be 
-  displayed to the right of the input, so when the user moves the mouse pointer 
-  over this mark, a pop-up window appears displaying this message.
+* **Help** （帮助）- 如果指定了任何文本/HTML 消息，将在输入框右侧显示一个问号，当用户将鼠标指针移到该标记上时，将弹出一个窗口显示此消息。
 
-Help - if any text / html-message is specified, a question mark will be displayed to the right of the input, 
-so when the user moves the mouse pointer over this label, a pop-up window appears displaying this message.
+帮助 - 如果指定了任何文本/HTML 消息，将在输入框右侧显示一个问号，当用户将鼠标指针移到该标签上时，将弹出一个窗口显示此消息。
 
-* **Visible** - if this checkbox is not checked, this filter will not be displayed
-  in the item Filters dialog.
+* **Visible** （可见）- 如果未勾选此复选框，此过滤器将不会显示在项目的过滤器对话框中。
 
-Use the up and down arrows to place the filters in the order in which they will 
-be displayed. See 
+使用上下箭头将过滤器按照它们将显示的顺序排列。请参阅
 :doc:`create_filter_inputs </refs/client/item/m_create_filter_inputs>`
+

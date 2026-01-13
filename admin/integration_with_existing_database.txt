@@ -1,56 +1,52 @@
 ==================================
-Importing existing database tables
+导入现有数据库表
 ==================================
 
-For importing existing database tables: 
+要导入现有数据库表：
 
-* Create a new project with connection to existing database.
+* 创建一个连接到现有数据库的新项目。
 
-* Select Project node and click Database button. Set 
+* 选择 Project（项目）节点并点击 Database（数据库）按钮。将
   :doc:`DB manual mode </admin/project/database>`
-  to true.
+  （数据库手动模式）设置为 true。
 
-* Select group you want to import a table to and click Import button. 
+* 选择您要导入表到的组，然后点击 Import（导入）按钮。
 
-* In the form that will appear dbl click on the table to import it.
+* 在出现的表单中，双击要导入的表。
 
 .. image:: /admin/_images/Import_tables_jampy.png
 	:align: center
 	:alt: import_tables_jampy.png
 
-
-* In the 
-  :doc:`Item Editor Dialog </admin/items/item_editor_dialog>`
-  check that all fields have valid types. If field type is displayed in the red,
-  try to select appropriate type.
+* 在
+  :doc:`项目编辑器对话框 </admin/items/item_editor_dialog>`
+  中，检查所有字段是否具有有效的类型。如果字段类型显示为红色，
+  请尝试选择适当的类型。
   
-  You can import a subset of fields in the table.
+  您可以导入表中的字段子集。
   
-  Before saving, specify the primary key field for the item and generator name, 
-  if necessary.
+  在保存之前，如有必要，请指定项目的主键字段和生成器名称。
 
-* After saving the imported item, go to the project page and check how it is 
-  displayed.
+* 保存导入的项目后，转到项目页面，检查其显示情况。
    
-* After importing several tables, you can specify lookup fields (in DB manual mode).     
-
-
-.. note::
-
-    Please, do be very careful when performing this operations.
-    
-    When DB manual mode is removed any changes to the item will be reflected in
-    the corresponding DB table. If you delete the item, the table will be dropped
-    from the database.
+* 导入多个表后，您可以指定查找字段（在数据库手动模式下）。     
 
 .. note::
+
+    请注意，执行此操作时请务必小心。
     
-  The database table to be imported must have a primary key with one field.
+    当移除数据库手动模式后，对项目所做的任何更改都将反映在
+    相应的数据库表中。如果您删除项目，该表将从
+    数据库中删除。
 
 .. note::
     
-  Binary fields must not be imported.
+  要导入的数据库表必须具有一个字段的主键。
+
+.. note::
+    
+  二进制字段不得导入。
   
 .. note::
 
-    The indexes are not imported.
+    索引不会被导入。

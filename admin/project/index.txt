@@ -1,24 +1,23 @@
 ==================
-Project management
+项目管理
 ==================
 
-After the Application builder is first run or when the **Project** node is selected
-in the project tree, the Application builder page will look as follows:
+应用程序构建器首次运行后，或在项目树中选择 **Project** （项目）节点时，
+应用程序构建器页面将如下所示：
 
 .. image:: /admin/_images/project_node_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Project management
+	:alt: 项目管理
 
 
 .. important::
 
-        As seen on top right corner, The Name of the application is displayed, name of the database used, application version number, and 
-        ``Jam.py`` framework ``version`` number. 
+        如右上角所示，显示应用程序的名称、使用的数据库名称、应用程序版本号以及
+        ``Jam.py`` 框架的 ``版本`` 号。
 
 
-Click on the links below to see the purpose of the buttons in the right panel of 
-the page.
+点击下面的链接以了解页面右侧面板中按钮的用途。
 
 .. toctree::
    :maxdepth: 1

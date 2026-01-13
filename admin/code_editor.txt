@@ -1,54 +1,52 @@
 ===========
-Code editor
+代码编辑器
 ===========
 
-For every item of the project :doc:`task tree </programming/task_tree>` there 
-are two buttons in the upper-right corner of the
-:doc:`Application builder <index>`
-: ``Client module [F7]`` 
-and ``Server module[F8]``.
+对于项目 :doc:`任务树 </programming/task_tree>` 中的每个项目，
+在
+:doc:`应用程序构建器 <index>`
+的右上角有两个按钮：``Client module [F7]`` （客户端模块 [F7]）
+和 ``Server module[F8]`` （服务器模块 [F8]）。
 
 
 .. image:: /admin/_images/item_btns_jampy.png
 	:align: center
-	:alt: Invoke code editor buttons
+	:alt: 调用代码编辑器按钮
 
 
-By clicking on these buttons the Code Editor for the client or server 
-module of the item will be opened. 
-(See :doc:`Working with modules </programming/modules>`)
+点击这些按钮将打开项目的客户端或服务器模块的代码编辑器。
+（参见 :doc:`使用模块 </programming/modules>`）
 
-To the left of the **Editor** there is an information pane with four tabs: 
+在 **编辑器** 的左侧是一个包含四个选项卡的信息窗格：
 
-* **Module** - this tab displays all events and functions defined in the editor, 
-  double-click on one of them to move the cursor to the proper function. 
-* **Events** - displays all the published event of the item, double-click to 
-  add a wrapper for the event at the current cursor position (see the 
-  on_before_post event on the figure above).
-* **Task** - the 
-  :doc:`task tree </programming/task_tree>`, 
-  double-click on the node to enter the item_name at the current cursor position.
-* **Fields** - the field list of the current item, double-click on one of the 
-  fields to enter the field_name at the current cursor position.
+* **Module** （模块）- 此选项卡显示编辑器中定义的所有事件和函数，
+  双击其中一个可将光标移动到相应的函数处。
+* **Events** （事件）- 显示项目的所有已发布事件，双击可在
+  当前光标位置添加事件的包装器（参见上图中的 on_before_post 事件）。
+* **Task** （任务）- 
+  :doc:`任务树 </programming/task_tree>`，
+  双击节点可在当前光标位置输入 item_name。
+* **Fields** （字段）- 当前项目的字段列表，双击其中一个
+  字段可在当前光标位置输入 field_name。
   
-To save changes click the **OK** button or press Ctrl-S.
+要保存更改，请点击 **OK** （确定）按钮或按 Ctrl-S。
 
-To search the project modules, click the **Find in project** button or press 
-Alt-F to display the 
-:doc:`Find in project Dialog <project/find>`
+要搜索项目模块，请点击 **Find in project** （在项目中查找）按钮或按
+Alt-F 以显示
+:doc:`在项目中查找对话框 <project/find>`
 
-Jam.py uses the `ace editor`_  editor to implement its code editor. More recent Jam.py
-version will use Microsoft `Monaco editor`_.
+Jam.py 使用 `ace 编辑器`_ 来实现其代码编辑器。更新的 Jam.py
+版本将使用 Microsoft 的 `Monaco 编辑器`_。
 
-`Here are keyboard shortcuts for the ace editor`_.
+`这里是 ace 编辑器的键盘快捷键`_。
 
-.. _ace editor: https://ace.c9.io
+.. _ace 编辑器: https://ace.c9.io
 
-.. _Monaco editor: https://microsoft.github.io/monaco-editor
+.. _Monaco 编辑器: https://microsoft.github.io/monaco-editor
 
 
-.. _Here are Keyboard Shortcuts for the ace editor: https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts
+.. _这里是 ace 编辑器的键盘快捷键: https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts
 
 .. image:: /admin/_images/editor_jampy.png
 	:align: center
-	:alt: code editor
+	:alt: 代码编辑器

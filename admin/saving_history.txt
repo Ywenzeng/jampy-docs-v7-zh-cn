@@ -1,57 +1,50 @@
 ===============================================
-Saving audit trail/change history made by users
+保存用户所做的审计追踪/变更历史记录
 ===============================================
 
-To save change history made by users to must specify the item that will 
-store them. 
+要保存用户所做的变更历史记录，您必须指定将存储这些记录的项目。
 
-To do so, open project parameters and click the button to the right of the
-History item input:
+为此，请打开项目参数，并点击 History item（历史项目）输入框右侧的按钮：
 
 .. image:: _images/history_item_jampy.png
 	:align: center
-	:alt: History item
-	
-In the dialog that will appear click on the Create history item button 
+	:alt: 历史项目
+
+在出现的对话框中，点击 Create history item（创建历史项目）按钮
 
 .. image:: _images/new_hist_item_jampy.png
 	:align: center
-	:alt: New history item
+	:alt: 新建历史项目
 
-The following message will appear when the item will be created: 
+创建项目时将显示以下消息：
 
 .. image:: _images/hist_item_created_jampy.png
 	:align: center
-	:alt: History item created
-	
-After that you have to set **Keep history** attribute of an item to save the history
-its changes:
+	:alt: 历史项目已创建
+
+之后，您必须设置项目的 **Keep history** （保留历史）属性以保存其更改历史：
 
 .. image:: _images/item_editor_dialog_jampy.png
 	:align: center
-	:alt: Keep history attribute
-	
-To see the history of changes of a record click the icon to the left of 
-the close button on the right part of the header of the edit form.
+	:alt: 保留历史属性
 
+要查看记录的变更历史，请点击编辑表单标题栏右侧关闭按钮左侧的图标。
 
 .. image:: _images/invoices_hist_jampy.png
 	:align: center
-	:alt: Invoices history
+	:alt: 发票历史
 
-
-Or you can do it using the
+或者，您可以使用
 :doc:`show_history </refs/client/item/m_show_history>`
-method
+方法来实现。
 
 .. note::
 
-    Changes are saved when dataset changes are applied to the database using
-    apply method (:doc:`client </refs/client/item/m_apply>`/:doc:`server </refs/server/item/m_apply>`).
-    Changes to database made with custom SQL requests are not saved in the history. 
+    当使用 apply 方法（:doc:`客户端 </refs/client/item/m_apply>`/:doc:`服务器端 </refs/server/item/m_apply>`）
+    将数据集更改应用到数据库时，会保存更改历史。
+    通过自定义 SQL 请求对数据库所做的更改不会保存在历史记录中。
     
 .. note::
 
-    These changes can significantly increase the size of the database.
-    Please be careful.
-    
+    这些更改可能会显著增加数据库的大小。
+    请务必小心。

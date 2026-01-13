@@ -1,45 +1,42 @@
 ==========
-Sanitizing
+数据清理
 ==========
 
-To prevent Cross Site Scripting (XSS) attacks, Jam.py sanitizes field values 
-displayed in the table columns.
+为了防止跨站脚本（XSS）攻击，Jam.py 会清理在表格列中显示的字段值。
 
-For example, if field contains the following text:
+例如，如果字段包含以下文本：
 
 .. code-block:: html
 
   <span style='color: red'>Norway</span>
 
-when un-sanitized, it will be displayed in the table column as follows:
+当未经过清理时，它将在表格列中显示如下：
 
 .. image:: /admin/_images/unsanitized_jampy.png
 	:align: center
 	:alt: unsanitized_jampy.png
 
-When the field text is sanitized, it is transformed to the following:
+当字段文本经过清理后，它会转换为以下形式：
 
 .. code-block:: html
 
   "&lt;span style='color: red'&gt;Norway&lt;/span&gt;"
 
-as you can see symbols '<' and '>' are replaced with '&lt;' and '&gt;'
-and the table column will be displayed this way: 
-
+如您所见，符号 '<' 和 '>' 被替换为 '&lt;' 和 '&gt;'
+表格列将以下列方式显示：
 
 .. image:: /admin/_images/sanitized_jampy.png
 	:align: center
 	:alt: sanitized_jampy.png
 
-There are two ways to prevent sanitizing.
+有两种方法可以防止清理。
 
-First is to set **Do not sanitize** attribute in the Interface tab in the 
-:doc:`Field Editor Dialog </admin/items/field_editor_dialog>`
+第一种是在 :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>` 的 Interface（界面）选项卡中设置 **Do not sanitize** （不清理）属性。
 
 .. image:: /admin/_images/fields_editr_interface_jampy.png
 	:align: center
 	:alt: do_not_sanitize_jampy.png
 
-Second is to write the 
+第二种是编写
 :doc:`on_field_get_html </refs/client/item/on_field_get_html>`
-event handler. If the this event handler returns a value it is not sanitized.
+事件处理程序。如果此事件处理程序返回一个值，则该值不会被清理。

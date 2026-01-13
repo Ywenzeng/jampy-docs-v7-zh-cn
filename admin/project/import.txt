@@ -1,16 +1,15 @@
 ======
-Import
+导入
 ======
 
-Use this button to import project 
-:doc:`metadata <metadata_file>`
-from zip file.
+使用此按钮从 zip 文件导入项目
+:doc:`元数据 <metadata_file>`。
 
-See also
+另请参阅
 ========
 
-:doc:`Export <export>`
+:doc:`导出 <export>`
 
-:doc:`Metadata file <metadata_file>`
+:doc:`元数据文件 <metadata_file>`
 
-:doc:`How to migrate development to production </how_to/how_to_migrate_development_to_production>`
+:doc:`如何将开发迁移到生产环境 </how_to/how_to_migrate_development_to_production>`

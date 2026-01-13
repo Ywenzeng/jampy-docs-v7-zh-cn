@@ -1,92 +1,48 @@
 ==================
-Item Editor Dialog
+项目编辑器对话框
 ==================
 
-**Item Editor dialog** opens when a developer selects a Group node in the project 
-tree of the Application builder and click on the **New** or **Edit** button to create 
-a new item or modify a selected one. See 
-:doc:`Items <index>`.
+**Item Editor dialog** （项目编辑器对话框）在开发人员选择应用程序构建器项目树中的 Group（组）节点，并点击 **New** （新建）或 **Edit** （编辑）按钮以创建新项目或修改选定项目时打开。请参阅
+:doc:`项目 <index>`。
 
 .. image:: /admin/_images/item_editor_dialog_jampy.png
 	:align: center
-	:alt: Item Editor Dialog
-	
-The upper part of the **Item Editor dialog** have the following fields:
+	:alt: 项目编辑器对话框
 
-* **Caption** - the item name that appears to users.
+**Item Editor dialog** （项目编辑器对话框）的上半部分有以下字段：
 
-* **Name** - the name of the item that will be used in programming code to 
-  get access to the item object. It should be unique in the project and should 
-  be a valid python identifier.
+* **Caption** （标题）- 向用户显示的项目名称。
 
-* **Table** - the name of the table that will be created in the project 
-  database. This name is specified when creating an item, and can not be 
-  changed later.
-  
-* **Primary key field** - by clicking on the button to the right of this 
-  attribute you can specify the primary key field for the item. If the primary 
-  key field was defined for the group that owns the item it will be displayed 
-  there by default, otherwise you have to create this field first.
+* **Name** （名称）- 项目的名称，将在编程代码中用于访问项目对象。它在项目中应该是唯一的，并且应该是有效的 Python 标识符。
 
-* **Deleted flag field** - by clicking on the button to the right of this 
-  attribute you can specify the field that will serve as a deleted flag 
-  for the item. If the deleted flag field was defined for the group that owns 
-  the item it will be displayed there by default, otherwise you have to create 
-  this field first.
+* **Table** （表）- 将在项目数据库中创建的表的名称。此名称在创建项目时指定，以后不能更改。
 
-* **Record version** - by clicking on the button to the right of this attribute 
-  you can specify the field that will serve as :doc:`record locking </admin/record_locking>`
-  field for the item.
+* **Primary key field** （主键字段）- 通过点击此属性右侧的按钮，您可以指定项目的主键字段。如果主键字段已为拥有该项目的组定义，则默认会显示在那里，否则您必须先创建此字段。
 
+* **Deleted flag field** （删除标志字段）- 通过点击此属性右侧的按钮，您可以指定将作为项目删除标志的字段。如果删除标志字段已为拥有该项目的组定义，则默认会显示在那里，否则您必须先创建此字段。
 
-* **Visible** - use this checkbox to set item's visible attribute. The value of 
-  this attribute can be used in code on the client to create menu items and so 
-  on.
+* **Record version** （记录版本）- 通过点击此属性右侧的按钮，您可以指定将作为项目 :doc:`记录锁定 </admin/record_locking>` 字段的字段。
 
-* **Soft delete** - when this check-box is checked, the delete method does not 
-  erase a record physically from the table, but uses this field to mark the 
-  record as deleted. See
-  :doc:`Common fields </programming/data/common_fields>`,
-  :doc:`delete </refs/server/item/m_delete>`
-  method (server),
-  :doc:`delete </refs/client/item/m_delete>`
-  method (client).
-  
-* **Virtual table** - if this checkbox is checked, no database table will be 
-  created. Use this options to create an item with in-memory dataset or to use 
-  its modules to write code.
-  This checkbox must be set when creating an item and can not be changed 
-  later.
-  
-* **History** - if this checkbox is checked, the application will saving for this
-  item audit trail/change history made by users, see 
-  :doc:`Saving audit trail/change history made by users </admin/saving_history>`
+* **Visible** （可见）- 使用此复选框设置项目的可见属性。该属性的值可在客户端代码中用于创建菜单项等。
 
-* **Edit lock** - if this checkbox is checked, the application will use record 
-  locking while users concurrently edit a record, see
-  :doc:`Record locking </admin/record_locking>`
-  
-In the center part of the **Item Editor dialog** there is a table containing a
-list of fields, defined for the item. To add, modify or delete a field use the 
-following buttons:
+* **Soft delete** （软删除）- 当勾选此复选框时，删除方法不会从表中物理删除记录，而是使用此字段将记录标记为已删除。请参阅 :doc:`公共字段 </programming/data/common_fields>`、:doc:`delete </refs/server/item/m_delete>` 方法（服务器端）、:doc:`delete </refs/client/item/m_delete>` 方法（客户端）。
 
-* **New** - click this button to invoke the 
-  :doc:`Field Editor Dialog <field_editor_dialog>`
-  to create a new field.
+* **Virtual table** （虚拟表）- 如果勾选此复选框，将不会创建数据库表。使用此选项可以创建具有内存数据集的项目，或使用其模块编写代码。此复选框必须在创建项目时设置，以后不能更改。
 
-* **Edit** - click this button to invoke the 
-  :doc:`Field Editor Dialog <field_editor_dialog>`
-  to modify a selected field.
+* **History** （历史）- 如果勾选此复选框，应用程序将为此项目保存用户所做的审计追踪/变更历史记录，请参阅 :doc:`保存用户所做的审计追踪/变更历史记录 </admin/saving_history>`
 
-* **Delete** - click this button to delete a field selected in in the field list.
+* **Edit lock** （编辑锁定）- 如果勾选此复选框，应用程序将在用户同时编辑记录时使用记录锁定，请参阅 :doc:`记录锁定 </admin/record_locking>`
 
-In the bottom-right corner of the Dialog form there are two buttons:
+在 **Item Editor dialog** （项目编辑器对话框）的中心部分，有一个表格包含为项目定义的字段列表。要添加、修改或删除字段，请使用以下按钮：
 
-* **OK** - click this button to save change you made. If the **Virtual table** 
-  checkbox is not checked and **DB manual update** parameter in the project 
-  :doc:`Database Dialog</admin/project/database>` is not set, the application
-  will generate and execute SQL query to update the item table in the project
-  Database (changes made to the fields will be applied to the table). 
+* **New** （新建）- 点击此按钮调用 :doc:`字段编辑器对话框 <field_editor_dialog>` 以创建新字段。
 
-* **Cancel** - click this buttons to cancel the operation.
+* **Edit** （编辑）- 点击此按钮调用 :doc:`字段编辑器对话框 <field_editor_dialog>` 以修改选定的字段。
 
+* **Delete** （删除）- 点击此按钮删除字段列表中选定的字段。
+
+在对话框表单的右下角有两个按钮：
+
+* **OK** （确定）- 点击此按钮保存您所做的更改。如果未勾选 **Virtual table** （虚拟表）复选框，且项目 :doc:`Database Dialog</admin/project/database>`（数据库对话框）中的 **DB manual update** （数据库手动更新）参数未设置，应用程序将生成并执行 SQL 查询以更新项目数据库中的项目表（对字段所做的更改将应用到表中）。
+
+* **Cancel** （取消）- 点击此按钮取消操作。

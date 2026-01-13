@@ -1,33 +1,31 @@
 =====
-Users
+用户
 =====
 
-If the **Safe mode** checkbox in the 
-:doc:`project parameters <project/parameters>`
-is checked, authentication 
-is needed for a user to work in the system.
+如果在
+:doc:`项目参数 <project/parameters>`
+中勾选了 **Safe mode** （安全模式）复选框，
+用户需要在系统中进行身份验证才能工作。
 
-But before that, the user must be registered in the framework. To register a user 
-select Users node, click New and fill in the form that appears: 
-
+但在此之前，用户必须在框架中注册。要注册用户，
+请选择 Users（用户）节点，点击 New（新建），并填写出现的表单：
 
 .. image:: _images/users_new_jampy.png
 	:align: center
-	:alt: New users dialog
+	:alt: 新建用户对话框
 
-
-* **Name** – user name
-* **Login** - login
-* **Password** - password
-* **Role** – user role
-* **Information** - some additional information
-* **Admin** - if this flag is set, the user has the right to work in the Application builder.
+* **Name** （姓名）– 用户名
+* **Login** （登录名）- 登录名
+* **Password** （密码）- 密码
+* **Role** （角色）– 用户角色
+* **Information** （信息）- 一些附加信息
+* **Admin** （管理员）- 如果设置了此标志，用户有权在应用程序构建器中工作。
 
 .. image:: _images/users_jampy.png
 	:align: center
-	:alt: Jam.py Application builder Users 
+	:alt: Jam.py 应用程序构建器用户
 
-See also
+另请参阅
 ========
 
-:doc:`on_login event </refs/server/task/on_login>` 
+:doc:`on_login 事件 </refs/server/task/on_login>`

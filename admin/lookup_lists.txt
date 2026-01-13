@@ -1,27 +1,26 @@
 ==================
-Lookup List Dialog
+查找列表对话框
 ==================
 
-Lookup list is a list of integer-text pairs that can used as a datasource for 
-:doc:`lookup fields </programming/data/lookup_fields>`.
+查找列表是一个整数-文本对列表，可用作
+:doc:`查找字段 </programming/data/lookup_fields>` 的数据源。
 
 .. note::
 
-    The length of the lookup list should not exceed 10
+    查找列表的长度不应超过 10 条
 
 .. image:: _images/lookup_lists_jampy.png
 	:align: center
-	:alt: Lookup List Dialog
+	:alt: 查找列表对话框
 
-Click on the **Edit**/**New** buttons to edit/create a lookup list.
+点击 **Edit** （编辑）/**New** （新建）按钮以编辑/创建查找列表。
 
 .. image:: _images/lookup_list_jampy.png
 	:align: center
-	:alt: Lookup List 
+	:alt: 查找列表
 
-Then use the **Edit**/**New** buttons to edit/add a lookup pairs to the list.
+然后使用 **Edit** （编辑）/**New** （新建）按钮来编辑/向列表中添加查找对。
 
 .. image:: _images/lookup_paire_jampy.png
 	:align: center
-	:alt: Lookup Pair
-
+	:alt: 查找对

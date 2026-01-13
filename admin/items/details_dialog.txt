@@ -1,22 +1,21 @@
 ==============
-Details Dialog
+明细表对话框
 ==============
 
-Use this dialog to setup details of an item. See 
-:doc:`Details </programming/data/details>`.
+使用此对话框设置项目的明细表。请参阅
+:doc:`明细表 </programming/data/details>`。
 
 .. image:: /admin/_images/details_dialog_jampy.png
 	:align: center
-	:alt: Details Dialog
+	:alt: 明细表对话框
 
-The **Details Dialog** has two panels. The left panel lists details that 
-have been added. The right panel has available detail items that could be added 
-as details.
+**Details Dialog** （明细表对话框）有两个面板。左侧面板列出了已添加的明细表。
+右侧面板列出了可添加为明细表的可用明细表项目。
 
-To add a detail item as detail, select it in the right panel and use the **Left arrow** 
-button in the center or press **Space** key on a keyboard. 
+要将明细表项目添加为明细表，请在右侧面板中选择它，并使用中间的 **左箭头** 按钮，
+或按键盘上的 **空格** 键。
 
-To remove a detail, select it in the left panel and use the **Right arrow** 
-button in the center or press **Space** key on a keyboard.
+要移除明细表，请在左侧面板中选择它，并使用中间的 **右箭头** 按钮，
+或按键盘上的 **空格** 键。
 
-Click the **OK** button to save to result or **Cancel** to cancel the operation.
+点击 **OK** （确定）按钮保存结果，或点击 **Cancel** （取消）取消操作。

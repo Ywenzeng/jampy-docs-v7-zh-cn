@@ -1,42 +1,36 @@
 ========
-Routing
+路由
 ========
 
+Jam.py v7 引入了路由功能。由于 Jam.py v5 是 SPA（单页应用程序），因此不需要路由。
+另一方面，例如在 Jam.py v5 中，需要实现用户注册页面。
 
-The Jam.py v7 introduced routing. As Jam.py v5 is a SPA (Single Page Application), there was no need for routing.
-On the other hand, there was a need to implement, for example, the User registration page with Jam.py v5.	
+此问题的解决方案类似于 :doc:`创建注册表单 </how_to/authentication/how_to_create_registration_form>`。
 
-The solution for this problem was similar to :doc:`creating a registration form </how_to/authentication/how_to_create_registration_form>`.
+如您所见，**register.html** 文件使用了 JavaScript AJAX 代码。因此，任何需要与数据库交互的附加页面都需要类似的方法。
 
-As seen, the **register.html** file is using JavaScript AJAX code. Hence, any additional page would need a similar approach, if
-interacting with the database.
+在 Jam.py v7 中，解决方案是在 ``on_request`` 事件处理程序中处理每个请求，并对有效请求定义响应。
 
-In Jam.py v7, the solution is to process every request in the ``on_request`` event handler and defining a response on a valid request.
+这使我们能够创建自定义的登录和注册表单，其中可以创建自定义错误信息。例如："用户不存在！"、"密码错误"等。
 
-This enables us to do a custom login and registration forms, where custom errors can be created. For example: "User does not exist!", "Wrong password", etc.
-
-The new **login.html** page with the error message:
-
+新的 **login.html** 页面显示错误消息：
 
 .. image:: /admin/_images/custom_login_error_jampy.png
 	:align: center
-	:alt: Custom Login Form
+	:alt: 自定义登录表单
 
-
-The new **register.html** page (no AJAX):
+新的 **register.html** 页面（无需 AJAX）：
 
 .. image:: /admin/_images/register_form_v7_jampy.png
 	:align: center
-	:alt: Registration Form
+	:alt: 注册表单
 
-
-Routing code
+路由代码
 =============
 
+如前所述，使用 ``on_request`` 事件。
 
-As mentioned, the ``on_request`` is used.
-
-The below code should exist on "Task/Server Module". No Python logic is included below to make it simple to read:
+以下代码应存在于"任务/服务器模块"中。为便于阅读，以下未包含 Python 逻辑：
 
 .. code-block:: Python
 
@@ -60,8 +54,7 @@ The below code should exist on "Task/Server Module". No Python logic is included
 
 		            return task.redirect('/login.html')
 
-
-The working example for serving robots.txt file:
+提供 robots.txt 文件的工作示例：
 
 .. code-block:: Python
 
@@ -76,9 +69,9 @@ The working example for serving robots.txt file:
 	        if task.logged_in(request):
 	            return task.serve_page('robots.txt')
 
-The ``robots.txt`` file should exist within the application folder.
+``robots.txt`` 文件应存在于应用程序文件夹内。
 
-See also
+另请参阅
 ========
 
 :doc:`serve_page </refs/server/task/m_serve_page>`

@@ -1,84 +1,78 @@
 =====
-Items
+项目
 =====
 
-Select a group node in the project tree to get access to items that this 
-group owns, see 
-:doc:`Task tree </programming/task_tree>`.
+在项目树中选择一个组节点，以访问该组拥有的项目，请参阅
+:doc:`任务树 </programming/task_tree>`。
 
-At the bottom of the page there are 3 buttons:
+页面底部有 3 个按钮：
 
-* **New** - click on New to create a new item in the 
-  :doc:`Item Editor Dialog <item_editor_dialog>`
+* **New** （新建）- 点击 New（新建）在
+  :doc:`项目编辑器对话框 <item_editor_dialog>` 中创建新项目。
 
-* **Edit** - use this button to modify item's attributes as well to add, change
-  or delete fields in the 
-  :doc:`Item Editor Dialog <item_editor_dialog>`
+* **Edit** （编辑）- 使用此按钮修改项目的属性，以及在
+  :doc:`项目编辑器对话框 <item_editor_dialog>` 中添加、更改或删除字段。
 
-* **Delete** - click on the button to delete an item and its underlying database 
-  table. 
+* **Delete** （删除）- 点击此按钮删除项目及其底层数据库表。
 
-You can use the up and down arrows to arrange the items in the list. This may be 
-useful for creating a menu or display it in some way on the web page. 
+您可以使用上下箭头在列表中排列项目。这可能
+对创建菜单或以某种方式在网页上显示它们有用。
 
-The right panel of the page have following buttons:
+页面右侧面板有以下按钮：
 
-* **Client module** - click on this button to open the 
-  :doc:`Code editor </admin/code_editor>`
-  to edit client module of an item, see 
-  :doc:`Working with modules </programming/modules>`.
+* **Client module** （客户端模块）- 点击此按钮打开
+  :doc:`代码编辑器 </admin/code_editor>`
+  以编辑项目的客户端模块，请参阅
+  :doc:`使用模块 </programming/modules>`。
 
-* **Server module**	- click on this button to open the 
-  :doc:`Code editor </admin/code_editor>`
-  to edit server module of an item, see 
-  :doc:`Working with modules </programming/modules>`.
+* **Server module** （服务器模块）- 点击此按钮打开
+  :doc:`代码编辑器 </admin/code_editor>`
+  以编辑项目的服务器模块，请参阅
+  :doc:`使用模块 </programming/modules>`。
 
-* **View Form** - use this button to invoke the 
-  :doc:`View Form Dialog <view_form_dialog>` 
-  to set how the view form will be displayed.
+* **View Form** （查看表单）- 使用此按钮调用
+  :doc:`查看表单对话框 <view_form_dialog>` 
+  以设置查看表单的显示方式。
 
-* **Edit Form** - use this button to invoke the 
-  :doc:`Edit Form Dialog <edit_form_dialog>`
-  to set how the edit form will be displayed.
+* **Edit Form** （编辑表单）- 使用此按钮调用
+  :doc:`编辑表单对话框 <edit_form_dialog>`
+  以设置编辑表单的显示方式。
 
-* **Filters** - use this button to invoke the
-  :doc:`Filters Dialog <filters_dialog>`
-  to create, modify and delete item filters. See
-  :doc:`Filters </programming/data/filters>`.
+* **Filters** （过滤器）- 使用此按钮调用
+  :doc:`过滤器对话框 <filters_dialog>`
+  以创建、修改和删除项目过滤器。请参阅
+  :doc:`过滤器 </programming/data/filters>`。
 
-* **Details** - use this button to invoke the
-  :doc:`Details Dialog <details_dialog>`
-  to add or remove details linked to the item.
+* **Details** （明细表）- 使用此按钮调用
+  :doc:`明细表对话框 <details_dialog>`
+  以添加或删除链接到该项目的明细表。
 
-* **Order** - use this button to invoke the
-  :doc:`Order Dialog <order_dialog>`
-  to specify how records will be ordered by default. See
+* **Order** （排序）- 使用此按钮调用
+  :doc:`排序对话框 <order_dialog>`
+  以指定记录的默认排序方式。请参阅
   :doc:`open </refs/client/item/m_open>`
-  method
+  方法。
 
-* **Indices** - сlick this button to open the
-  :doc:`Indices Dialog <indices_dialog>`
-  to create and delete indices for the item database table.
+* **Indices** （索引）- 点击此按钮打开
+  :doc:`索引对话框 <indices_dialog>`
+  为项目数据库表创建和删除索引。
 
 ..
-    * **Foreign keys** - сlick this button to open the
-      :doc:`Foreign Keys Dialog <foreign_keys_dialog>`
-      to create foreign keys for the database table.
+    * **Foreign keys** （外键）- 点击此按钮打开
+      :doc:`外键对话框 <foreign_keys_dialog>`
+      为数据库表创建外键。
 
-* **Reports** - сlick this button to open the
-  :doc:`Reports Dialog <reports_dialog>`
-  to specify reports that could printed for the item. 
-  A new project has a function that can be used to create a drop-up 
-  button to print the reports.
+* **Reports** （报告）- 点击此按钮打开
+  :doc:`报告对话框 <reports_dialog>`
+  以指定可为项目打印的报告。
+  新项目有一个可用于创建下拉按钮以打印报告的功能。
   
-* **Privileges** - click this button to open a dialog to configure the 
-  privileges assigned to user roles for this item.
+* **Privileges** （权限）- 点击此按钮打开一个对话框，配置
+  分配给用户角色对此项目的权限。
 
 .. image:: /admin/_images/items_jampy.png
 	:align: center
-	:alt: Task node
-	
-
+	:alt: 任务节点
 .. toctree::
    :maxdepth: 1
    

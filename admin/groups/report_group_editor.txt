@@ -1,29 +1,26 @@
 ===================
-Report Group Editor
+报告组编辑器
 ===================
 
-**Report Group Editor** opens when the developer wants to create a new report 
-group or change an existing report group.
+当开发人员想要创建新的报告组或更改现有报告组时，会打开 **Report Group Editor** （报告组编辑器）。
 
-The upper part of the **Report Group Editor** have the following fields:
+**Report Group Editor** （报告组编辑器）的上半部分有以下字段：
 
-* **Caption** - the group name that appears to users.
+* **Caption** （标题）- 向用户显示的组名称。
 
-* **Name** - the name of the group that will be used in programming code to 
-  get access to the group object. It should be unique in the project and should 
-  be a valid python identifier.
+* **Name** （名称）- 组的名称，将在编程代码中用于
+  访问组对象。它在项目中应该是唯一的，并且
+  应该是有效的 Python 标识符。
 
-* **Visible** - use this checkbox to set group's visible attribute. The value of 
-  this attribute can be used in code on the client to create menu items and so 
-  on.
+* **Visible** （可见）- 使用此复选框设置组的可见属性。该
+  属性的值可在客户端代码中用于创建菜单项等。
 
-In the bottom-right corner of the Dialog form there are two buttons:
+在对话框表单的右下角有两个按钮：
 
-* **OK** - click the button to save change you made. 
+* **OK** （确定）- 点击此按钮保存您所做的更改。
 
-* **Cancel** - click the buttons to cancel the operation.
+* **Cancel** （取消）- 点击此按钮取消操作。
 
 .. image:: /admin/_images/report_group_jampy.png
 	:align: center
-	:alt: Item Group Editor
-
+	:alt: 项目组编辑器

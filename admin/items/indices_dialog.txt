@@ -1,31 +1,25 @@
 ==============
-Indices Dialog
+索引对话框
 ==============
 
-The **Indices Dialog** lists the indices that were created for the item table in 
-the project database.
+**Indices Dialog** （索引对话框）列出了为项目数据库中的项目表创建的索引。
 
 .. image:: /admin/_images/indices_dialog_jampy.png
 	:align: center
-	:alt: Indices Dialog
-	
-To delete an index click the **Delete** button. The application will generate the 
-SQL query to drop the index and execute it on the server.
+	:alt: 索引对话框
 
-To create a new index click the **New** button. The following dialog will 
-appear:
+要删除索引，请点击 **Delete** （删除）按钮。应用程序将生成删除索引的 SQL 查询并在服务器上执行。
+
+要创建新索引，请点击 **New** （新建）按钮。将出现以下对话框：
 
 .. image:: /admin/_images/index_dialog_jampy.png
 	:align: center
-	:alt: Index Dialog
+	:alt: 索引对话框
 
-Specify the fields to create an index on, by using left and right arrow buttons.
-Check the **Descending** checkbox if you want to create a descending index.
-If necessary, change the name of the index.
+使用左右箭头按钮指定要创建索引的字段。
+如果要创建降序索引，请勾选 **Descending** （降序）复选框。
+如有必要，请更改索引的名称。
 
-Click the **OK** button to create the index. The application will generate the 
-SQL query to create the index and execute it on the server.
+点击 **OK** （确定）按钮创建索引。应用程序将生成创建索引的 SQL 查询并在服务器上执行。
 
-Click **Cancel** button to cancel the operation.
-	
-	
+点击 **Cancel** （取消）按钮取消操作。

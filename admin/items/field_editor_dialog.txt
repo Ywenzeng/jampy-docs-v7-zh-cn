@@ -1,188 +1,142 @@
 ===================
-Field Editor Dialog
+字段编辑器对话框
 ===================
 
-Use the **Field Editor Dialog** to create a new or modify an existing field.
+使用 **Field Editor Dialog** （字段编辑器对话框）创建新字段或修改现有字段。
 
 .. note::
 
-    For some operations, the :doc:`DB manual mode </admin/project/database>` must be set to true.
-    For example, changing the field type. Since the database is in "Manual Mode", changing the type
-    will not reflect within the database structure. Use this with caution.
+    对于某些操作，必须将 :doc:`DB manual mode </admin/project/database>` （数据库手动模式）设置为 true。
+    例如，更改字段类型。由于数据库处于"手动模式"，更改类型
+    不会反映在数据库结构中。请谨慎使用。
 
-The dialog has following tabs: **Field**, **Lookup**, **Interface** and **Calculation**.
+该对话框有以下选项卡：**Field** （字段）、**Lookup** （查找）、**Interface** （界面）和 **Calculation** （计算）。
 
-Field tab
+字段选项卡
 =========
 
 .. image:: /admin/_images/fields_editr_field_jampy.png
 	:align: center
 	:alt: fields_editr_field_jampy.png
 
-The **Field** tab have the following fields:
+**Field** （字段）选项卡有以下字段：
 
-* **Caption** - the field name that appears to users.
+* **Caption** （标题）- 向用户显示的字段名称。
 
-* **Name** - the name of the field that will be used in programming code to 
-  get access to the field object. It should be a valid python identifier.
+* **Name** （名称）- 字段的名称，将在编程代码中用于访问字段对象。它应该是一个有效的 Python 标识符。
 
-* **Type** - type of the field — one of the following values: 
+* **Type** （类型）- 字段类型 —— 以下值之一：
+  * **TEXT** （文本）
+  * **INTEGER** （整数）
+  * **FLOAT** （浮点数）
+  * **CURRENCY** （货币）
+  * **DATE** （日期）
+  * **DATETIME** （日期时间）
+  * **BOOLEAN** （布尔值）
+  * **LONGTEXT** （长文本）
+  * **FILE** （文件）
+  * **IMAGE** （图像）
 
-  * **TEXT**
-  * **INTEGER**
-  * **FLOAT**
-  * **CURRENCY**
-  * **DATE**
-  * **DATETIME**
-  * **BOOLEAN**
-  * **LONGTEXT**
-  * **FILE**
-  * **IMAGE**
+* **Size** （大小）- 文本字段的大小。
 
-* **Size** - the size of the field for text fields.
+* **Default value** （默认值）- 字段的默认值，对于布尔字段使用 0 或 1
 
-* **Default value** - the default value of the field, for boolean fields use 
-  0 or 1
+* **Required** （必填）- 如果勾选此复选框，如果此字段为空，post 方法将引发异常。请参阅 :doc:`修改数据集 </programming/data/modifying_datasets>`。
 
-* **Required** - if this checkbox is checked, the post method will raise an 
-  exception if this field is empty. See 
-  :doc:`Modifying datasets </programming/data/modifying_datasets>`. 
+* **Read only** （只读）- 如果勾选此复选框，字段值无法在客户端通过 :doc:`create_inputs </refs/client/item/m_create_inputs>` 方法创建的界面控件中更改。
 
-* **Read only** - this checkbox is checked, the field value can not be changed 
-  in the interface controls created by the
-  :doc:`create_inputs </refs/client/item/m_create_inputs>`
-  method on the client.
-
-Lookup tab
+查找选项卡
 ==========
 
 .. image:: /admin/_images/fields_editr_lookup_jampy.png
 	:align: center
 	:alt: fields_editr_lookup_jampy.png
 
+* **Lookup item** （查找项目）- :doc:`查找字段 </programming/data/lookup_fields>` 的查找项目
 
-* **Lookup item** - the lookup item for 
-  :doc:`Lookup fields </programming/data/lookup_fields>`
+* **Lookup field** （查找字段）- :doc:`查找字段 </programming/data/lookup_fields>` 的查找字段
 
-* **Lookup field** - the lookup field for 
-  :doc:`Lookup fields </programming/data/lookup_fields>`
+* **Lookup field 2** （查找字段 2）- :doc:`查找字段 </programming/data/lookup_fields>` 的查找字段 2
 
-* **Lookup field 2** - the lookup field 2 for 
-  :doc:`Lookup fields </programming/data/lookup_fields>`
+* **Lookup field 3** （查找字段 3）- :doc:`查找字段 </programming/data/lookup_fields>` 的查找字段 3
 
-* **Lookup field 3** - the lookup field 3 for 
-  :doc:`Lookup fields </programming/data/lookup_fields>`
+* **Master field** （主字段）- :doc:`查找字段 </programming/data/lookup_fields>` 的主字段
 
-* **Master field** - the master field for 
-  :doc:`Lookup fields </programming/data/lookup_fields>`
+* **Typeahead** （预输入）- 如果勾选此复选框，则为查找字段启用预输入功能
 
-* **Typeahead** - if this checkbox is checked, typeahead is enabled for the
-  lookup field
+* **Lookup value list** （查找值列表）- 用于为整数字段指定 :doc:`查找列表 </admin/lookup_lists>`
 
-* **Lookup value list** - use it to specify a
-  :doc:`lookup list </admin/lookup_lists>`
-  for an integer field
-
-
-Interface tab
+界面选项卡
 =============
 
 .. image:: /admin/_images/fields_editr_interface_jampy.png
 	:align: center
 	:alt: fields_editr_interface_jampy.png
 
-* **Mask** - use this attribute to specify the 
-  :doc:`field_mask </refs/client/field/at_field_mask>`
+* **Mask** （掩码）- 使用此属性指定 :doc:`field_mask </refs/client/field/at_field_mask>`（字段掩码）
 
-* **TextArea** - for text fields if this attribute is set the textarea element
-  will be created for these fields in the :doc:`Edit Form Dialog <edit_form_dialog>`
+* **TextArea** （文本区域）- 对于文本字段，如果设置了此属性，将在 :doc:`编辑表单对话框 <edit_form_dialog>` 中为这些字段创建 textarea 元素
 
-* **Do not sanitize** - set this attribute to prevent default sanitizing of the 
-  field value, see :doc:`Sanitizing </admin/sanitizing>`
+* **Do not sanitize** （不清理）- 设置此属性以防止字段值的默认清理，请参阅 :doc:`数据清理 </admin/sanitizing>`
 
-* **Alignment** - determines the alignment of text in the controls that display 
-  this field.
+* **Alignment** （对齐方式）- 确定在显示此字段的控件中文本的对齐方式。
 
-* **Placeholder** - use this attribute to specify the placeholder that will be
-  displayed by the field input.
+* **Placeholder** （占位符）- 使用此属性指定字段输入将显示的占位符。
 
-* **Help** - if any text / html-message is specified, a question mark will be 
-  displayed to the right of the input, so when the user moves the mouse pointer 
-  over this mark, a pop-up window appears displaying this message.
+* **Help** （帮助）- 如果指定了任何文本/HTML 消息，将在输入框右侧显示一个问号，当用户将鼠标指针移到该标记上时，将弹出一个窗口显示此消息。
 
-Interface tab for FILE field
+FILE 字段的界面选项卡
 ============================
-
 
 .. image:: /admin/_images/fields_editr_file_interface_jampy.png
 	:align: center
 	:alt: fields_editr_file_interface_jampy.png
 
-
 .. image:: /admin/_images/file_btns_jampy.png
 	:align: center
 	:alt: file_btns_jampy.png
 
+* **Download btn** （下载按钮）- 取消勾选以隐藏下载按钮（中间）
 
-* **Download btn** - uncheck the box to hide the download button (middle)
+* **Open btn** （打开按钮）- 取消勾选以隐藏打开按钮（右侧）
 
-* **Open btn** - uncheck the box to hide the open button (right)
-
-* **Accept** - the attribute specifies the types of files that can be loaded. 
-  This is an :doc:`Accept string </admin/accept_string>`. 
-  
+* **Accept** （接受）- 此属性指定可以加载的文件类型。这是一个 :doc:`接受字符串 </admin/accept_string>`。
 
 .. note::
 
-  Please note that **Accept** attribute is required. 
-  Uploaded files are checked on the server against this attribute.  
+  请注意，**Accept** （接受）属性是必需的。
+  上传的文件会在服务器端根据此属性进行检查。
 
-
-Interface tab for Image field
+图像字段的界面选项卡
 =============================
 
 .. image:: /admin/_images/fields_editr_image_interface_jampy.png
 	:align: center
 	:alt: fields_editr_image_interface_jampy.png
-	
-* **View width** - specifies the width of an image in pixels when it is displayed
-  in the table of the view form. If it not specified, the width is auto
 
-* **View height** - specifies the height of an image in pixels when it is displayed
-  in the table of the view form. If it not specified, the height is auto
-	
-* **Edit width**  - specifies the width of an image in pixels when it is displayed
-  in the edit form. If it not specified, the width is auto
+* **View width** （查看宽度）- 指定图像在查看表单的表格中显示时的宽度（以像素为单位）。如果未指定，宽度为 auto（自动）
 
-* **Edit height**  - specifies the height of an image in pixels when it is displayed
-  in the edit form. If it not specified, the height is auto
+* **View height** （查看高度）- 指定图像在查看表单的表格中显示时的高度（以像素为单位）。如果未指定，高度为 auto（自动）
 
-* **Capture from camera** - if this checkbox is set, the user will be able to 
-  capture image from camera by double-click. The image is automatically uploded
-  to the server, 
-  providing the ".png" is added on Parameters :doc:`Accept string </admin/accept_string>`.
+* **Edit width** （编辑宽度）- 指定图像在编辑表单中显示时的宽度（以像素为单位）。如果未指定，宽度为 auto（自动）
 
-* **Placeholder image** - double-click the image to set the placeholder image,
-  that will be displayed when field image is not set.
-  Hold Ctrl key and double-click the image to clear the placeholder image.
+* **Edit height** （编辑高度）- 指定图像在编辑表单中显示时的高度（以像素为单位）。如果未指定，高度为 auto（自动）
 
-  
-Calculation tab
+* **Capture from camera** （从摄像头捕获）- 如果设置此复选框，用户将能够通过双击从摄像头捕获图像。图像会自动上传到服务器，前提是在参数 :doc:`接受字符串 </admin/accept_string>` 中添加了 ".png"。
+
+* **Placeholder image** （占位符图像）- 双击图像以设置占位符图像，当未设置字段图像时将显示该图像。按住 Ctrl 键并双击图像以清除占位符图像。
+
+计算选项卡
 ===============
 
 .. image:: /admin/_images/fields_editr_calc_jampy.png
 	:align: center
 	:alt: fields_editr_calc_jampy.png
-  
 
-* **Calc. object** - specifies the :doc:`Details </admin/items/details_dialog>` table.
+* **Calc. object** （计算对象）- 指定 :doc:`明细表 </admin/items/details_dialog>` 表。
 
-* **Lookup field** - specifies the 
-  :doc:`Lookup field </programming/data/lookup_fields>`. For example, the Details table *invoice_table*, *tracks* field, 
-  which is a lookup field to *Name* field on table *Tracks*.
-	
-* **Calc. field**  - specifies on which field the calculation is performing on.
+* **Lookup field** （查找字段）- 指定 :doc:`查找字段 </programming/data/lookup_fields>`。例如，明细表 *invoice_table* 中的 *tracks* 字段，它是到 *Tracks* 表中 *Name* 字段的查找字段。
 
-* **Function**  - specifies the server side functions (SUM, COUNT, MIN, MAX, AVG).
+* **Calc. field** （计算字段）- 指定在其上执行计算的字段。
 
-
+* **Function** （函数）- 指定服务器端函数（SUM、COUNT、MIN、MAX、AVG）。

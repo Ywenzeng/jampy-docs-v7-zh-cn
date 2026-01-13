@@ -1,38 +1,37 @@
 ====================
-Language translation
+语言翻译
 ====================
 
-All language translations are stored in the langs.sqlite database in the "jam" 
-folder in the package.
+所有语言翻译都存储在软件包中 "jam" 文件夹内的 langs.sqlite 数据库中。
 
 .. note::
 
   .. role:: red
   
-  Therefore, if you made some changes to the translation database and installed a 
-  new version of the package, you will use the translation database of this package 
-  where **there will be no changes made by you**.
+  因此，如果您对翻译数据库进行了一些更改，并安装了
+  新版本的软件包，您将使用此软件包的翻译数据库，
+  其中 **将不包含您所做的更改**。
   
-  **Please, export your translation to a file!!!**
+  **请务必将您的翻译导出到文件中！！！**
 
-If you want your language translation to be included to Jam.py package,
-export it to a file and contact the package maintainer on GitHub to include it.
-Or, send the file to Jam.py mailgroup.
+如果您希望您的语言翻译被包含在 Jam.py 软件包中，
+请将其导出到文件，并在 GitHub 上联系软件包维护者以将其包含进去。
+或者，将文件发送到 Jam.py 邮件组。
 
-Please note that Jam.py is constantly evolving and by submitting your translation 
-you might need to make the necessary changes in the future. If you don't mind 
-you will be included to the contributors list.
+请注意，Jam.py 在不断发展，提交您的翻译后，
+您可能需要在将来进行必要的更改。如果您不介意，
+您将被列入贡献者名单。
 
 .. note::
 
-  Do not change the following symbols **%, %(item)s, %(field)s, %(filters)s**
+  请勿更改以下符号 **%、%(item)s、%(field)s、%(filters)s**
   
-  For example
+  例如
   
-  **english**:
+  **英文**：
   
   Can't delete the field %(field)s. It's used in field definitions:%(fields)s
   
-  **Kazakhstan translation**:
+  **哈萨克语翻译**：
   
   Нельзя удалить поле %(field)s. Используется в определении полей:%(fields)s

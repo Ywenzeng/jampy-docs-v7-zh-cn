@@ -1,18 +1,16 @@
 =====
-Roles
+角色
 =====
 
-Select Roles node in the project tree to create and modify roles that defined
-users privileges. Each user must be assigned to one of roles defined in the 
-project. A role defines the user's rights to view, create, modify, and delete 
-data. 
+在项目树中选择 Roles（角色）节点，以创建和修改定义用户权限的角色。
+每个用户必须被分配项目中定义的某个角色。
+角色定义了用户查看、创建、修改和删除数据的权利。
 
-To add or delete a role, use New and Delete buttons. To set permissions 
-for a role, select the role in a role list and put or remove a check mark next 
-to the appropriate column by clicking on it with the mouse: View, Create, Edit, 
-Delete (allowed to view, create, modify and delete, respectively).
+要添加或删除角色，请使用 New（新建）和 Delete（删除）按钮。
+要设置角色的权限，请在角色列表中选择角色，并通过鼠标点击在相应列旁边
+添加或移除勾选标记：View（查看）、Create（创建）、Edit（编辑）、
+Delete（删除）（分别允许查看、创建、修改和删除）。
 
 .. image:: _images/roles_jampy.png
 	:align: center
-	:alt: Jam.py roles 
-
+	:alt: Jam.py 角色

@@ -1,20 +1,20 @@
 =============
-Accept string
+接受字符串
 =============
 
-An accept string can be a combination of the following values, 
-separated by comma.
+接受字符串可以是以下值的组合，
+用逗号分隔。
 
 ==============  ===========  
-Value	          Description
+值	              描述
 ==============  ===========  
-file_extension	Specify the file extension(s) (e.g: .gif, .jpg, .png, .doc)
-audio/*	        All sound files
-video/*	        All video files
-image/*	        All image files
+file_extension	指定文件扩展名（例如：.gif、.jpg、.png、.doc）
+audio/*	        所有音频文件
+video/*	        所有视频文件
+image/*	        所有图像文件
 ==============  ===========  
 
-For example::
+例如：::
 
   .pdf,.xls
   

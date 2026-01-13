@@ -1,16 +1,16 @@
 ======
-Export
+导出
 ======
 
-Press this button to export project 
-:doc:`metadata <metadata_file>`
-to zip file. 
+点击此按钮将项目
+:doc:`元数据 <metadata_file>`
+导出到 zip 文件。
 
-See also
+另请参阅
 ========
 
-:doc:`Import <import>`
+:doc:`导入 <import>`
 
-:doc:`Metadata file <metadata_file>`
+:doc:`元数据文件 <metadata_file>`
 
-:doc:`How to migrate development to production </how_to/how_to_migrate_development_to_production>`
+:doc:`如何将开发迁移到生产环境 </how_to/how_to_migrate_development_to_production>`

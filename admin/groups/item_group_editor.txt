@@ -1,70 +1,65 @@
 =================
-Item Group Editor
+项目组编辑器
 =================
 
-**Item Group Editor** opens when a developer wants to create a new item group or 
-modify an existing one. See 
-:doc:`Task tree </programming/task_tree>`
+当开发人员想要创建新的项目组或修改现有项目组时，会打开 **Item Group Editor** （项目组编辑器）。请参阅
+:doc:`任务树 </programming/task_tree>`
 
-The upper part of the **Item Group Editor** have the following fields:
+**Item Group Editor** （项目组编辑器）的上半部分有以下字段：
 
-* **Caption** - the item name that appears to users.
+* **Caption** （标题）- 向用户显示的项目名称。
 
-* **Name** - the name of the item that will be used in programming code to 
-  get access to the item object. It should be unique in the project and should 
-  be a valid python identifier.
+* **Name** （名称）- 项目的名称，将在编程代码中用于
+  访问项目对象。它在项目中应该是唯一的，并且
+  应该是有效的 Python 标识符。
 
-* **Primary key field** - by clicking on the button to the right of this 
-  attribute you can specify the primary key field for the item. If the primary 
-  key field was defined for the group that owns the item it will be displayed 
-  there by default, otherwise you have to create this field first.
+* **Primary key field** （主键字段）- 通过点击此
+  属性右侧的按钮，您可以指定项目的主键字段。如果主
+  键字段已为拥有该项目的组定义，则默认会显示在那里，
+  否则您必须先创建此字段。
 
-* **Deleted flag field** - by clicking on the button to the right of this 
-  attribute you can specify the field that will serve as a deleted flag 
-  for the item. If the deleted flag field was defined for the group that owns 
-  the item it will be displayed there by default, otherwise you have to create 
-  this field first.
+* **Deleted flag field** （删除标志字段）- 通过点击此
+  属性右侧的按钮，您可以指定将作为项目删除标志的
+  字段。如果删除标志字段已为拥有该项目的组定义，
+  则默认会显示在那里，否则您必须先创建此字段。
 
-* **Record version** - by clicking on the button to the right of this attribute 
-  you can specify the field that will serve as :doc:`record locking </admin/record_locking>`
-  field for the item.
+* **Record version** （记录版本）- 通过点击此属性右侧的按钮，
+  您可以指定将作为项目 :doc:`记录锁定 </admin/record_locking>`
+  字段的字段。
 
-* **Visible** - use this checkbox to set item's visible attribute. The value of 
-  this attribute can be used in code on the client to create menu items and so 
-  on.
+* **Visible** （可见）- 使用此复选框设置项目的可见属性。该
+  属性的值可在客户端代码中用于创建菜单项等。
 
-In the center part of the **Item Group Editor** dialog there is a table 
-containing a list of fields, defined for the item. These fields are 
-:doc:`common </programming/data/common_fields>`
-to all items the group will own. 
+在 **Item Group Editor** （项目组编辑器）对话框的中心部分，有一个表格
+包含为该组定义的所有项目共有的字段列表。这些字段对于该组将拥有的所有项目都是
+:doc:`公共的 </programming/data/common_fields>`。
 
-To add, modify or delete a field use the following buttons:
+要添加、修改或删除字段，请使用以下按钮：
 
-* **New** - click the button to invoke the 
-  :doc:`Field Editor Dialog </admin/items/field_editor_dialog>`
-  to create a new field.
+* **New** （新建）- 点击此按钮调用
+  :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>`
+  以创建新字段。
 
-* **Edit** - click the button to invoke the 
-  :doc:`Field Editor Dialog </admin/items/field_editor_dialog>`
-  to modify a selected field.
+* **Edit** （编辑）- 点击此按钮调用
+  :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>`
+  以修改选定的字段。
 
-* **Delete** - click the button to delete a field selected in in the field list.
+* **Delete** （删除）- 点击此按钮删除字段列表中选定的字段。
 
-In the bottom-right corner of the Dialog form there are two buttons:
+在对话框表单的右下角有两个按钮：
 
-* **OK** - click the button to save change you made. 
+* **OK** （确定）- 点击此按钮保存您所做的更改。
 
-* **Cancel** - click the buttons to cancel the operation.
+* **Cancel** （取消）- 点击此按钮取消操作。
 
 .. note::
-    You can create new or modify existing fields and set **Primary key field** 
-    and **Deleted flag field** attributes only when creating a new group or 
-    editing an empty one.
+    您只能在创建新组或编辑空组时创建新字段或修改现有字段，
+    以及设置 **Primary key field** （主键字段）
+    和 **Deleted flag field** （删除标志字段）属性。
     
-    For existing item groups, that already own items you can only change 
-    **Caption**, **Name** and  **Visible** attributes.
+    对于已经拥有项目的现有项目组，您只能更改
+    **Caption** （标题）、**Name** （名称）和 **Visible** （可见）属性。
 
 .. image:: /admin/_images/item_group_jampy.png
 	:align: center
-	:alt: Item Group Editor
-
+	:alt: 项目组编辑器

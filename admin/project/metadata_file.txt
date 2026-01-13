@@ -1,151 +1,121 @@
 ======================
-Export/import metadata 
+导出/导入元数据
 ======================
 
-All the code, parameters and data structure information of the project is stored 
-in the *admin.sqlite* SQLite database located in the project folder. This 
-information we call the metadata.
+项目的所有代码、参数和数据结构信息都存储在项目文件夹中的 *admin.sqlite* SQLite 数据库中。
+我们将此信息称为元数据。
 
-Export metadata
+导出元数据
 ===============
 
-The project metadata can be exported to a zip file in the Application Builder
-by clicking the :doc:`Export </admin/project/export>` button.
+项目元数据可以通过点击 :doc:`导出 </admin/project/export>` 按钮在应用程序构建器中导出到 zip 文件。
 
-This file contains the following information:
+该文件包含以下信息：
 
-* Information about project data structure (information about DB tables, fields, 
-  indexes defined in the project items), code and settings that is stored in 
-  the *admin.sqlite* database.
-  
-* Files from the following folders:
+* 项目数据结构的信息（有关项目表中定义的数据库表、字段、索引的信息）、存储在 *admin.sqlite* 数据库中的代码和设置。
 
+* 来自以下文件夹的文件：
   * css
   * js
   * static/css
   * static/js
   * static/img
-  * reports (*ods* files of project report templates)
-  * utils (this folder may contain python libraries or files used in the project)
+  * reports（项目报告模板的 *ods* 文件）
+  * utils（此文件夹可能包含项目中使用的 Python 库或文件）
 
-Import metadata
+导入元数据
 ===============
 
-The metadata file can be imported to another project.   
+元数据文件可以导入到另一个项目中。
 
-The web application while importing the metadata performs the following operations:
+Web 应用程序在导入元数据时执行以下操作：
 
-#. sets the under_maintenance flag so that incoming requests are not processed 
-   by the application. When receiving the response to theses requests the client 
-   application shows the message "Web site currently under maintenance".
-   Web applications that run in parallel processes upon 
-   receiving requests check whether the under_maintenance flag is set and, 
-   if so, also do not process requests. 
+#. 设置 under_maintenance（维护中）标志，以便应用程序不处理传入的请求。
+   当接收到这些请求的响应时，客户端应用程序会显示"网站当前正在维护中"的消息。
+   并行运行的 Web 应用程序在收到请求时也会检查 under_maintenance 标志是否设置，
+   如果是，同样不处理请求。
 
-#. unzips the metadata file to the temporary folder in the project directory
+#. 将元数据文件解压缩到项目目录的临时文件夹中
 
-#. checks the data integrity - items with the same 
-   :doc:`ID </refs/server/abstr_item/at_id>` in the current project and imported
-   metadata must have the same type and the same 
-   :doc:`table_name </refs/server/item/at_table_name>`
-   attribute if one is specified for an item
+#. 检查数据完整性——当前项目和导入的元数据中具有相同
+   :doc:`ID </refs/server/abstr_item/at_id>` 的项目必须具有相同的类型，
+   如果为项目指定了 :doc:`table_name </refs/server/item/at_table_name>` 属性，则也必须相同
 
-#. analyzes the metadata to generate sql queries to update the project 
-   database structure and records of the *admin.sqlite* database.
+#. 分析元数据以生成更新项目数据库结构和 *admin.sqlite* 数据库记录的 SQL 查询
 
-#. if the **Import delay** attribute in the project 
-   :doc:`Parameters <parameters>`
-   is set, waits the number of seconds set in the attribute,
-   otherwise waits for 5 minutes or until all previous request to the server 
-   will be processed.
+#. 如果项目 :doc:`参数 <parameters>` 中的 **Import delay**（导入延迟）属性已设置，
+   则等待该属性中设置的秒数，否则等待 5 分钟或直到所有先前的服务器请求都被处理完毕
 
-#. updates the project database and modifies the records of the *admin.sqlite*,
-   see bellow_
+#. 更新项目数据库并修改 *admin.sqlite* 的记录，参见下文_
   
-#. copies files from the temporary folder to the project folder
+#. 将文件从临时文件夹复制到项目文件夹
 
-#. reloads the task tree
+#. 重新加载任务树
 
-#. writes the import log file to the logs folder and sends the import log to 
-   the Application builder to be displayed
+#. 将导入日志文件写入 logs 文件夹，并将导入日志发送到应用程序构建器显示
 
-#. deletes the temporary folder
+#. 删除临时文件夹
 
-#. removes the under_maintenance flag
+#. 移除 under_maintenance 标志
 
-#. increases the build flag, so web applications that run in parallel 
-   processes and monitor this flag reload their task tree
+#. 增加 build 标志，以便并行运行的 Web 应用程序监控此标志并重新加载它们的任务树
 
 
 .. _bellow:
 
-Updating project databases
+更新项目数据库
 ------------------------------
 
-The way the the project database is updated depends on the type of the
-project database.
+项目数据库的更新方式取决于项目数据库的类型。
 
-* Updating databases that support DDL statement rollback (**Postgress**, **Firebird**, **MSSQL**)
+* 支持 DDL 语句回滚的数据库更新（**Postgress**、**Firebird**、**MSSQL**）
 
-  * creates the connection to the project database 
+  * 创建到项目数据库的连接
   
-  * starts to execute sql statements to update the project database.
+  * 开始执行 SQL 语句以更新项目数据库。
   
-  * if an error occurs while updating the project database, rollbacks the changes, 
-    and goes to the step 9.
+  * 如果在更新项目数据库时发生错误，则回滚更改，并转到步骤 9。
 
-  * after the project database has been updated, makes a copy of the *admin.sqlite*
-    file and starts modifying the *admin.sqlite* database
+  * 项目数据库更新后，创建 *admin.sqlite* 文件的副本，并开始修改 *admin.sqlite* 数据库
     
-  * if an error occurs while modifying the records of *admin.sqlite*, restores 
-    *admin.sqlite* from the copy, rollbacks the changes to the project database 
-    and goes to the step 9.
+  * 如果在修改 *admin.sqlite* 记录时发生错误，则从副本恢复 *admin.sqlite*，回滚对项目数据库的更改，并转到步骤 9。
     
-  * commits the changes, deletes the copy of the *admin.sqlite*, closes 
-    connection and goes to the step 7.     
+  * 提交更改，删除 *admin.sqlite* 的副本，关闭连接并转到步骤 7。
 
-* Updating databases that do not support DDL statement rollback (**MySql**, **Oracle**)
+* 不支持 DDL 语句回滚的数据库更新（**MySql**、**Oracle**）
 
-  * creates the connection to the project database 
+  * 创建到项目数据库的连接
   
-  * starts to execute sql statements to update the project database.
+  * 开始执行 SQL 语句以更新项目数据库。
 
-  * if an error occurs while updating the project database writes error 
-    to the import log and continues until all statements will be processed
+  * 如果在更新项目数据库时发生错误，则将错误写入导入日志并继续执行，直到处理完所有语句
     
-  * commits the changes
+  * 提交更改
     
-  * starts modifying the *admin.sqlite* database
+  * 开始修改 *admin.sqlite* 数据库
 
-  * closes connection and goes to the step 7.     
-  
-  
-Causes of errors
+  * 关闭连接并转到步骤 7。
+
+错误原因
 ----------------
 
-Due to the fact that all items and fields of Jam.py projects have a unique ID
-attribute, Jam.py very accurately generates sql queries to modify the project 
-database.
+由于 Jam.py 项目的所有项目和字段都具有唯一的 ID 属性，
+Jam.py 能够非常精确地生成修改项目数据库的 SQL 查询。
 
-While generating sql queries the application currently compares only metadata
-in the current and imported project. The errors can occur when the application,
-for example, tries to adds to a table a field that doesn't exist in the current 
-project metadata but exists in the database table, you created this field 
-outside of Application Builder. This situations can be corrected using Manual 
-mode in Application Builder, see :doc:`Database <database>`,
-and changing the database.
+在生成 SQL 查询时，应用程序目前仅比较当前项目和导入项目中的元数据。
+当应用程序尝试向表中添加一个在当前项目元数据中不存在但在数据库表中存在的字段时，
+可能会发生错误（您在应用程序构建器之外创建了此字段）。
+这种情况可以通过在应用程序构建器中使用手动模式来纠正，请参阅 :doc:`数据库 <database>`，
+并修改数据库。
 
-If you won't change tables, field and indexes of production database, there will 
-be no problems. Carry out development on the development project and then import 
-its metadata into production.
+如果您不更改生产数据库的表、字段和索引，就不会有问题。
+请在开发项目上进行开发，然后将其元数据导入到生产环境中。
 
 .. note::
-    For the databases that do not support DDL statement rollback (MySql, Oracle)
-    we recommend that you make a backup of the project database 
-    and *admin.sqlite* before performing the import.
-    
+    对于不支持 DDL 语句回滚的数据库（MySql、Oracle），
+    我们建议在执行导入之前备份项目数据库和 *admin.sqlite*。
+
 .. note::
 
-    For **SQLite** database, Jam.py doesn’t support importing of metadata into an 
-    existing project (project with tables in the database). 
-    You can only import metadata into a new project.
+    对于 **SQLite** 数据库，Jam.py 不支持将元数据导入到现有项目（数据库中已有表的项目）中。
+    您只能将元数据导入到新项目中。

@@ -1,28 +1,26 @@
 ======
-Groups
+组
 ======
 
-Select the node with the name of the task to get to the groups of the project
-:doc:`task tree </programming/task_tree>`.
+选择名为任务的节点以访问项目
+:doc:`任务树 </programming/task_tree>` 的组。
 
-At the bottom of the page there are 3 buttons:
+页面底部有 3 个按钮：
 
-* **Delete** - click the button to delete an empty group.
+* **Delete** （删除）- 点击此按钮删除一个空组。
 
-* **Edit** - click this button to modify the selected group, the 
-  corresponding Group Editor will appear.
+* **Edit** （编辑）- 点击此按钮修改选定的组，
+  将出现相应的组编辑器。
 
-* **New** -  use this button to create a new item. 
+* **New** （新建）- 使用此按钮创建新项目。
 
-* **New Report Group** -  use this button to create a new report group. 
+* **New Report Group** （新建报告组）- 使用此按钮创建新的报告组。
   
 .. image:: /admin/_images/group_type_jampy.png
 	:align: center
-	:alt: Group type
+	:alt: 组类型
 
-    
-
-For each of the group, its own editor will be shown:
+对于每个组，将显示其自己的编辑器：
 
 .. toctree::
     :maxdepth: 1
@@ -30,13 +28,12 @@ For each of the group, its own editor will be shown:
     item_group_editor
     report_group_editor
     table_group_editor
-	
-Use buttons in the right panel of the page to edit Client and Server modules of 
-a selected group, see 
 
-* :doc:`Working with modules </programming/modules>`, 
-* :doc:`Code editor </admin/code_editor>`
+使用页面右侧面板中的按钮编辑所选组的客户端和服务器模块，请参阅：
+
+* :doc:`使用模块 </programming/modules>`，
+* :doc:`代码编辑器 </admin/code_editor>`
 
 .. image:: /admin/_images/groups_jampy.png
 	:align: center
-	:alt: Group node
+	:alt: 组节点

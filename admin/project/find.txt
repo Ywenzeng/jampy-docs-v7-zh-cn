@@ -1,11 +1,9 @@
 ====
-Find
+查找
 ====
 
-Press this button to to search for the character string in all modules of 
-the project.
+点击此按钮以在项目的所有模块中搜索字符串。
 
 .. image:: /admin/_images/find_jampy.png
 	:align: center
-	:alt: Find in project dialog
-	
+	:alt: 在项目中查找对话框

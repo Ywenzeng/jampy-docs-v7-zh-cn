@@ -1,67 +1,58 @@
 ========
-Database
+数据库
 ========
-
 
 .. image:: /admin/_images/database_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Database dialog
+	:alt: 数据库对话框
 
-In this dialog project database parameters are displayed. When they have been 
-changed and OK button is clicked, the Application builder will check connection 
-to the database and if it failed to connect an error will be displayed.
-
-.. note::
-   When any **Database** parameter is changed, except **DB manual update**, 
-   the server application must be restarted for changes to take effect.
-
-If **DB manual update** checkbox is unchecked (default), then when changes to an 
-item, that have an associated database table, are saved, this database table is 
-automatically modified. For example, if we add a new field to some item in the
-:doc:`Item Editor Dialog </admin/items/item_editor_dialog>`
-, the new field will be added to the associated database table. If this checkbox 
-is checked, no modifications to the database tables are made. 
-
-The **DB manual update** was renamed to **DB manual mode** in more recent version.
+在此对话框中显示项目数据库参数。当它们被更改并点击 OK（确定）按钮时，
+应用程序构建器将检查与数据库的连接，如果连接失败，将显示错误。
 
 .. note::
-    Please be very careful when using this option.
+   当任何 **Database** （数据库）参数被更改时（除了 **DB manual update** （数据库手动更新）），
+   必须重新启动服务器应用程序才能使更改生效。
 
-Examples of database setups
+如果 **DB manual update** （数据库手动更新）复选框未勾选（默认），那么当保存对有关联数据库表的项目所做的更改时，
+该数据库表会自动修改。例如，如果我们在
+:doc:`项目编辑器对话框 </admin/items/item_editor_dialog>`
+中为某个项目添加一个新字段，新字段将被添加到关联的数据库表中。如果勾选此复选框，
+则不会对数据库表进行任何修改。
+
+在更新的版本中，**DB manual update** （数据库手动更新）已重命名为 **DB manual mode** （数据库手动模式）。
+
+.. note::
+    使用此选项时请务必非常小心。
+
+数据库设置示例
 ===========================
 
-.. admonition:: Adapted from `Jam.py Design Tips`_
+.. admonition:: 改编自 `Jam.py Design Tips`_（Jam.py 设计技巧）
 
-    Jam.py supports many different database servers. For example PostgreSQL_, MariaDB_, MySQL_, MSSQL_, Oracle_, Firebird_, IBM_, SQLite_ and SQLite with SQLCipher_.
+    Jam.py 支持许多不同的数据库服务器。例如 PostgreSQL_、MariaDB_、MySQL_、MSSQL_、Oracle_、Firebird_、IBM_、SQLite_ 以及使用 SQLCipher_ 的 SQLite。
 
-    If you are developing a small project or something you don't plan to deploy in
-    a production environment, SQLite is generally the best option as it doesn't
-    require running a separate server. However, SQLite has many differences from
-    other databases, so if you are working on something substantial, it's
-    recommended to develop with the same database that you plan on using in
-    production.
+   如果您正在开发一个小型项目或不打算在生产环境中部署的项目，
+   SQLite 通常是最佳选择，因为它不需要运行单独的服务器。然而，SQLite 与其他数据库有许多不同之处，
+   因此如果您正在开发一个重要的项目，建议使用您计划在生产环境中使用的相同数据库进行开发。
 
+   除了数据库后端，我们还需要确保安装了 Python 数据库绑定。
 
-    In addition to a database backend, we need to make sure the Python
-    database bindings are installed.
+    * 如果使用 PostgreSQL，需要 ``psycopg2`` 或 ``psycopg2-binary`` 包。
 
-    * If using PostgreSQL, the ``psycopg2`` or ``psycopg2-binary`` package is needed. 
+    * 如果使用 MySQL 或 MariaDB，Python 2.x 需要 ``MySQLdb``。对于 Python 3.x，需要 ``mysql-connector-python`` 和 ``mysqlclient`` 包，以及数据库客户端开发文件。
 
-    * If using MySQL or MariaDB, the ``MySQLdb`` for Python 2.x is needed. For Python 3.x, the  ``mysql-connector-python`` and ``mysqlclient`` package is needed, as well as database client development files. 
+    * 如果使用 MSSQL，需要 ``pymssql``。对于 MS Windows 上的 ODBC，需要 ``pyodbc``。像往常一样配置 ODBC，DSN 作为内容。
 
-    * If using MSSQL, the ``pymssql`` is needed.  For ODBC on MS Windows, the ``pyodbc`` is needed. Configure the ODBC as usual with the DSN as a content.
+    * 如果使用 Oracle，需要 `cx_Oracle`_ 以及 Python 头文件（开发文件）。
 
-    * If using Oracle, the `cx_Oracle`_ is needed, as well as Python headers (development files).
+    * 如果使用 SQLCipher_，Linux 需要 ``sqlcipher3-binary`` 包。Windows 有独立的 DLL 可用。
 
-    * If using SQLCipher_,  ``sqlcipher3-binary`` package is needed for Linux. There is a standalone DLL for Windows available.
+    * 如果使用 IBM_（待补充），需要 ``ibm_db`` 和 ``ibm_db_dbi`` 包。
 
-    * If using IBM_ (TBA),  ``ibm_db`` and ``ibm_db_dbi`` package is needed.
-
-    * If using Firebird,  ``fdb`` package is needed.
+    * 如果使用 Firebird，需要 ``fdb`` 包。
     
-    * If using Databricks_, ``databricks-sql-connector`` is needed.
-
+    * 如果使用 Databricks_，需要 ``databricks-sql-connector`` 包。
 
 .. _Jam.py Design Tips: https://jampy-application-design-tips.readthedocs.io/
 .. _PostgreSQL: https://www.postgresql.org/
@@ -77,15 +68,12 @@ Examples of database setups
 .. _IBM: https://www.ibm.com/support/pages/downloading-ibm-db2-version-115-linux-unix-and-windows
 .. _Databricks: https://www.databricks.com/blog/how-use-lakebase-transactional-data-layer-databricks-apps
 
+支持在 Windows 上使用 MySQL，请访问 `MySQL deployment on Windows`_（Windows 上的 MySQL 部署）。
 
-Using MySQL on Windows is supported, please visit `MySQL deployment on Windows`_.
-
-Even though Jam.py supports all databases from the above, there is no guarantee 
-that some specific and/or propriety database functionality is supported. 
-Here we name a few tested databases:
+尽管 Jam.py 支持上述所有数据库，但不能保证支持某些特定和/或专有的数据库功能。
+这里我们列出几个经过测试的数据库：
 
 .. _MySQL deployment on Windows: https://www.radishlogic.com/coding/python-3/installing-mysqldb-for-python-3-in-windows/
-
 
 SQLite
 ------
@@ -93,7 +81,7 @@ SQLite
 .. image:: /admin/_images/SQLite_setup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: SQLite setup
+	:alt: SQLite 设置
 
 PostgreSQL
 ----------
@@ -101,7 +89,7 @@ PostgreSQL
 .. image:: /admin/_images/postgres_setup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: PostgreSQL setup
+	:alt: PostgreSQL 设置
 
 MySql
 -----
@@ -109,7 +97,7 @@ MySql
 .. image:: /admin/_images/MySql_setup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: MySql setup
+	:alt: MySql 设置
 
 FireBird
 --------
@@ -117,7 +105,7 @@ FireBird
 .. image:: /admin/_images/firebird_setup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: FireBird setup
+	:alt: FireBird 设置
 
 MSSQL
 -----
@@ -125,11 +113,10 @@ MSSQL
 .. image:: /admin/_images/mssql_setup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: MSSQL setup
-
+	:alt: MSSQL 设置
 
 .. note::
-   DSN example: ``DRIVER={SQL Server}; SERVER=localhost\MSSQLSERVER01; DATABASE=master; Trusted_Connection=yes;``
+   DSN 示例：``DRIVER={SQL Server}; SERVER=localhost\MSSQLSERVER01; DATABASE=master; Trusted_Connection=yes;``
 
 Oracle
 ------
@@ -137,9 +124,7 @@ Oracle
 .. image:: /admin/_images/oracle_setup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Oracle setup
-
-
+	:alt: Oracle 设置
 
 Databricks
 ----------
@@ -147,12 +132,10 @@ Databricks
 .. image:: /admin/_images/databricks_connection_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Databricks setup
-
+	:alt: Databricks 设置
 
 .. note::
-   Databricks workspace and database schema name is typed as ``workspace.database`` 
-   in the ``Database`` field. This is visible on the screenshot as 
-   ``samples.bakehouse`` in the upper right corner.
+   Databricks 工作区和数据库模式名称在 ``Database`` （数据库）字段中键入为 ``workspace.database``。
+   这在截图中显示为右上角的 ``samples.bakehouse``。
    
-   Not all DDL is supported.
+   并非所有 DDL 都受支持。
