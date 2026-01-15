@@ -1,3 +1,35 @@
+[![PyPI 上的软件包](https://img.shields.io/pypi/v/jam.py-v7.svg)](https://pypi.org/project/jam.py-v7) ![支持的 Python 版本](https://img.shields.io/pypi/pyversions/python3-saml.svg) [![文档状态](https://readthedocs.org/projects/jampy-docs-v7/badge/)](https://jampy-docs-v7.readthedocs.io) [![下载量](https://static.pepy.tech/badge/jam.py-v7)](http://pepy.tech/project/jam.py-v7)
+
+
+## Jam.py 是一个 Web 前端应用程序生成器，可与现有数据库和新创建的数据库一起使用。
+## 支持 Monaco 编辑器和 Databricks！
+
+## 这是 jam.py 的分支，旨在继续提供支持和开发，因为 Andrew 已从 jam.py 项目退休。V7 现已全面发布。请在以下链接中找到 v5 master 分支的存档：https://github.com/jam-py-v5/jam-py/
+
+## LLMS-full.txt 已发布：
+https://jampy-docs-v7.readthedocs.io/en/latest/llms-full.txt 
+和 
+https://jampy-docs-v7.readthedocs.io/en/latest/llms.txt
+
+内置所有功能且事件驱动！什么是 EDA：
+
+"事件驱动框架，也称为事件驱动架构（EDA），是一种软件组件通过状态变化或事件进行通信和响应的设计模式。" Jam.py 中的一切都可以是一个事件。例如鼠标点击，或按下 CRTL+Ins、CTRL+Del 或您定义的任何操作。
+
+与其他产品的主要区别在于，整个应用程序都包含在一个 **单个 SQLite3 文件** 中。并且可以 **加密**！
+
+另一个关键区别是能够在 **应用程序构建器中直接作为后端运行任何 Python 过程** ——包括流行的库，如 Matplotlib、Pandas 和 NumPy——结果在浏览器中显示。Python 过程可以在服务器上 **同步** 或 **异步** 运行。
+
+此外，使用来自任何受支持数据库的 **导入表格** 功能，可提供 **即时 Web 前端**。无需编写任何代码，并且 **身份验证一键即可完成**！
+
+希望这能激发您的兴趣！谢谢。
+
+## 安装和启动
+
+```
+pip install jam.py-v7
+jam-project.py
+server.py
+```
 
 [![替代文本](https://github.com/jam-py-v5/jam-py/blob/develop/assets/images/JAMPY_Readme.gif?raw=true)](https://northwind.pythonanywhere.com)
 
