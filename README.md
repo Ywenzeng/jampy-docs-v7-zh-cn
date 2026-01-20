@@ -33,7 +33,8 @@ server.py
 
 [![替代文本](https://github.com/jam-py-v5/jam-py/blob/develop/assets/images/JAMPY_Readme.gif?raw=true)](https://northwind.pythonanywhere.com)
 
-[![alt text](https://github.com/platipusica/jampy-docs-v7-zh-cn/tree/main/_static/demo_zh_cn.png?raw=true)](https://northwind.pythonanywhere.com)
+
+(https://github.com/platipusica/jampy-docs-v7-zh-cn/tree/main/_static/demo_zh_cn.png?raw=true)
 
 
 
