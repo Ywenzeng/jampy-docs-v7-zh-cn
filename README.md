@@ -33,6 +33,10 @@ server.py
 
 [![替代文本](https://github.com/jam-py-v5/jam-py/blob/develop/assets/images/JAMPY_Readme.gif?raw=true)](https://northwind.pythonanywhere.com)
 
+[![alt text](https://github.com/platipusica/jampy-docs-v7-zh-cn/tree/main/_static/demo_zh_cn.png?raw=true)](https://northwind.pythonanywhere.com)
+
+
+
 一些关于如何设置 Jam.py 和创建应用程序的短视频：
 
 * [使用 Jam.py 框架在 7 分钟内从头到尾创建 CRM Web 数据库应用程序](https://youtu.be/vY6FTdpABa4)
