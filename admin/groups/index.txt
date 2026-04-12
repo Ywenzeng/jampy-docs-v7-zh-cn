@@ -2,18 +2,18 @@
 组
 ======
 
-选择名为任务的节点以访问项目 
-:doc:`任务树 </programming/task_tree>` 的组。
+选择名为 “任务(task)” 的节点以访问项目的 
+:doc:`任务树 </programming/task_tree>` 组。
 
 页面底部有 3 个按钮：
 
-* **Delete** （删除）- 点击此按钮删除一个空组。
+* **删除(Delete)** - 点击此按钮删除一个空组。
 
-* **Edit** （编辑）- 点击此按钮修改选定的组，将出现相应的组编辑器。
+* **编辑(Edit)** - 点击此按钮修改选定的组，将出现相应的组编辑器。
 
-* **New** （新建）- 使用此按钮创建新项目。
+* **新建(New)** - 使用此按钮创建新项目。
 
-* **New Report Group** （新建报告组）- 使用此按钮创建新的报告组。
+* **新建报告组(New Report Group)** - 使用此按钮创建新的报告组。
   
 .. image:: /admin/_images/group_type_jampy.png
 	:align: center

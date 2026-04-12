@@ -1,43 +1,43 @@
-===========
-新建目录
-===========
+===========================
+新建数据目录(catalog)
+===========================
 
-让我们回到应用程序构建器页面，创建一个"Customers" （客户）目录。
-一个目录对应数据库中的一个新表。
+让我们回到应用程序构建器页面，创建一项 "客户(Customers)" 数据目录。
+每项新的数据目录对应数据库中的一个新表。
 
-为此，在项目树中选择 “目录(Catalogs)” 组，然后点击页面右下角的 **新建(New)** 按钮
+为此，在项目树中选择 “数据目录(Catalogs)” 组，然后点击页面右下角的 **新建(New)** 按钮
 
 .. image:: /intro/_images/catalogs_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: 目录
+	:alt: 数据目录
 
 在出现的
-:doc:`项目编辑器 </admin/items/item_editor_dialog>`
-对话框中，填写新目录的标题和名称。标题是向用户显示的名称，而名称是在代码（Python 或 JS）中引用此目录时使用的变量名。名称必须是有效的 Python 标识符。
+:doc:`实体项编辑器 </admin/items/item_editor_dialog>`
+对话框中，填写新数据表对应的目录的标题和名称。标题是向用户显示的名称，而名称是在代码（Python 或 JS）中引用此项数据目录时使用的变量名。名称必须是有效的 Python 标识符。
 
 .. image:: /intro/_images/customers_new_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: 新客户目录
+	:alt: 新的客户数据目录
 
-然后，点击对话框右下角的 **新建** 按钮添加新字段。将出现
-:doc:`字段编辑器 </admin/items/field_editor_dialog>`
-对话框。输入"名字(Firstname)" 字段的标题和名称，选择其类型（此处为 30 个字符的 ``TEXT`` 类型），然后点击 **确定(OK)** 按钮。
+然后，点击对话框右下角的 **新建(New)** 按钮添加新字段。将出现
+:doc:`字段编辑器 </admin/items/field_editor_dialog>` 
+对话框。输入 “名字(Firstname)” 字段的标题和名称，并选择其类型（此处为 30 个字符的 ``TEXT`` 类型），然后点击 **确定(OK)** 按钮。
 
 .. image:: /intro/_images/firstname_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: 新任务日志
+	:alt: 新建字段
 
-类似地，添加"Lastname" （姓氏）和"Phone" （电话）字段。添加"Lastname" （姓氏）字段时，请勾选 **必填(Required)** 属性。这要求在添加新数据项时必须填写该字段。
+类似地，添加 “姓氏(Lastname)” 和 “电话(Phone)” 字段。添加 “姓氏(Lastname)” 字段时，请勾选 **必填(Required)** 属性。这要求在添加新数据项时必须填写该字段。
 
 .. image:: /intro/_images/customers_fields_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: 客户字段
 
-现在，请点击 **确定** 按钮保存更改。保存时，应用程序构建器将在 ``crm.sqlite`` 数据库中创建 ``CRM_CUSTOMERS`` 表：
+现在，请点击 **确定(OK)** 按钮保存更改。保存时，应用程序构建器将在 ``crm.sqlite`` 数据库中创建 ``CRM_CUSTOMERS`` 表：
 
 
 .. image:: /intro/_images/customer_sql_jampy.png
@@ -46,7 +46,7 @@
 	:alt: 已创建的表
 
 
-转到项目页面并确保刷新了页面
+转到项目的客户端页面并确保刷新了页面
 
 .. code-block:: console
 
@@ -54,8 +54,8 @@
 
 
 
-然后，点击 **新建** 按钮创建一个新客户。
-填写对话框，然后点击 **确定** 按钮：
+然后，点击页面右下角的 **新建(New)** 按钮创建一个新客户。
+填写对话框，然后点击 **确定(OK)** 按钮：
 
 .. image:: /intro/_images/customers_refresh_jampy.png
 	:scale: 50%
@@ -64,6 +64,6 @@
 
 
 另请参阅
-========
+-----------
 
-:doc:`数据清理 </admin/sanitizing>`
+:doc:`数据的转义清理 </admin/sanitizing>`

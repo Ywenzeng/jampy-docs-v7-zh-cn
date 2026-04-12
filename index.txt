@@ -5,7 +5,7 @@ Jam.py V7 文档
 简介
 ==============
 
-欢迎使用 Jam.py！如果您是 Jam.py 或无代码、低代码或多代码 Web 应用程序开发的新手，这里可以找到关于 Jam.py V7 的文档。
+欢迎使用 Jam.py！如果您是 Jam.py 新手，要进行无代码、低代码或多代码的 Web 应用程序开发，那么在这里可以找到使用 Jam.py V7 的相关文档。
 
 与 Jam.py V5 最大的区别在于增加了 :doc:`路由 </admin/routing>` 支持和采用了 Bootstrap 5，从而实现对移动设备的现代化支持（详见 :doc:`版本 7 </releases/version_7/index>`）。
 
@@ -14,7 +14,7 @@ Jam.py V7 文档
 
 .. admonition:: 目标
 
-    安装 Python 和 Jam.py，选择数据库和 Web 服务器，并做出应用程序设计决策。
+    安装 Python 和 Jam.py 后，再选择数据库和 Web 服务器，就实现应用程序设计的决策。
 
 .. admonition:: 读者对象
 
@@ -22,12 +22,13 @@ Jam.py V7 文档
 
 .. admonition:: 前提条件
 
-    建议具备一些 Python 和 JavaScript 知识。需要掌握命令行提示符的基本知识，并能够输入命令。
+    建议具备一些 Python 和 JavaScript 知识。
+    需要掌握命令行提示符的基本知识，并能够输入命令执行操作。
 
-为 LLM 提供资料
-================
+提供给 LLM(大预言模型) 的资料
+==========================================
 
-已发布 LLMS-full.txt 文件：
+已发布的 LLMS-full.txt 文件：
 
 https://jampy-docs-v7.readthedocs.io/en/latest/llms-full.txt
 
@@ -44,34 +45,29 @@ https://github.com/jam-py-v5/jam-py-v7
 
 以下是文档结构的概览，以帮助您找到特定内容的所在位置：
 
-:doc:`入门 <intro/index>` 主题描述了如何安装框架、创建新项目、逐步开发 Web 应用程序并部署它。
+:doc:`入门指南 <intro/index>` 主题描述了如何安装框架、创建新项目、逐步开发 Web 应用程序并部署到生产环境。
 
 :doc:`编程指南 <programming/index>`
 在较高层次上讨论关键主题和概念，并提供有用的背景信息和解释。
 
 :doc:`业务应用程序构建器 <admin/index>` 是对用于应用程序开发和数据库管理的应用程序构建器的详细描述。
 
-:doc:`类参考指南 <refs/index>` 包含 Jam.py 类 API 的技术参考。
+:doc:`类参考指南 <refs/index>` 包含关于 Jam.py 类 API 的技术参考。
 
-:doc:`常见问题 <faq/index>` 主题涵盖了最常见的问题。
+:doc:`常见问题 <faq/index>` 该主题涵盖了最常见的问题。
 
 :doc:`如何实现操作指南 <how_to/index>` 包含一些代码示例，对于快速完成常见任务可能很有用。
 
-请访问 :doc:`目录 <contents>`，或者查看
-
-`Jam.py 应用程序设计技巧`_，以获取关于如何构建应用程序或从 MS Access 迁移的详细步骤。
+请访问 :doc:`目录 <contents>`，或者查看 `Jam.py 应用程序设计技巧`_，以获取关于如何构建应用程序或从 MS Access 迁移的详细步骤。
 
 .. _`Jam.py 应用程序设计技巧`: https://jampy-application-design-tips.readthedocs.io/
 
-要将本文档的单个 PDF 文件，请访问：
-
-
-https://jampy-docs-v7.readthedocs.io/_/downloads/zh-cn/latest/pdf/
+要获取本文档的单个 PDF 文件，请访问： https://jampy-docs-v7.readthedocs.io/_/downloads/zh-cn/latest/pdf/
 
 视频教程
 ===============
 
-如果您是 Jam.py 的新手，我们强烈建议您观看这些视频教程。这些视频针对 Jam.py V5 录制的，但与 V7 相比，用户界面的变化极小。
+如果您是 Jam.py 的新手，我们强烈建议您观看这些视频教程。这些视频是针对 Jam.py V5 录制的，但与 V7 相比，用户界面的变化极小。
 
 建议以 1080p 分辨率观看这些视频。
 
