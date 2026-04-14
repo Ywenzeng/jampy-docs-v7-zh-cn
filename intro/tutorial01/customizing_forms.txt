@@ -2,33 +2,34 @@
 自定义表单
 =================
 
-当我们刷新项目页面时，会看到 “联系人(Contacts)” 日志的表格中和编辑表单中的字段是按照它们被创建的顺序显示的。
+当我们刷新客户端的项目页面时，会看到 “联系人(Contacts)” 台账的表格和编辑表单中的字段是按照它们被创建的顺序显示的。
 
 .. image:: /intro/_images/contacts_new_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: 联系人新记录
 
-要更改字段在表格中的显示方式，请点击 **查看表单(View Form)** 按钮打开
+要更改字段在客户端的表格中的显示方式，请选择 “联系人(Contacts)” 台账项，再点击 **查看表单(View Form)** 按钮打开
 :doc:`查看表单对话框 </admin/items/view_form_dialog>`。
-让我们使用 **←** 、 **→** 、 **↑** 和 **↓** “方向箭头” 按钮来更改显示的字段。
+让我们使用 “方向箭头” （ **←** 、 **→** 、 **↑** 和 **↓** ）按钮来更改显示的字段。
 
 .. image:: /intro/_images/view_contacts1_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: 查看联系人1
 
-在上面的示例中，我们通过选择 “名字(firstname)” 字段并按下 **→** （右箭头）按钮将其隐藏，并通过选择 “备注(notes)” 字段并d多次按下 **↓** （下箭头）按钮将其移动到最后。
+在上面的示例中，我们通过选择 “名字(firstname)” 字段并按下 **→** 按钮将其隐藏（移到右边的字段列表中），
+并通过选择 “备注(notes)” 字段并多次按下 **↓** 按钮将其移到最后。
 
 我们还可以更改哪些字段可用于对表格的数据进行排序。
-为此，点击 **排序字段(Sort fields)** 输入框右侧的按钮，并选择表格对应的列标题。然后点击 **确定** 保存所有更改。
+为此，点击 **排序字段(Sort fields)** 输入框右侧的按钮，并选择表格中对应的列标题。然后点击 **确定(OK)** 保存所有更改。
 
 .. image:: /intro/_images/view_contacts_order_by_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: view_contacts_order_by_jampy.png
 
-要更改字段在编辑表单中的显示方式，请点击 **编辑表单(Edit Form)** 按钮打开
+要更改字段在客户端的编辑表单中的显示方式，请点击 **编辑表单(Edit Form)** 按钮打开
 :doc:`编辑表单对话框 </admin/items/edit_form_dialog>`。
 这与上面的 **查看表单(View Form)** 操作方式非常相似。
 
@@ -37,7 +38,7 @@
 	:align: center
 	:alt: 编辑联系人2
 
-要查看我们的工作成果，请转到项目页面并刷新，然后点击 **新建** 按钮。
+要查看我们的工作成果，请转到客户端的项目页面并刷新，然后点击 **新建(New)** 按钮。
 
 .. image:: /intro/_images/contacts_view_jampy.png
 	:scale: 50%

@@ -7,8 +7,8 @@
 添加图像字段
 ==================
 
-让我们选择 “客户(Customers)” 目录，双击它以打开
-:doc:`项目编辑器对话框 </admin/items/item_editor_dialog>`
+让我们在主表目录中选择 “客户(Customers)” ，双击它以打开
+:doc:`实体项编辑器对话框 </admin/items/item_editor_dialog>`
 并添加一个图像字段 “照片(Photo)” ：
 
 .. image:: /intro/_images/image_field_jampy.png
@@ -16,14 +16,14 @@
     :align: center
     :alt: image_field_jampy.png
 
-现在刷新项目页面，点击 客户(Customers) 菜单项并打开编辑表单。
+现在，刷新客户端的项目页面，点击 “客户(Customers)” 菜单项并选中一条数据，然后打开编辑表单。
 
 .. image:: /intro/_images/image_project1_jampy.png
     :scale: 50%
     :align: center
     :alt: image_project1_jampy.png
 
-双击编辑表单中的图像，从 “打开文件” 对话框中选择一张图像。
+双击编辑表单中的图像，从 “打开” 对话框中选择一张图像文件。
 
 .. image:: /intro/_images/select_image_jampy.png
     :scale: 50%
@@ -40,7 +40,7 @@
 
   要清除图像，请按住 Ctrl 键并双击图像。
 
-让我们在应用程序构建器中打开
+像本节开始一样，让我们在应用程序构建器中打开
 :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>`
 并在 **界面(Interface)** 选项卡上将 **查看宽度(View width)** 设置为 120，
 将 **编辑宽度(Edit width)** 设置为 314。
@@ -56,7 +56,7 @@
 
 在
 :doc:`查看表单对话框 </admin/items/view_form_dialog>`
-中，我们将 **Row lines**（行数）设置为 4，并将"Photo"（照片）字段的宽度设置为 120。
+中，我们将 **行数(Row lines)** 设置为 4 （每条记录的高度占据 4 行文本），并将 “照片” 字段的宽度设置为 120。
 
 .. image:: /intro/_images/image_view_form_jampy.png
     :scale: 50%
@@ -72,27 +72,29 @@
 
 
 另请参阅
-========
+--------------
 
-:doc:`接受字符串 </admin/accept_string>`
+:doc:`可接受的字符串 </admin/accept_string>`
 
 
 从摄像头捕获图像
 ===========================
 
-您可以从摄像头捕获图像。为此，请勾选 **从摄像头捕获(Capture from camera)** 复选框。
+您可以从摄像头捕获图像。
+为此， 在应用程序构建器中打开 :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>` ，
+在 **界面(Interface)** 选项卡勾选 **从摄像头捕获(Capture from camera)** 复选框。
 在这种情况下，当图像未设置时，将显示摄像头视频流而不是图像占位符。
 
 双击视频以捕获图像。要清除图像，请按住 Ctrl 键并双击图像，之后将显示视频流。
 
-图像会自动上传到服务器，前提是应用程序的 :doc:`参数 </admin/project/parameters>` 
-中的 :doc:`可接受值列表 </admin/accept_string>` 中添加了 ".png"。
+图像会自动上传到服务器，前提是应用程序的项目 :doc:`参数 </admin/project/parameters>` 
+中的 :doc:`可接受的值列表 </admin/accept_string>` 中添加了 “.png” 、“.jpg” 等图像文件的扩展名。
 
 
 添加文件字段
 =================
 
-现在，我们向 “联系人(Contacts)” 日志添加一个用于存储附件的字段。
+现在，我们向 “联系人(Contacts)” 台账添加一个用于存储附件的字段 “附件(attachment)”，字段类型为 “FILE”。
 
 .. image:: /intro/_images/file_field_jampy.png
     :scale: 50%
@@ -108,19 +110,18 @@
     
 字段输入框右侧有三个按钮——用于上传、下载和打开文件。
 
-让我们在应用程序构建器中打开
-:doc:`字段编辑器对话框 </admin/items/field_editor_dialog>`
-取消勾选 **下载按钮(Download btn)** 复选框，并将 
-**接受(Accept)** 属性设置为 '.pdf'。
+在应用程序构建器中打开 :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>`
+在 **界面(Interface)** 选项卡中取消勾选 **下载按钮(Download btn)** 复选框，
+并将 **接受(Accept)** 属性设置为 '.pdf'。
 
-在添加值之前，请查看 :doc:`可接受值列表 </admin/accept_string>`。
+在添加值之前，请查看 :doc:`可接受的值列表 </admin/accept_string>`。
 
 .. image:: /intro/_images/appendix_interface_jampy.png
     :scale: 50%
     :align: center
     :alt: appendix_interface_jampy.png
 
-让我们刷新项目页面，打开 “联系人(Contacts)”编辑表单，
+让我们刷新客户端的项目页面，打开 “联系人(Contacts)”编辑表单，
 通过点击上传按钮上传文件：
 
 .. image:: /intro/_images/appendix_select_jampy.png
@@ -144,10 +145,10 @@
 
   文件和图像存储在服务器上的 *static/files* 文件夹中。
   
-  您可以通过在 :doc:`项目参数 </admin/project/parameters>` 中设置 **最大内容长度(Max content length)** 属性
-  来限制可以上传到服务器的文件大小。
+  在服务端应用程序构建器页面中，您可以通过选择 “项目” 后，再点击页面右侧的 :doc:`参数 </admin/project/parameters>` 来设置 **最大内容长度(Max content length)** 
+  属性来限制可以上传到服务器的文件大小。
 
 另请参阅
-========
+------------
 
-:doc:`接受字符串 </admin/accept_string>`
+:doc:`可接受的字符串 </admin/accept_string>`

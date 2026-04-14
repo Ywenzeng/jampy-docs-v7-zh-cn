@@ -2,25 +2,26 @@
 教程 第三部分：明细表
 =========================
 
-在本部分教程中，我们将解释如何使用明细表。
+在本部分教程中，我们将解释如何使用 **明细表(Details)** 。
 
-让我们在项目树中选择"任务(Task)/组(Groups)" ，并点击页面右下角的 **新建(New)** 按钮，新建一个项目组：
+让我们在项目树中选择 “任务(Task)/分组(Groups)” ，并点击页面右下角的 **新建(New)** 按钮，新建一个组：
 
 .. image:: /intro/_images/detail_group_jampy.png
     :scale: 50%
     :align: center
     :alt: detail_group_jampy.png
 
-将其命名为 “明细表(Details)” ：
+将其命名为 “明细表(Details)” ，并添加两个字段 ID(id，类型为 INTEGER ) 、 已删除(deleted，类型为 BOOLEAN )：
 
 .. image:: /intro/_images/detail_group_not_visible_jampy.png
     :scale: 50%
     :align: center
     :alt: detail_group_not_visible_jampy.png
 
-在
-:doc:`项目编辑器 </admin/items/item_editor_dialog>`
-对话框中，我们将新实体命名为 “待办事项列表(To do list)” ，并按照前一教程的方式添加 “创建时间(Created)” 和 “待办事项(To do)” 两个字段：
+现在创建一个明细项。先选中刚刚新建的 “明细表(Details)” ，再点击页面右下角的 “新建(New)” ，
+然后在打开的 :doc:`实体项编辑器 </admin/items/item_editor_dialog>` 对话框中，
+将明细项命名为 “待办事项列表(To do list)” ，
+并按照前面的教程介绍的方式添加类型为 DATETIME 的 “创建时间(Created datetime)” 和类型为 TEXT的 “待办事项(To do)” 两个字段：
 
 .. image:: /intro/_images/new_detail_jampy.png
     :scale: 50%
@@ -29,7 +30,7 @@
 
 .. note::
     现在最重要的一步是创建将明细表与其主表 “链接” 起来的字段。
-    这是与 Jam.py v5 的一个关键区别，在 v5 中明细表记录是作为遗留功能处理的。
+    这是与 Jam.py v5 的一个关键区别，在 v5 中明细表记录被视为作为未启用的功能。
 
 例如，创建字段 “联系人ID(ContactID)” ：
 
@@ -38,15 +39,16 @@
     :align: center
     :alt: new_detail_lookup_id_jampy.png
 
-“ID” 字段是到 “联系人(Contacts)” 表的 :doc:`查找字段 </programming/data/lookup_fields>`。
+“ID” 字段是连到 “联系人(Contacts)” 表的 :doc:`查找字段 </programming/data/lookup_fields>`。
 
 .. image:: /intro/_images/new_detail_lookup_id_field_jampy.png
     :scale: 50%
     :align: center
     :alt: new_detail_lookup_id_field_jampy.png
 
-保存 “待办事项列表(To do list)” 后，选择 “联系人(Contacts)” 日志，然后点击右侧窗格中的 **明细表(Details)** 按钮，打开
-:doc:`明细表对话框 </admin/items/details_dialog>`。
+保存 “待办事项列表(To do list)” 后，选择 “联系人(Contacts)” 台账，
+然后点击右侧窗格中的 **明细表(Details)** 按钮，
+打开 :doc:`明细表对话框 </admin/items/details_dialog>` 。
 
 .. image:: /intro/_images/new_detail_to_do_jampy.png
     :scale: 50%
@@ -60,37 +62,38 @@
     :align: center
     :alt: details_dialog_jampy.png
 
-一个新的 “待办事项列表(To do list)” 实体将被创建为 “联系人(Contacts)” 日志的子项。
+一个新的 “待办事项列表(To do list)” 实体将被创建为 “联系人(Contacts)” 台账的子项。
 
 .. image:: /intro/_images/contacts_to_do_list_jampy.png
     :scale: 50%
     :align: center
     :alt: contacts_to_do_list_jampy.png
 
-再次选择 “联系人(Contacts)” 日志，点击 **编辑表单(Edit form)** 按钮打开
+再次选择 “联系人(Contacts)” 台账，点击页面右侧 **编辑表单(Edit form)** 按钮打开
 :doc:`编辑表单对话框 </admin/items/edit_form_dialog>`。选择 **表单(Form)** 选项卡，
-点击 **编辑明细表(Edit details)** 输入框右侧的按钮，然后勾选 “待办事项列表(To do list)” 复选框。
+点击 **编辑明细(Edit details)** 输入框右侧的按钮，然后勾选 “待办事项列表(To do list)” 复选框。
 
 .. image:: /intro/_images/details_to_edit_jampy.png
     :scale: 50%
     :align: center
     :alt: details_to_edit_jampy.png
 
-让我们更新项目页面并双击某个联系人。现在我们可以为该联系人的待办事项列表添加内容。
+让我们更新客户端的项目页面并在 “联系人(Contacts)” 台账中双击某个联系人。
+现在我们可以为该联系人的待办事项列表添加内容。
 
 .. image:: /intro/_images/new_to_do_item_jampy.png
     :scale: 50%
     :align: center
     :alt: new_to_do_item_jampy.png
 
-点击项目树中的 **组(Groups)** 节点，双击 **明细表(Details)** 行，并将 “可见(Visible)” 属性设置为 “是(true)” 。
+点击项目树中的 **分组(Groups)** 节点，双击 **明细表(Details)** 行，并将 “可见(Visible)” 属性设置为 “是(true)” 。
 
 .. image:: /intro/_images/detail_group_visible_jampy.png
     :scale: 50%
     :align: center
     :alt: detail_group_visible_jampy.png
 
-当我们刷新项目页面时，我们将在主菜单中看到 “待办事项列表(To do list)”  实体。
+当我们刷新客户端项目页面时，我们将在主菜单中看到 “待办事项列表(To do list)”  菜单项。
 点击它以查看所有联系人的待办事项列表。
 
 .. image:: /intro/_images/todo_all_jampy.png
@@ -98,9 +101,9 @@
     :align: center
     :alt: todo_all_jampy.png
 
-再次选择 “联系人(Contacts)” 日志，点击 **查看表单(View form)** 按钮打开
-:doc:`查看表单对话框 </admin/items/view_form_dialog>`。
-选择 ****表单(Form)**** 选项卡，点击 **查看明细表(View detail)** 输入框右侧的按钮，
+再次选择 “联系人(Contacts)” 台账，点击 **查看表单(View form)** 按钮打开
+:doc:`查看表单对话框 </admin/items/view_form_dialog>` 。
+选择 **表单(Form)** 选项卡，点击 **查看明细(View detail)** 输入框右侧的按钮，
 然后勾选 “待办事项列表(To do list)” 复选框。
 
 .. image:: /intro/_images/contacts_view_detail_jampy.png
@@ -108,7 +111,7 @@
     :align: center
     :alt: contacts_view_detail_jampy.png
 
-在项目页面中，您将看到当联系人更改时，待办事项列表也会相应更改。
+在客户端项目页面中，当更改选中的联系人时，您将看到页面底部的待办事项列表也会相应更改。
 
 .. image:: /intro/_images/todo_completed_jampy.png
     :scale: 50%

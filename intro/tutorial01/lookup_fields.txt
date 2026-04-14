@@ -2,31 +2,33 @@
 查找字段
 =============
 
-现在，我们将创建 “联系人(Contacts)” 日志，并使用查找字段将联系人与客户关联起来。查找字段允许一个数据实体（即目录或日志）的元素引用另一个实体中的元素。
+现在，我们将创建 “联系人(Contacts)” 台账，并使用查找字段将联系人与客户关联起来。
+查找字段允许一个数据实体（即主表目录或台账）的元素引用另一个实体中的元素。
 
-在项目任务树中选择"Journals"（日志）组，并以与创建 “客户” 目录相同的方式添加新日志。日志和目录一样，对应数据库中的不同表。有关更多信息，请参阅此 :doc:`链接 </faq/faq_catalogs_vs_journals>`。
+在项目任务树中选择 “台账(Journals)” ，并以与创建 “客户(Customers)” 主表目录相同的方式添加新台账。
+台账和主表目录一样，对应数据库中的不同表。有关更多信息，请参阅此 :doc:`链接 </faq/faq_catalogs_vs_journals>`。
 
 首先，添加一个 ``DATETIME`` 类型的 “联系日期(Contact date)” 字段，
 以及一个 ``TEXT`` 类型的 “备注(Notes)” 字段。
 
 然后，添加
 :doc:`查找字段 </programming/data/lookup_fields>` 
-“联系客户(Customer)”，该字段将存储对 “客户(Customers)” 目录中记录的引用。
+“联系的客户(Customer)”，该字段将存储对 “客户(Customers)” 表中记录的引用。
 
 .. image:: /intro/_images/contacs_cutomer_fld_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: 添加客户字段
+	:alt: 添加联系的客户字段
 
 要创建查找字段，首先指定其标题和名称，并将类型留空。
-然后转到 **查找(Lookup)** 选项卡，点击 **查找项目(Lookup item)** 输入框右侧的按钮。
+然后转到 **查找(Lookup)** 选项卡，点击 **查找项(Lookup item)** 输入框右侧的按钮。
 
 .. image:: /intro/_images/cutomers_lookup_tab_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: 客户查找选项卡
 
-这将弹出一个实体列表。双击 “客户(Customers)” 记录以选择它。
+这将弹出一个实体项列表。双击 “客户(Customers)” 实体项以选择它。
 
 .. image:: /intro/_images/cutomers_lookup_item_jampy.png
 	:scale: 50%
@@ -34,7 +36,7 @@
 	:alt: 选择客户查找项目
 
 接下来，我们需要指定一个查找字段。这是用于定位客户的方式。
-这里我们选择 “姓氏(Lastname)” 。将其他留空，然后点击 **确定** 。
+这里我们选择 “姓氏(Lastname)” 。将其他留空，然后点击 **确定(OK)** 。
 
 .. image:: /intro/_images/lastname_lookup_jampy.png
 	:scale: 50%
@@ -42,7 +44,7 @@
 	:alt: 姓氏查找字段
 
 重复此过程，添加 “名字(Firstname)” 和 “电话(Phone)” 查找字段。
-对于这些字段，我们将 “联系客户(Customer)” 字段指定为它们的 **主控字段(Master field)** 属性。
+对于这些字段，我们将 “联系的客户(Customer)” 字段指定为它们的 **主控字段(Master field)** 属性。
 这使它们与我们创建的第一个  “姓氏(Lastname)” 查找字段关联起来，从而使所有三个
 查找字段都引用同一个客户。
 
@@ -56,7 +58,7 @@
 	:align: center
 	:alt: 电话查找字段
 
-点击 **确定** 按钮保存 “联系人(Contacts)” 实体。
+点击 **确定(OK)** 按钮保存 “联系人(Contacts)” 实体。
 
 .. image:: /intro/_images/contacts_sql_jampy.png
 	:scale: 50%
@@ -64,22 +66,21 @@
 	:alt: 联系人 SQL
 
 如您所见，``CRM_CONTACTS`` 表中没有 “名字(Firstname)” 和 “电话(Phone)” 字段。
-这是因为我们已将这些字段的  **主控字段(Master field)** 属性设置为 “联系客户(Customer)” 。
- “联系客户(Customer)” 字段将存储对  “客户(Customers)”  目录中记录的引用，
+这是因为我们已将这些字段的  **主控字段(Master field)** 属性设置为 “联系的客户(Customer)” 。
+“联系的客户(Customer)” 字段将存储对  “客户(Customers)”  表中记录的引用，
 而该记录将包含 “名字(Firstname)” 和 “电话(Phone)” 字段 。
 
-刷新项目页面，在 “联系人(Contacts)” 页面中，点击 **新建** 按钮。
-您会看到  “联系客户(Customer)” 输入框右侧有一个小按钮。
+刷新项目页面，在 “联系人(Contacts)” 页面中，点击 **新建(NEW)** 按钮。
+您会看到  “联系的客户(Customer)” 输入框右侧有一个小按钮。
 
 .. image:: /intro/_images/customer_input_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: 客户输入
 
-点击它，然后在 “客户(Customers)” 目录中选择一条记录：
- “联系客户(Customer)”、“名字(Firstname)” 和 “电话(Phone)” 字段将自动填充。
+点击它，然后在 “客户(Customers)” 表中选择一条记录，“联系的客户(Customer)”、“名字(Firstname)” 和 “电话(Phone)” 字段将自动填充。
 
 .. image:: /intro/_images/customer_input_selected_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: 已选择的客户输入
+	:alt: 输入框中已选择的客户

@@ -1,27 +1,27 @@
-============
-查找的列表
-============
+========================
+查找列表(Lookup lists)
+========================
 
-现在我们来创建一个
-:doc:`查找列表 </admin/lookup_lists>`
- “状态(Status)” 。查找列表用于创建"下拉"字段，其值域为有限的可选值集合。
+现在我们来创建一个 :doc:`查找列表 </admin/lookup_lists>` “状态(Status)” 。
+查找列表用于创建 "下拉框" 中的字段，其值域为有限的可选值集合。
 
-在项目树中选择 “任务(Task)” 节点，然后在右侧点击 **查找的列表(Lookup lists)** 按钮。
+在项目树中选择 “任务(Task)” 节点，然后在右侧点击 **查找列表(Lookup lists)** 按钮。
 
 .. image:: /intro/_images/lookup_lists_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: 查找的列表
+	:alt: 查找列表
 
-初始状态下它是空的。点击 **新建** 按钮创建一个新列表。
-指定新的 “查找的列表” 的名称 “状态(Status)” ，并点击 **新建** 添加一个 “整数-文本" 对：
+初始状态下它是空的。点击 **新建(New)** 按钮创建一个新列表。
+指定新 “查找列表” 的名称为 “状态(Status)” ，
+并点击 **新建(New)** 添加几个 “整数-文本" 对（例如 1-已联系，2-未联系）：
 
 .. image:: /intro/_images/lookup_list_ready_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: 查找列表条目
 
-使用 **确定** 按钮保存查找列表，然后编辑 “联系人(Contacts)” 日志，
+使用 **确定(OK)** 按钮保存查找列表，然后编辑 “联系人(Contacts)” 台账，
 添加新的 “状态(Status)” 字段。
 
 .. image:: /intro/_images/status_field_jampy.png
@@ -37,10 +37,10 @@
 	:align: center
 	:alt: 状态查找字段
 
-最后，在保存之前，打开我们之前创建 “联系客户(Customer)” 字段，
-设置 **必填(Required)** 属性（在 “字段(Field)” 选项卡中）和 **预输入(Typeahead)** 属性
-（在 “查找(Lookup)” 选项卡中）。当勾选 **预输入(Typeahead)** 时，
-将为查找字段启用自动补全/预输入功能。
+最后，在保存之前，打开我们之前创建的 “联系的客户(Customer)” 字段对话框，
+在 “字段(Field)” 选项卡中选中 **必填(Required)** 属性，
+在 “查找(Lookup)” 选项卡中选中 **预输入(Typeahead)** 属性。
+当勾选 **预输入(Typeahead)** 时，将为查找字段启用自动补全/预输入功能。
 
 .. image:: /intro/_images/customer_required_attr_jampy.png
 	:scale: 50%
@@ -52,7 +52,7 @@
 	:align: center
 	:alt: 客户预输入属性
 
-在这里，我们还可以将 “联系日期(Contact date)” 字段的 **默认值(Default value)** 设置为"当前日期时间(CURRENT DATETIME)" ，
+在这里，我们还可以将 “联系日期(Contact date)” 字段的 **默认值(Default value)** 设置为 “当前日期时间(CURRENT DATETIME)” ，
 这样日期将自动初始化为当前日期和时间。
 
 .. image:: /intro/_images/contact_date_default_value_jampy.png
@@ -60,8 +60,7 @@
 	:align: center
 	:alt: 联系日期字段默认值
 
-同样，我们可以为 “状态(Status)” 字段选择 **默认值(Default value)** ，
-方法是在下拉列表中选择一个值。
+同样，我们可以为 “状态(Status)” 字段选择 **默认值(Default value)** ，方法是在下拉列表中选择一个值。
 
 .. image:: /intro/_images/status_default_value_jampy.png
 	:scale: 50%
