@@ -8,61 +8,62 @@
 在项目树中选择 “任务(Task)” 节点，然后在右侧点击 **查找列表(Lookup lists)** 按钮。
 
 .. image:: /intro/_images/lookup_lists_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 查找列表
+    :scale: 50%
+    :align: center
+    :alt: 查找列表
 
 初始状态下它是空的。点击 **新建(New)** 按钮创建一个新列表。
 指定新 “查找列表” 的名称为 “状态(Status)” ，
 并点击 **新建(New)** 添加几个 “整数-文本" 对（例如 1-已联系，2-未联系）：
 
 .. image:: /intro/_images/lookup_list_ready_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 查找列表条目
+    :scale: 50%
+    :align: center
+    :alt: 查找列表条目
 
 使用 **确定(OK)** 按钮保存查找列表，然后编辑 “联系人(Contacts)” 台账，
 添加新的 “状态(Status)” 字段。
 
 .. image:: /intro/_images/status_field_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 状态字段
+    :scale: 50%
+    :align: center
+    :alt: 状态字段
 
 对于查找字段，设置标题和名称，并将类型留空。然后转到
 **查找(Lookup)** 选项卡，将 **查找值的列表(Lookup value list)** 属性设置为 “状态(Status)” 查找列表：
 
 .. image:: /intro/_images/status_lookup_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 状态查找字段
+    :scale: 50%
+    :align: center
+    :alt: 状态查找字段
 
-最后，在保存之前，打开我们之前创建的 “联系的客户(Customer)” 字段对话框，
+最后，在保存之前，打开我们之前创建的 “业务客户(Customer)” 字段对话框，
 在 “字段(Field)” 选项卡中选中 **必填(Required)** 属性，
 在 “查找(Lookup)” 选项卡中选中 **预输入(Typeahead)** 属性。
 当勾选 **预输入(Typeahead)** 时，将为查找字段启用自动补全/预输入功能。
 
 .. image:: /intro/_images/customer_required_attr_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 客户属性
+    :scale: 50%
+    :align: center
+    :alt: 客户属性
 
 .. image:: /intro/_images/customer_typeahead_attr_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 客户预输入属性
+    :scale: 50%
+    :align: center
+    :alt: 客户预输入属性
 
-在这里，我们还可以将 “联系日期(Contact date)” 字段的 **默认值(Default value)** 设置为 “当前日期时间(CURRENT DATETIME)” ，
-这样日期将自动初始化为当前日期和时间。
+在这里，我们还可以将 “联系日期(Contact date)” 字段的 **默认值(Default value)** 
+设置为 “当前日期时间(CURRENT DATETIME)” ，这样日期将自动初始化为当前日期和时间。
 
 .. image:: /intro/_images/contact_date_default_value_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 联系日期字段默认值
+    :scale: 50%
+    :align: center
+    :alt: 联系日期字段默认值
 
-同样，我们可以为 “状态(Status)” 字段选择 **默认值(Default value)** ，方法是在下拉列表中选择一个值。
+同样，我们可以为 “状态(Status)” 字段选择 **默认值(Default value)** ，
+方法是在下拉列表中选择一个值。
 
 .. image:: /intro/_images/status_default_value_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 状态字段默认值
+    :scale: 50%
+    :align: center
+    :alt: 状态字段默认值

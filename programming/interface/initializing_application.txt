@@ -7,9 +7,7 @@
 新项目使用 :doc:`on_page_loaded </refs/client/task/on_page_loaded>` 事件处理程序来动态构建应用程序的主菜单，并使用 JQuery 为菜单项添加点击事件处理程序。
 
 
-
 .. code-block:: js
-
 
     function on_page_loaded(task) { 
         
@@ -39,6 +37,7 @@
             splash_screen: '<h1 class="text-center">Jam.py Demo Application</h1>',
             view_first: true
         });
+    }
 
 
 此事件处理程序使用 JQuery 从 :doc:`index.html <index_html>` 中选择元素，以设置它们的属性并分配事件。

@@ -2,50 +2,50 @@
 新建主表目录(catalog)
 ===========================
 
-让我们回到应用程序构建器页面，创建一项 "客户(Customers)" 主表目录。
-每项新的主表目录对应数据库中的一个新数据表。
+让我们回到应用程序构建器页面，创建一项名为 "客户(Customers)" 的主表数据项。
+每项新的主表对应数据库中的一个新数据表。
 
 为此，在项目树中选择 “主表目录(Catalogs)” 组，然后点击页面右下角的 **新建(New)** 按钮
 
 .. image:: /intro/_images/catalogs_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 主表目录
+    :scale: 50%
+    :align: center
+    :alt: 主表目录
 
 在出现的 :doc:`实体项编辑器 </admin/items/item_editor_dialog>` 
 对话框中，填写新数据表对应的目录的标题和名称。
-标题是向用户显示的名称，而名称是在代码（Python 或 JS）中引用此目录对应的数据表时使用的变量名。
+标题是向用户显示的名称，而名称是在代码（Python 或 JS）中引用此主表项对应的数据表时使用的变量名。
 名称必须是有效的 Python 标识符。
 
 .. image:: /intro/_images/customers_new_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 新的客户主表目录
+    :scale: 50%
+    :align: center
+    :alt: 新的客户主表项
 
 然后，点击对话框右下角的 **新建(New)** 按钮添加新字段。将出现
 :doc:`字段编辑器 </admin/items/field_editor_dialog>` 对话框。
 输入 “名字(Firstname)” 字段的标题和名称，并选择其类型（此处为 30 个字符的 ``TEXT`` 类型），然后点击 **确定(OK)** 按钮。
 
 .. image:: /intro/_images/firstname_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 新建字段
+    :scale: 50%
+    :align: center
+    :alt: 新建字段
 
 类似地，添加 “姓氏(Lastname)” （30 个字符的 ``TEXT`` 类型）和 “电话(Phone)” （20 个字符的 ``TEXT`` 类型）字段。
 添加 “姓氏(Lastname)” 字段时，请勾选 **必填(Required)** 属性。这要求在添加新数据项时必须填写该字段。
 
 .. image:: /intro/_images/customers_fields_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 客户字段
+    :scale: 50%
+    :align: center
+    :alt: 客户字段
 
 现在，请点击 **确定(OK)** 按钮保存更改。保存时，应用程序构建器将在 ``crm.sqlite`` 数据库中创建 ``CRM_CUSTOMERS`` 表：
 
 
 .. image:: /intro/_images/customer_sql_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 已创建的表
+    :scale: 50%
+    :align: center
+    :alt: 已创建的表
 
 
 转到项目的客户端页面并确保刷新了页面
@@ -60,9 +60,9 @@
 填写对话框，然后点击 **确定(OK)** 按钮：
 
 .. image:: /intro/_images/customers_refresh_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 客户页面
+    :scale: 50%
+    :align: center
+    :alt: 客户页面
 
 
 另请参阅

@@ -28,25 +28,25 @@
 您应该会看到语言选择对话框。
 
 .. image:: /intro/_images/lang_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 选择语言对话框
+    :scale: 50%
+    :align: center
+    :alt: 选择语言对话框
 
 使用浏览按钮选择(或查找) **Chinese zh-CN** ，然后点击 **确定(OK)** 按钮。
 将出现项目参数对话框。
 
 .. image:: /intro/_images/project_params_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 项目参数
+    :scale: 50%
+    :align: center
+    :alt: 项目参数
 
 如上图所示填写表单，然后点击 **确定(OK)**。
 现在您应该在左侧面板中看到项目树。
 
 .. image:: /intro/_images/adm_new_project_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 项目应用程序构建器
+    :scale: 50%
+    :align: center
+    :alt: 项目应用程序构建器
 
 .. important::
 
@@ -57,12 +57,12 @@
 
 .. code-block:: console
 
-	127.0.0.1:8080
+    127.0.0.1:8080
 
 并按 Enter 键。
 将出现一个具有空菜单的新项目。
 
 .. image:: /intro/_images/empty_project_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: 空项目
+    :scale: 50%
+    :align: center
+    :alt: 空项目

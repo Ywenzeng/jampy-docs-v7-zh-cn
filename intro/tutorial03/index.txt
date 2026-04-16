@@ -2,7 +2,7 @@
 教程 第三部分：明细表
 =========================
 
-在本部分教程中，我们将解释如何使用 **明细表(Details)** 。
+在本部分教程中，我们将解释如何使用 **明细表(Details)** 组。
 
 让我们在项目树中选择 “任务(Task)/分组(Groups)” ，并点击页面右下角的 **新建(New)** 按钮，新建一个组：
 
@@ -18,7 +18,8 @@
     :align: center
     :alt: detail_group_not_visible_jampy.png
 
-现在创建一个明细项。先选中刚刚新建的 “明细表(Details)” ，再点击页面右下角的 “新建(New)” ，
+现在创建一个明细项。
+先选中刚刚新建的 “明细表(Details)” ，再点击页面右下角的 “新建(New)” ，
 然后在打开的 :doc:`实体项编辑器 </admin/items/item_editor_dialog>` 对话框中，
 将明细项命名为 “待办事项列表(To do list)” ，
 并按照前面的教程介绍的方式添加类型为 DATETIME 的 “创建时间(Created datetime)” 和类型为 TEXT的 “待办事项(To do)” 两个字段：

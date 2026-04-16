@@ -2,7 +2,7 @@
 表单示例
 =============
 
-目前，框架使用 `Bootstrap 5`_，它具有一个简单易用的网格系统，这个网格系统最多使用 12 列，允许您创建任何类型的布局。
+目前，框架使用 `Bootstrap 5`_ ，它具有一个简单易用的网格系统，这个网格系统最多使用 12 列，允许您创建任何类型的布局。
 它是响应式的，并包含许多组件，如下拉菜单、下拉按钮、按钮组、导航、导航栏、选项卡、面包屑、徽章、进度条等。
 
 .. _`Bootstrap 5`: https://getbootstrap.com/docs/5.0/
@@ -10,7 +10,7 @@
 默认编辑表单模板
 --------------------------
 
-如果实体及其所有者没有自己的编辑表单模板，则使用此模板创建编辑表单。
+如果实体项及其所有者没有自己的编辑表单模板，则使用此模板创建编辑表单。
 
 .. code-block:: html
 
@@ -28,9 +28,9 @@
         </div>
     </div>
 
-下面的事件位于任务客户端模块中，当任何实体的编辑表单刚刚创建时会触发该事件。
+下面的事件位于任务客户端模块中，当任何实体项的编辑表单刚刚创建时会触发该事件。
 
-它使用 :doc:`create_inputs </refs/client/item/m_create_inputs>` 方法在 class 为 "edit-body" 的 div 中创建输入控件。但在此之前，它检查实体的客户端模块中是否定义了 ``init_inputs`` 函数，该函数可用于指定方法的 options 参数。
+它使用 :doc:`create_inputs </refs/client/item/m_create_inputs>` 方法在 class 为 "edit-body" 的 div 中创建输入控件。但在此之前，它检查实体项的客户端模块中是否定义了 ``init_inputs`` 函数，该函数可用于指定方法的 options 参数。
 
 然后，它为 OK 和 Cancel 按钮分配 jQuery 事件。
 
@@ -55,17 +55,17 @@
         });
     }
 
-**专辑(Albums)** 目录的编辑表单如下所示：
+主表目录中的 **专辑(Albums)** 主表项的编辑表单如下所示：
 
 .. image:: /programming/_images/default_edit_form_template_jampy.png
-	:align: center
-	:alt: 默认编辑表单模板
+    :align: center
+    :alt: 默认编辑表单模板
 
 .. note::
     
     如果没有具有相应 id 的按钮，上述代码不会生成异常。
 
-    如果您想在实体的客户端模块的相应事件中，覆盖任务客户端模块中声明的按钮的 JQuery 事件，可以使用 jQuery 的 ``off`` 方法：
+    如果您想在实体项的客户端模块的相应事件中，覆盖任务客户端模块中声明的按钮的 JQuery 事件，可以使用 jQuery 的 ``off`` 方法：
 
     .. code-block:: js
     
@@ -108,36 +108,35 @@
         </div>
     </div>
 
-以下事件处理程序声明在 **客户(Customers)** 实体的客户端模块中。它为与选项卡对应的窗格创建输入控件：它会为面板创建对应的输入控件，这些面板分别对应各个选项卡：
+以下事件处理程序声明在 **客户(Customers)** 实体项的客户端模块中。它为与选项卡对应的窗格创建输入控件：它会为面板创建对应的输入控件，这些面板分别对应各个选项卡：
 
 .. code-block:: js
 
     function on_edit_form_created(item) {
-    	item.edit_form.find('#customer-tabs a').click(function (e) {
-    	  e.preventDefault();
-    	  $(this).tab('show');
-    	});
-    	item.create_inputs(item.edit_form.find("#cust-name"), 
-    	    {fields: ['firstname', 'lastname', 'company', 'support_rep_id']}
-    	);
-    	item.create_inputs(item.edit_form.find("#cust-address"), 
-    	    {fields: ['country', 'state', 'address', 'postalcode']}
-    	);
-    	item.create_inputs(item.edit_form.find("#cust-contact"), 
-    	    {fields: ['phone', 'fax', 'email']}
-    	);
+        item.edit_form.find('#customer-tabs a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        });
+        item.create_inputs(item.edit_form.find("#cust-name"), 
+            {fields: ['firstname', 'lastname', 'company', 'support_rep_id']}
+        );
+        item.create_inputs(item.edit_form.find("#cust-address"), 
+            {fields: ['country', 'state', 'address', 'postalcode']}
+        );
+        item.create_inputs(item.edit_form.find("#cust-contact"), 
+            {fields: ['phone', 'fax', 'email']}
+        );
     }
 
 .. image:: /programming/_images/edit_form_template_with_tabs_jampy.png
-	:align: center
-	:alt: 带选项卡的编辑表单模板
+    :align: center
+    :alt: 带选项卡的编辑表单模板
+
 
 使用网格布局的编辑表单模板
 ------------------------------------
 
-
 此示例使用 Bootstrap 的网格系统：
-
 
 .. code-block:: html
 
@@ -153,9 +152,7 @@
         </div>
     </div>
 
-
 或：
-
 
 .. code-block:: html
 
@@ -194,9 +191,8 @@
 
 
 .. image:: /programming/_images/edit_form_tepmlate_layout_jampy.png
-	:align: center
-	:alt: Edit form template using grid layout
-
+    :align: center
+    :alt: Edit form template using grid layout
 
 
 
@@ -234,26 +230,28 @@
     </div>
 
 .. image:: /programming/_images/edit_form_tepmlate_layout_headers_jampy.png
-	:align: center
-	:alt: Edit form template using grid layout with headers
+    :align: center
+    :alt: Edit form template using grid layout with headers
 
 
-目录查看表单模板
+主表目录查看表单模板
 -----------------------------------
 
 在这个例子中，有一个 class 为 "form-header" 的 div。
 
 id 为 "form-title" 的元素在任务的 
-:doc:`on_view_form_created </refs/client/task/on_view_form_created>` 方法中用于显示实体的标题，并为其分配一个 JQuery onclick 事件来执行 view 方法以重新创建查看表单。
+:doc:`on_view_form_created </refs/client/task/on_view_form_created>` 
+方法中用于显示实体项的标题，并为其分配一个 JQuery onclick 事件来执行 view 
+方法以重新创建查看表单。
 
-id 为 "selected-div" 和 "search-form" 的元素在目录组的
+id 为 "selected-div" 和 "search-form" 的元素在主表目录组的
 :doc:`on_view_form_created </refs/client/group/on_view_form_created>` 中用于
 在点击右侧按钮选择值时显示查找字段的当前值，并相应地实现目录的搜索功能。
 
 class 为 "view-table" 的 div 在任务的
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
 事件处理程序中用于通过 :doc:`create_table </refs/client/item/m_create_table>` 
-方法创建一个表格来显示实体数据：
+方法创建一个表格来显示实体项数据：
 
 .. code-block:: js
 
@@ -267,7 +265,7 @@ class 为 "view-table" 的 div 在任务的
 
 id 为 "report-btn" 的 div 在任务的
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-事件处理程序中用于用实体 :doc:`Reports Dialog </admin/items/reports_dialog>`
+事件处理程序中用于用实体项 :doc:`Reports Dialog </admin/items/reports_dialog>`
 中定义的报告填充下拉按钮菜单项（如果它们存在）。
 
 .. code-block:: html
@@ -315,14 +313,15 @@ id 为 "report-btn" 的 div 在任务的
 
 
 .. image:: /programming/_images/catalogs_view_teplate_jampy.png
-	:align: center
-	:alt: Catalogs view form template
+    :align: center
+    :alt: Catalogs view form template
 
 
 按钮在顶部的查看表单模板
 ------------------------------------------
 
-在此示例中，移除了表单页脚 div，并将按钮放置在表单标题 div 中。创建了 **操作(Actions)** 下拉按钮。代码与上一个示例相同。
+在此示例中，移除了表单页脚 div，并将按钮放置在表单标题 div 中。
+创建了 **操作(Actions)** 下拉按钮。代码与上一个示例相同。
 
 
 .. code-block:: html
@@ -357,17 +356,17 @@ id 为 "report-btn" 的 div 在任务的
     </div>
 
 .. image:: /programming/_images/view_template_btns_top_jampy.png
-	:align: center
-	:alt: View form template with buttons at the top
+    :align: center
+    :alt: View form template with buttons at the top
 
-	
+    
 带明细表的查看表单模板
 ------------------------------
 
 在此示例中，移除了 class 为 "view-table" 的 div，
-并在 **发票(Invoices)** 日志的客户端模块中声明的 
+并在 **发票(Invoices)** 台账的客户端模块中声明的 
 :doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-事件处理程序中为主表和明细表实体创建了两个 div："view-master" 和 "view-detail" 表格：
+事件处理程序中为主表和明细表实体项创建了两个 div："view-master" 和 "view-detail" 表格：
 
 .. code-block:: js
 
@@ -401,7 +400,6 @@ id 为 "report-btn" 的 div 在任务的
         
         item.open(true);
     }
-
 
 
 .. code-block:: html
@@ -442,6 +440,6 @@ id 为 "report-btn" 的 div 在任务的
     </div>
 
 .. image:: /programming/_images/invoices_view_form_tempate_jampy.png
-	:align: center
-	:alt: Invoices view form template
-	
+    :align: center
+    :alt: Invoices view form template
+    

@@ -103,8 +103,8 @@ Jam.py 是一个面向对象、事件驱动的框架，具有层次结构、模�
 
 * 开放式框架。您可以使用任何 JavaScript/Python 库。
 
-* 内容丰富、大信息量的报告。基于 [LibreOffice](https://www.libreoffice.org)
-  模板的 Band-oriented 报告生成器。
+* 内容丰富、大信息量的报表。基于 [LibreOffice](https://www.libreoffice.org)
+  模板的 Band-oriented 报表生成器。
 
 * 图表。您可以使用免费的 [jsCharts](http://www.jscharts.com) 库
   或任何 JavaScript 图表库来创建图表，以展示和分析您的应用程序数据。
