@@ -31,6 +31,6 @@
 视频
 ======
 
-`Data aware controls`_（数据感知控件）
+`Data aware controls`_ （数据感知控件）
  
 .. _`Data aware controls`: https://youtu.be/fMTq8P4XdGw
