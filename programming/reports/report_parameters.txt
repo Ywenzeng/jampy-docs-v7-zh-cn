@@ -2,7 +2,7 @@
 报表参数
 =================
 
-您可以指定报表的参数。例如，演示项目的 **客户购买(Customer purchases)** 报表有三个参数。
+您可以指定报表的参数。例如，演示项目的 **客户购买情况(Customer purchases)** 报表有三个参数。
 
 .. image:: /programming/_images/parameters_jampy.png
 	:align: center
@@ -31,12 +31,11 @@
 
 * **Multiple selection** （多选）- 启用多选功能
 
-* **Select all enabled** （启用全选）- 启用全选功。
+* **Select all enabled** （启用全选）- 启用全选。
 
-* **Lookup value list** （查找值列表）- 选择查找值列表
+* **Lookup value list** （查找值列表）- 查找值列表
 
-* **Required** （必填）- 如果勾选此复选框且设置了 **可见(Visible)** 属性，
-  客户端应用程序将在打印报表前要求用户指定参数值。
+* **Required** （必填）- 如果勾选此复选框且设置了 **可见(Visible)** 属性，客户端应用程序将在打印报表前要求用户指定参数值。
 
 * **Alignment** （对齐方式）- 指定参数值在输入元素中的对齐方式。
 
@@ -48,8 +47,8 @@
 * **Visible** （可见）- 客户端应用程序在打印报表前创建一个用于指定参数的表单。
   如果勾选此复选框，此参数的输入元素将出现在表单中。
 
-可以创建查找参数。例如， **客户购买(Customer purchases)** 
-报表有一个 **客户(Customer)** 参数，可以从 **客户(Customers)** 目录中选择：
+可以创建查找参数。例如， **客户购买情况(Customer purchases)** 
+报表有一个 **客户(Customer)** 参数，可以从 **客户(Customers)** 主表中选择：
 
 .. image:: /programming/_images/lookup_param_jampy.png
 	:align: center
@@ -61,8 +60,8 @@
 
 * **Lookup field** （查找字段）- 查找项中的字段
 
-设置 **客户购买(Customer purchases)** 报表参数的表单如下所示：
+设置 **客户购买情况(Customer purchases)** 报表参数的表单如下所示：
 
 .. image:: /programming/_images/customer_purchases_params_jampy.png
 	:align: center
-	:alt: 客户购买参数示例
+	:alt: 客户购买情况参数示例

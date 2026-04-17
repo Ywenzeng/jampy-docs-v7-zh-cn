@@ -51,7 +51,7 @@
 	:align: center
 	:alt: 主字段示例
 
-当用户点击字段输入框右侧的按钮或使用预输入时，应用程序会创建查找实体对应的字段的副本，设置其 :doc:`lookup_field </refs/client/item/at_lookup_field>` 属性为该字段，并触发 :doc:`on_field_select_value </refs/client/item/on_field_select_value>` 事件。
+当用户点击字段输入框右侧的按钮或使用预输入时，应用程序会创建字段对应的查找实体项的副本，设置其 :doc:`lookup_field </refs/client/item/at_lookup_field>` 属性为该字段，并触发 :doc:`on_field_select_value </refs/client/item/on_field_select_value>` 事件。
 编写此事件处理程序以指定将显示的字段，在打开查找实体并显示给用户以选择字段值之前，为其设置过滤器。
 
 查找实体中的查找字段也可以是查找字段，例如：

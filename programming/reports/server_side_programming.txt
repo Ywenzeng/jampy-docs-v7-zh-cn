@@ -44,7 +44,7 @@
 
     
 首先，我们使用 :doc:`copy </refs/server/item/m_copy>`
-方法创建 **发票(invoices)** 日志的副本。
+方法创建 **发票(invoices)** 业务项的副本。
 
 .. code-block:: py
 
@@ -60,9 +60,9 @@
 
 其中 report.id.value 是报表的 id 参数，我们在客户端的
 :doc:`on_before_print_report </refs/client/report/on_before_print_report>`
-事件处理程序中设置了其值，该值等于当前 **发票(invoice)** 日志的 **id** 字段的值。
+事件处理程序中设置了其值，该值等于当前 **发票(invoice)** 的 **id** 字段的值。
 
-然后，使用 :doc:`open </refs/server/item/m_open>` 方法，我们在服务器上获取记录。
+然后，我们使用 :doc:`open </refs/server/item/m_open>` 方法在服务器上获取记录。
 之后，使用 :doc:`print_band </refs/server/report/m_print_band>` 方法打印标题栏：
 
 .. code-block:: py
@@ -70,9 +70,9 @@
     report.print_band('title', locals())
 
 但在此之前，我们为四个局部变量赋值：customer（客户）、address（地址）、
-city（城市）和 date（日期），这些变量对应报表模板中标题栏的可编程单元格。
+city（城市）和 date（日期），这些变量对应报表模板中标题区段的可编程单元格。
 
-然后，以相同的方式生成明细栏和汇总栏。
+然后，以相同的方式生成明细区段和汇总区段。
 
 报表生成后，如果客户端设置的报表
 :doc:`extension </refs/client/report/at_extension>`

@@ -2,7 +2,7 @@
 on_open_events
 ==============
 
-当在 :doc:`客户端 </refs/client/item/m_open>` 或 :doc:`服务器端 </refs/server/item/m_open>` 调用实体的 ``open`` 方法时，服务器应用程序执行以下代码：
+当在 :doc:`客户端 </refs/client/item/m_open>` 或 :doc:`服务器端 </refs/server/item/m_open>` 调用实体项的 ``open`` 方法时，服务器应用程序执行以下代码：
 
 .. code-block:: py
 
@@ -17,9 +17,9 @@ on_open_events
 它会检查任务是否有 ``on_open`` 事件处理程序。
 如果在任务服务器端模块中声明了 ``on_open`` 事件处理程序，则它会被执行。
 
-如果任务的 ``on_open`` 事件处理程序未声明或事件处理程序的结果返回 ``None`` ，该方法会检查实体是否有 :doc:`on_open </refs/server/item/on_open>` 事件处理程序。如果它在实体服务器模块中被声明，则会被执行。
+如果任务的 ``on_open`` 事件处理程序未声明或事件处理程序的结果返回 ``None`` ，该方法会检查实体项是否有 :doc:`on_open </refs/server/item/on_open>` 事件处理程序。如果它在实体项服务器模块中被声明，则会被执行。
 
-如果实体事件处理程序返回的结果是 ``None`` ，则调用实体的 ``execute_open`` 方法，该方法会生成 SQL 查询，并在执行后返回查询结果。
+如果实体项事件处理程序返回的结果是 ``None`` ，则调用实体项的 ``execute_open`` 方法，该方法会生成 SQL 查询，并在执行后返回查询结果。
 
 示例
 =======

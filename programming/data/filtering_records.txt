@@ -2,11 +2,11 @@
 筛选记录
 =================
 
-在调用 ``open`` 方法时，有三种方法可以定义从数据库表中将获取实体 :doc:`数据集 <dataset>` 的哪些记录：
+在调用 ``open`` 方法时，有三种方法可以定义从数据库的表中将获取实体 :doc:`数据集 <dataset>` 的哪些记录：
 
-* 指定 ``open`` 方法的 ``where`` 参数（选项），
-* 在调用 ``open`` 方法之前调用 ``set_where`` 方法，
-* 或者使用  :doc:`过滤器 <filters>`。
+* 指定 ``open`` 方法的 ``where`` 参数
+* 在调用 ``open`` 方法之前调用 ``set_where`` 方法
+* 或者使用  :doc:`过滤器 <filters>`
 
 当指定了 ``where`` 参数时，即使调用了 ``set_where`` 方法或实体具有已设置值的过滤器，也始终使用 ``where`` 参数。
 
@@ -91,22 +91,16 @@
 
 
 另请参阅
-========
+---------
 
-:doc:`数据集 <dataset>`
-
-:doc:`过滤器 <filters>`
+:doc:`数据集 <dataset>` ，   :doc:`过滤器 <filters>`
 
 客户端
 --------
 
-:doc:`open </refs/client/item/m_open>`
-
-:doc:`set_where </refs/client/item/m_set_where>`
+:doc:`open </refs/client/item/m_open>` ， :doc:`set_where </refs/client/item/m_set_where>`
 
 服务器端
 --------
 
-:doc:`open </refs/server/item/m_open>`
-
-:doc:`set_where </refs/server/item/m_set_where>`
+:doc:`open </refs/server/item/m_open>` ，  :doc:`set_where </refs/server/item/m_set_where>`
