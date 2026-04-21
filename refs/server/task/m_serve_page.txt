@@ -4,7 +4,7 @@ serve_page
 
 .. py:method:: serve_page(self, file_name, dic=None) 
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

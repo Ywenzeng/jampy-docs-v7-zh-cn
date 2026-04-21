@@ -9,7 +9,9 @@ Jam.py 使用 Mocha/Chai 进行前端单元测试，使用 pytest 进行数据�
 
 .. _Jam.py-v7: https://github.com/jam-py-v5/jam-py-v7
 
-然后，克隆你的仓库副本： :
+然后，克隆你的仓库副本：
+
+.. code-block::
 
         ...\> git clone https://github.com/YourGitHubName/jam-py-v7.git
         ...\> cd jam-py-v7/tests/project
@@ -18,8 +20,10 @@ Jam.py 使用 Mocha/Chai 进行前端单元测试，使用 pytest 进行数据�
 要添加一个新的前端测试，请在 project/js 文件夹中添加 JavaScript 文件。
 假如，我们想对 ``user`` 表的一个名为 ``username`` 的字段进行 CRUD 测试。
 
-The project folder has the below structure::
+
 项目的文件夹有如下结构：
+
+.. code-block::
 
         ├── admin.sqlite
         ├── css
@@ -39,12 +43,14 @@ The project folder has the below structure::
         ├── test.sqlite
         └── wsgi.py
 
-像往常一样启动项目： :
+像往常一样启动项目：
+
+.. code-block::
 
         ...\> ./server.py
 
 
-在构建器里，添加一个  ``Users``  表，它有一个名为  ``Username`` 的字段，如图示： :
+在构建器里，添加一个 ``Users`` 表，它有一个名为 ``Username`` 的字段，如图示：
 
 .. code-block:: html
 
@@ -105,9 +111,9 @@ index.html 内容应该如下所示：
         127.0.0.1:8080/index.html
 
 
-所有单元测试都将运行并显示结果。 数据库 tests.sqlite 将使用新用户进行更新。
-如果该表是使用 “软删除” 选项创建的，表中新行的  ``DELETED`` 字段将被设置为 1 。
+所有单元测试都将运行并显示结果。数据库 tests.sqlite 将使用新用户进行更新。
+如果该表是使用 “软删除” 选项创建的，表中新行的 ``DELETED`` 字段将被设置为 1 。
 否则，新记录将被删除。
 
-If all good to go, create a Github ``pull`` request with the changes.
-如果一切顺利，创建一个带有更改的 Github ``pull`` 请求。
+
+如果更改后一切顺利，创建一个 Github ``pull`` 请求。

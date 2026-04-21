@@ -4,7 +4,7 @@ app
 
 .. py:attribute:: app
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

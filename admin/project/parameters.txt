@@ -2,8 +2,8 @@
 参数
 ==========
 
-点击 **Parameters** 按钮后，将出现参数对话框。
-它有两个选项卡： **常规(General)** 和 **(界面)Interface** 。
+点击 **参数(Parameters [F2])** 按钮后，将出现参数对话框。
+它有两个选项卡： **常规(General)** 和 **界面(Interface)** 。
 
 常规选项卡
 ===========
@@ -14,61 +14,60 @@
 
 在常规选项卡上，您可以指定项目的常规参数：
 
-* **Production** （生成环境） - 如果选中此复选框，则禁用对应用程序构建器的访问。
+* **生成环境(Production)**  - 如果选中此复选框，则禁用对应用程序构建器的访问。
   要启用访问，应从应用程序文件夹中删除 ``builder.html`` 文件。
 
-* **Safe mode** （安全模式）- 如果启用安全模式，用户需要身份验证才能在系统中工作。
-  （请参阅 :doc:`Users </admin/users>` 和 :doc:`Roles </admin/roles>` ）
+* **安全模式(Safe mode)** - 如果启用安全模式，用户需要身份验证才能在系统中工作。
+  （请参阅 :doc:`用户 </admin/users>` 和 :doc:`角色 </admin/roles>` ）
   
-* **Debugging** （调试） - 如果选中此复选框，当服务器上发生错误时，将调用 Werkzeug 库调试器。
+* **调试(Debugging)** - 如果选中此复选框，当服务器上发生错误时，将调用 Werkzeug 库调试器。
 
-* **Show SELECT SQL** （） - 如果选中此复选框，将显示 SELECT SQL 。
+* **显示 SQL 语句(Show SELECT SQL)** - 如果选中此复选框，将显示 SELECT SQL 语句。
 
-* **Language** （语言） - 使用它打开语言对话框。
-  请参阅 :doc:`Language support </admin/language_support>`
+* **语言(Language)** - 使用它打开语言对话框。
+  请参阅 :doc:`语言支持 </admin/language_support>`
 
-* **Persistent connection** （持久连接） - 如果选中此复选框，应用程序将创建连接池，否则在执行 sql 查询之前创建连接。
+* **持久连接(Persistent connection)** - 如果选中此复选框，应用程序将创建连接池，否则在执行 sql 查询之前创建连接。
   
-* **Connection pool size** （连接池的大小） — 服务器数据库连接池的大小。 
+* **连接池的大小(Connection pool size)** — 服务器数据库连接池的大小。 
 
-* **Compressed JS, CSS files** （压缩 JS，CSS 文件） - 如果选中此按钮，当加载 *index.html* 页面时，服务器将返回压缩后的 *js* 和 *css* 文件。
+* **压缩 JS，CSS 文件(Compressed JS, CSS files)** - 如果选中此按钮，当加载 *index.html* 页面时，服务器将返回压缩后的 *js* 和 *css* 文件。
 
-* **All JS modules in a single file** （单文件的 JS 模块） - 
+* **单文件的 JS 模块(All JS modules in a single file)** - 
   如果未选中此复选框，应用程序将在项目的 *js* 文件夹中为
-  :doc:`task tree </programming/task_tree>` 中的每个实体生成一个 javascript 文件，
-  该文件包含对应实体在客户端模块中的代码，其名称为 *item_name.js* ，
+  :doc:`任务树 </programming/task_tree>` 中的每个实体项生成一个 javascript 文件，
+  该文件包含对应实体项在客户端模块中的代码，其名称为 *item_name.js* ，
   其中 *item_name* 是对应的实体项的名称。
   否则，应用程序将生成一个名为 *task_name.js* 的 javascript 文件，
-  其中 *task_name* 是项目 :doc:`任务 </admin/task>` 的名称（例如 *demo.js* ），
+  其中 *task_name* 是实体项 :doc:`任务 </admin/task>` 的名称（例如 *demo.js* ），
   该文件将包含所有实体项的 javascript 代码，除了那些在 
   :doc:`实体编辑器对话框 </admin/items/item_editor_dialog>` 中选中 
-  **外部的 js 模块(External js module)** 复选框的项目（将为它们创建单独的文件）。
-  
-* **Dynamic JS modules loading** （动态加载 JS 模块） - 如果未选中此复选框且应用程序生成多个 javascript 文件，则在运行应用程序时，只会加载名为 *task_name.js* 的文件。所有其他文件必须动态加载。请参阅 :doc:`使用模块 </programming/modules>` 。
-  
-* **History item** （历史数据项） - 指定将存储更改历史的数据项，请参阅 :doc:`保存用户创建的审计跟踪/更改历史记录 </admin/saving_history>`
+  **外部的 js 模块(External js module)** 复选框的实体项（将为它们创建单独的文件）。
 
-* **Session timeout (seconds)** （会话超时） - 允许会话在过期之前不活动的秒数。
+* **动态加载 JS 模块(Dynamic JS modules loading)** - 如果未选中此复选框且应用程序生成多个 javascript 文件，则在运行应用程序时，只会加载名为 *task_name.js* 的文件。所有其他文件必须动态加载。请参阅 :doc:`使用模块 </programming/modules>` 。
 
-* **Session ignore change ip** （会话忽略 ip） - 如果为 false，则会话仅在从创建会话的同一 ip 地址访问时有效。
-  
-* **Max content length (MB)** （最大内容长度） - 使用它限制请求服务器的总内容长度，以兆字节为单位。
-  
-* **Import delay (seconds)** （） - 如果设置，
-  在 :doc:`导入项目元数据 <metadata_file>` 时，
-  应用程序将在更改项目数据集之前先等待参数中设置的秒数，
+* **历史数据项(History item)** - 指定将存储更改历史的数据项，请参阅 :doc:`保存用户创建的审计跟踪/更改历史记录 </admin/saving_history>`
+
+* **会话超时(Session timeout (seconds))** - 允许会话在过期之前不活动的秒数。
+
+* **会话忽略 ip(Session ignore change ip)** - 如果为 false，则会话仅在从创建会话的同一 ip 地址访问时有效。
+
+* **最大内容长度(Max content length (MB))** - 使用它限制请求服务器的总内容长度，以兆字节为单位。
+
+* **导入延迟(Import delay (seconds))** - 如果设置，
+  在 :doc:`导入元数据 <metadata_file>` 时，
+  应用程序将在更改项目的数据集之前先等待参数中设置的秒数，
   否则它等待 5 分钟或直到当前进程中所有以前的服务器请求被处理之后，再导入数据。
   
-* **Delete reports after (hours)** （多久后删除报表） - 如果指定了值，则位于 static/reports 文件夹中的已生成的报表将在指定的小时数之后被删除。
+* **多久后删除报表(Delete reports after (hours))** - 如果指定了值，则位于 static/reports 文件夹中的已生成的报表将在指定的小时数之后被删除。
   
-* **Upload file extensions** （上传文件的扩展名） - 是一个 :doc:`Accept string </admin/accept_string>` ，它定义了可以通过任务的 :doc:`upload </refs/client/task/m_upload>` 方法上传到服务器的文件类型。系统禁止上传不匹配这些类型的文件。
+* **上传文件的扩展名(Upload file extensions)** - 是一个 :doc:`可接受的字符串 </admin/accept_string>` ，它定义了可以通过任务的 :doc:`upload </refs/client/task/m_upload>` 方法上传到服务器的文件类型。系统禁止上传不匹配这些类型的文件。
   
-* **Version** （版本）— 在此处指定项目的版本。
+* **版本(Version)** — 在此处指定项目的版本。
 
 .. note::
 
-   要使更改的 **Connection pool size** 或 **Persistent connection** 参数生效，
-   必须重新启动服务器应用程序。
+   要使更改的 **连接池大小(Connection pool size)** 或 **持久连接(Persistent connection)** 参数生效，必须重新启动服务器应用程序。
 
 
 界面选项卡
@@ -80,13 +79,13 @@
 	
 在界面选项卡上，您可以指定项目的界面参数：	
 
-* **Theme** （主题） - 使用此参数从预定义主题中选择项目使用的主题
+* **主题(Theme)** - 使用此参数从预定义主题中选择项目使用的主题
 
-* **Docs Link** （文档链接） - 使用此参数指定文档位置（TBA）
+* **文档链接(Docs Link)** - 使用此参数指定文档位置（待定）
 
-* **Small font** （小字号） - 如果选中此按钮，默认字体大小将为 12px ，否则为 14px
+* **小字号(Small font)** - 如果选中此按钮，默认字体大小将为 12px ，否则为 14px
 
-* **Full width** （全部宽度） - 如果选中此按钮，项目将填充页面宽度，没有左右边距
+* **全部宽度(Full width)** - 如果选中此按钮，项目将填充页面宽度，没有左右边距
 
-* **Display forms in tabs** （在选项卡中打开表单） - 如果选中此按钮，表单将在选项卡中打开
+* **在选项卡中打开表单(Display forms in tabs)** - 如果选中此按钮，表单将在选项卡中打开
 

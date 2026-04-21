@@ -4,7 +4,7 @@ Reports class
 
 .. js:class:: Reports
 
-**domain**: client 
+**范围**: client 
 
 **language**: javascript
 

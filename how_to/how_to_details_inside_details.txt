@@ -4,11 +4,11 @@
 
 支持，你可以在明细表中再嵌套明细表。
 
-假设我们有三个对象 —— “Polls”（投票）、“Questions”（问题）和 “Answers”（答案）。
-“Answers” 是 “Questions” 的明细表，我们将 “Questions” 作为 “Polls” 的明细表。
+假设我们有三个对象 —— “投票(Polls)”、“问题(Questions)”端和 “答案(Answers)”端。
+“答案(Answers)” 是 “问题(Questions)” 的明细表，我们将 “问题(Questions)” 作为 “投票(Polls)” 的明细表。
 
 一种实现方式是在 “Questions” 表中添加一个整型字段 “poll” ，
-并在 “Poll” 的客户端模块中添加如下代码：
+并在 “投票(Polls)” 的客户端模块中添加如下代码：
 
 
 .. code-block:: js

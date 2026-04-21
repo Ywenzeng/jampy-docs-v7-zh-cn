@@ -4,7 +4,7 @@ redirect
 
 .. py:method:: redirect(self, location, code=302, Response=None) 
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

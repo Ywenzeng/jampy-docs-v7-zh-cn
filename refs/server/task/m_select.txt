@@ -4,7 +4,7 @@ select
 
 .. py:method:: select(self, sql) 
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

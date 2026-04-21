@@ -6,7 +6,7 @@
 因此，将已完成的项目从开发环境迁移到生产环境非常简单。
 
 要了解元数据的概念以及导出和导入元数据的过程，
-请阅读主题 :doc:`Export/import metadata </admin/project/metadata_file>` 。 
+请阅读主题 :doc:`导出/导入元数据 </admin/project/metadata_file>` 。 
 导入元数据的过程取决于项目数据库的类型。
 
 
@@ -17,21 +17,21 @@
 
 * 运行脚本 *jam-project.py* ，创建一个新项目
 
-* 设置服务器。参考 
+* 设置服务器，请参考 
   
   * :doc:`使用 Apache 和 mod_wsgi 部署 Jam.py </intro/deployment>` 
   * :doc:`如何部署 <deploy/index>` 
 
 * 在浏览器中启动应用程序构建器，并使用空数据库完成项目的创建。
 
-* 打开 :doc:`Parameters </admin/project/parameters>` 对话框来设置项目。 
+* 打开 :doc:`项目参数 </admin/project/parameters>` 对话框来设置项目。 
   设置以下参数：
   
-  * **生产环境(Production)** 设为 true
+  * **生产环境(Production)** 设为 true （勾选复选框）
   
-  * **安全模式(Safe mode)**
+  * **安全模式(Safe mode)** 设为 true（勾选复选框）
   
-  * **调试(Debugging)** 设为 false
+  * **调试(Debugging)** 设为 false（不勾选复选框）
 
 * 在应用程序构建器中，通过点击 :doc:`导出 </admin/project/export>` 按钮，
   将开发环境中的项目的元数据导出为一个 zip 文件。
@@ -65,18 +65,18 @@ project directory. If the folder doesn't exist, create it.
 如果该文件夹不存在，请创建它。
 
 启动 HTTP 服务器。Web 应用程序在初始化时会导入元数据文件。
-您可以在项目目录的 *logs* 文件夹中的日志文件中看到文件被导入的信息。 
+您可以在项目目录的 *logs* 文件夹下的日志文件中看到文件被导入的信息。 
 如果导入成功，zip 文件将被删除。
 
 
 不关闭 HTTP 服务器进程时导入元数据
 =============================================================
 
-点击应用程序构建器中的 :doc:`Import </admin/project/import>` 按钮。
+点击应用程序构建器中的 :doc:`导入(Import) </admin/project/import>` 按钮。
 
 .. note::
 
-   默认情况下，在导入元数据进程中的 Web 应用程序会等待 5 分钟，
+   默认情况下，在导入元数据是，进程中的 Web 应用程序会等待 5 分钟，
    或直到 **此进程中** 对应用程序的所有先前请求都被处理完毕，然后才开始更改数据库。
 
    对于在多个进程上运行的项目，您可以在 :doc:`项目参数 </admin/project/parameters>` 中

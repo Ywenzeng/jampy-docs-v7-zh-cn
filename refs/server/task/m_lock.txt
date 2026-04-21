@@ -4,7 +4,7 @@ lock
 
 .. py:method:: lock(self, lock_name, timeout=-1)
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

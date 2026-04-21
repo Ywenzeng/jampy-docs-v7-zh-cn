@@ -8,10 +8,7 @@
 	:align: center
 	:alt: set_media_type_jampy.png
 
-首先，需要将 :doc:`table_options </refs/client/item/at_table_options>` 的 multiselect 属性设置为 true，
-这样在 “Tracks” 表格的最左侧会显示复选框，用户可以选择多条记录。
-然后在 “Tracks” 客户端模块的 :doc:`on_view_form_created </refs/client/item/on_view_form_created>` 事件处理程序中，
-创建一个 **设置媒体类型(Set media type)** 按钮。
+首先，需要将 :doc:`table_options </refs/client/item/at_table_options>` 的 multiselect 属性设置为 true，这样在 “曲目(Tracks)” 表格的最左侧会显示复选框，用户可以选择多条记录。然后在 “曲目(Tracks)” 客户端模块的 :doc:`on_view_form_created </refs/client/item/on_view_form_created>` 事件处理程序中，创建一个 **设置媒体类型(Set media type)** 按钮。
 
 .. code-block:: js
 
@@ -24,13 +21,9 @@
 
 当点击该按钮时，会执行模块中定义的 ``set_media_type`` 函数。
 
-在该函数中，我们创建了 “Tracks” 实体项的一个副本。
-调用 :doc:`copy </refs/client/item/m_copy>` 方法时，
-传入的 handlers 选项值为 false，表示副本不会继承应用构建器中表单对话框的设置，
-以及该实体项客户端模块中定义的所有函数和事件。
+在该函数中，我们创建了 “曲目(Tracks)” 实体项的一个副本。调用 :doc:`copy </refs/client/item/m_copy>` 方法时，传入的 handlers 选项值为 false，表示副本不会继承应用构建器中表单对话框的设置，以及该实体项客户端模块中定义的所有函数和事件。
 
-接着分析 :doc:`selections </refs/client/item/at_selections>` 属性，
-该属性是一个数组，包含用户选中记录的主键字段值。
+接着分析 :doc:`selections </refs/client/item/at_selections>` 属性，该属性是一个数组，包含用户选中的记录的主键字段值。
 
 然后，通过调用 :doc:`open </refs/client/item/m_open>` 方法并传入 open_empty 选项，
 初始化副本的数据集。我们还设置 fields 选项，使数据集只包含 media_type 字段，

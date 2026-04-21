@@ -2,7 +2,5 @@
 如何创建自定义菜单
 ===========================
 
-要创建一个自定义菜单，你必须在任务的客户端模块中
-为任务的 :doc:`create_menu </refs/client/task/m_create_menu>` 方法
-指定 custom_menu 选项的值。
+要创建一个自定义菜单，你必须在 *任务* 的客户端模块中为 *任务* 的 :doc:`create_menu </refs/client/task/m_create_menu>` 方法指定 custom_menu 选项的值。
 

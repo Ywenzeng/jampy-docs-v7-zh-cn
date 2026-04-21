@@ -2,7 +2,7 @@
 如何迁移到另一个数据库
 ==================================
 
-TBA - 从 Jam.py v5 起被更改。
+待正式公布 - 从 Jam.py v5 起被更改。
 
 您可以将数据迁移到另一个数据库。
 
@@ -14,15 +14,14 @@ TBA - 从 Jam.py v5 起被更改。
 
 #. 使用此数据库创建一个新项目
 
-#. 在应用程序构建器中，通过点击 :doc:`Export </admin/project/export>` 按钮，
-   将 SQLite 项目的元数据导出为一个 zip 文件。
+#. 在 SQLite 项目的应用程序构建器中，通过点击 :doc:`导出(Export) </admin/project/export>` 按钮，将元数据导出为一个 zip 文件。
 
 #. 将元数据导入到新项目中。Web 应用程序将在 Postgres 数据库中创建数据库结构。
   
 #. 使用任务的 :doc:`copy_database </refs/server/task/m_copy_database>` 方法
    将数据从 SQLite 复制到 Postgres 数据库：
   
-   * 在 **项目\任务(Project\Task)** 中创建以下服务器模块函数（调整下面的数据库路径为正确的路径）：
+   * 在 **项目\\任务(Project\\Task)** 中创建以下服务器模块函数（调整下面的数据库路径为正确的路径）：
      
      .. code-block:: py
     

@@ -4,7 +4,7 @@ Field class
 
 .. js:class:: Field
 
-**domain**: client 
+**范围**: client 
 
 **language**: javascript
 

@@ -4,7 +4,7 @@ Filter class
 
 .. py:class:: Filter
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

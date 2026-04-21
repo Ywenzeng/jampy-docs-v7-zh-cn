@@ -4,7 +4,7 @@ Item class
 
 .. py:class:: Item
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

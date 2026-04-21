@@ -4,7 +4,7 @@ Group class
 
 .. js:class:: Group
 
-**domain**: client 
+**范围**: client 
 
 **language**: javascript
 

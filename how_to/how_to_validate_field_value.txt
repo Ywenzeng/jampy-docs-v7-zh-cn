@@ -5,7 +5,7 @@
 编写 :doc:`on_field_validate </refs/client/item/on_field_validate>`
 事件处理程序来验证字段的值。
 
-例如，当调用 :doc:`post </refs/client/item/m_post>` 方法将保存记录保存时，
+例如，当调用 :doc:`post </refs/client/item/m_post>` 方法将记录保存时，
 会触发事件；当用户离开用于编辑单价字段值的输入框时，也会触发事件。
 
 .. code-block:: js
@@ -48,20 +48,15 @@
       }
   }
 
-在 on_edit_form_shown 事件处理程序中，使用 each_field 方法来迭代访问所有字段，
-并找到每个字段对应的输入数据（如果存在）。
-
 在 :doc:`on_edit_form_shown </refs/client/item/on_edit_form_shown>` 事件处理程序中，
 使用 :doc:`each_field </refs/client/item/m_each_field>` 方法来迭代访问所有字段，
 并找到每个字段对应的输入框（如果存在）。每个输入框都有一个包含字段名称的类
 （ :doc:`field_name </refs/client/field/at_field_name>` ）。
 
-然后，我们为它分配一个 jQuery blur 事件，在该事件中我们调用 ``check_field_value`` 函数，
-如果它返回保护错误信息的文本字符串，我们会警告用户并并将焦点定位到输入框。 
+然后，我们为它分配一个 jQuery blur 事件，在该事件中我们调用 ``check_field_value`` 函数，如果它返回包含错误信息的文本字符串，我们会警告用户并将焦点定位到输入框。 
 在调用函数之前，我们检查是否按下了 “取消” 按钮。
 
-我在实体的模块中定义的 :doc:`on_edit_form_shown </refs/client/item/on_edit_form_shown>` 
-事件处理程序，所以只在定义它的模块中有效。
+我在实体的模块中定义的 :doc:`on_edit_form_shown </refs/client/item/on_edit_form_shown>` 事件处理程序，所以只在定义它的模块中有效。
 
 我们可以在任务客户端模块中声明以下事件处理程序，
 以便在我们需要启用此字段验证的任何模块中编写 ``check_field_value`` 函数。

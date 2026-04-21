@@ -1,9 +1,8 @@
 ======================
-Jam.py class reference
+Jam.py 类的参考
 ======================
 
-Server side is implemented in Python and uses Werkzeug library, the client side in 
-JavaScript and uses JQuery and Bootstrap
+服务端采用 Python 实现，使用 Werkzeug 库；客户端则采用 JavaScript 编写，利用 JQuery 和 Bootstrap 框架.
 
 .. toctree::
     :maxdepth: 2

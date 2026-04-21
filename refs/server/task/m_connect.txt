@@ -4,7 +4,7 @@ connect
 
 .. py:method:: connect(self) 
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

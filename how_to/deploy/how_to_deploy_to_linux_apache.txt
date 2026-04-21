@@ -82,12 +82,12 @@
   请查看网络上关于证书和 DNS 的资源。
   您需要获取并将这些文件复制到 /etc/ssl/private 文件夹中。将 YOUR_xyz 更改为您的自己的内容。
 
-  The /var/www/html 是 Ubuntu 用于提供网页的默认文件夹。
+  /var/www/html 是 Ubuntu 用于提供网页的默认文件夹。
   
 * 像往常一样安装 jam-py   
 
   我创建了 /var/www/html/simpleassets 文件夹，在那里解压了 jam-py SimpleAssets 项目。
-  按照那里解释的步骤来部署这些：
+  按照这里解释的步骤来部署这些：
 
   简单来说，导出您的项目，保存好 zip 文件，并将其复制到您的网络托管服务器的所需文件夹中。
   同时复制 admin.sqlite 和您的数据库（假设您使用的是 sqlite3 数据库）。
@@ -108,7 +108,6 @@
     sudo /etc/init.d/apparmor stop
 
 
-Now, here is the question of how to run TWO jam-py instances on one https server?
 现在，问题是如何在一个 https 服务器上运行两个 jam-py 实例？
 
 这个问题的一个可能答案是 DNS。您可以将您的 DNS 
@@ -116,7 +115,7 @@ Now, here is the question of how to run TWO jam-py instances on one https server
 
 因此，上面的 test.conf 文件几乎相同，只是 YOUR_SERVER 被称为 second_instance.YOUR_SERVER。
 
- /etc/apache2/sites-available/test3.conf 文件内容如下 :
+/etc/apache2/sites-available/test3.conf 文件内容如下 :
 
 .. code-block:: apache
 

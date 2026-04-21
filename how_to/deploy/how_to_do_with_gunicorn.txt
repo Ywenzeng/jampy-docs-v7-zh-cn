@@ -4,10 +4,10 @@ Nginx 配合 Gunicorn 或 uvicorn 的使用，如何实现？
 
 Green Unicorn (gunicorn) 是一个 HTTP/WSGI 服务器，
 设计用于为快速客户端或响应较慢的应用程序提供服务。
-也就是说，它通常在缓冲前端服务器（如 nginx 或 lighttpd）后面运行。
+也就是说，它通常在缓冲前端服务器（如 nginx 或 lighttpd）的后面运行。
 
 默认情况下， ``gunicorn`` 会监听 127.0.0.1。
-切换 jam 应用文件夹，或使用（例如，在脚本、cron 作业中）如下代码 ：
+切换到 jam 应用文件夹，或使用（例如，在脚本、cron 作业中）如下代码 ：
 
 .. code-block:: console
 
@@ -73,8 +73,8 @@ Nginx 配置:
   	#location / {
   		# First attempt to serve request as file, then
   		# as directory, then fall back to displaying a 404.
-  #		try_files $uri $uri/ =404;
-  #	}
+      #	try_files $uri $uri/ =404;
+    #	}
 
 
 并添加 :

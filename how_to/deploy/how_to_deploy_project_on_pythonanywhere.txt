@@ -10,10 +10,11 @@
     pip install jam.py-v7
 
   上面的 **mkvirtualenv** 命令可能显示如下：
-  .. code-block:: console  
+
+  .. code-block:: console
   
       created virtual environment CPython3.10.5.final.0-64 in 8486ms
-      creator CPython3Posix(dest=/home/username/.virtualenvs/my-virtualenv, ...
+      creator CPython3Posix(dest=/home/username/.virtualenvs/my-virtualenv, ...)
 
 
   **dest** 对应的路径将用于 **Virtualenv** 部分，这对于每个用户，各不相同。

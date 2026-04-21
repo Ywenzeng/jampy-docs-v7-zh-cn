@@ -4,7 +4,7 @@ Item class
 
 .. js:class:: Item
 
-**domain**: client 
+**范围**: client 
 
 **language**: javascript
 

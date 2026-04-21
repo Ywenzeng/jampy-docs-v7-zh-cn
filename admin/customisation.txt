@@ -6,23 +6,23 @@
 
 .. admonition:: 自定义应用程序构建器
 
-    应用程序构建器项目位于发行版的 'builder' 文件夹中。
+    应用程序构建器项目位于发行版的 “builder” 文件夹中。
     该项目用于使用旧版本创建新版本的应用程序构建器。
     该项目包含了进一步开发构建器所需的一切。
     应用程序像任何其他 Jam.py 应用程序一样启动。
     开发过程类似于常规 Jam.py 应用程序的开发，只是所有服务器代码必须位于任务服务器模块中。
     通过 server 方法从客户端代码调用的服务器模块中的所有函数，都应使用 register 方法在模块末尾的 register_events 函数中注册，并且服务器实体项的事件应在此函数中定义。
-    在进行更改并测试后，使用 "Prepare files" （准备文件）按钮。应用程序将在 jam_files 文件夹中创建必要的文件。
+    在进行更改并测试后，使用 “准备文件(Prepare files)” 按钮。应用程序将在 jam_files 文件夹中创建必要的文件。
     如果该文件夹不存在，将创建一个。
     此文件夹的内容应复制到 Jam.py 发行版软件包的 jam 文件夹中。
 
 .. admonition:: 访问应用程序的构建器应用程序
 
     当使用 wsgi.py 创建 Web 应用程序时，会创建构建器任务树 —— admin 对象。
-    admin 使用 get_info 方法从点击 "Prepare files" （准备文件）按钮时保存的 builder_structure.info 文件加载任务。
+    admin 使用 get_info 方法从点击 “准备文件(Prepare files)” 按钮时保存的 builder_structure.info 文件加载任务。
     这是在软件包的 admin 文件夹中的 admin.py 模块中完成的。
     当 Web 应用程序收到第一个请求时，会创建项目的任务树。
-    软件包 "admin" 文件夹中的 task.py 模块包含创建项目任务树的代码。
+    软件包 admin 文件夹中的 task.py 模块包含创建项目任务树的代码。
     它使用管理员用户从 admin.sqlite 数据库读取数据。
     为了加快过程，对应表中的信息被加载到字典中。
 
@@ -30,11 +30,11 @@
 
 .. _Jam.py-v7: https://github.com/jam-py-v5/jam-py-v7
 
-接下来，克隆你的 fork：::
+接下来，克隆你的 fork::
 
         ...\> git clone https://github.com/YourGitHubName/jam-py-v7.git
 
-并启动服务器：::
+并启动服务器 ::
 
         ...\> cd jam-py-v7/builder
         ...\> ./server.py
@@ -60,7 +60,7 @@
 应用程序的功能和外观直接取决于已安装的 Jam.py 版本。
 如果在未安装较新的运行时文件的情况下，在构建器中所做的任何更改都不会在此处显示。
 
-自定义完成后，点击 ``Prepare files`` （准备文件），我们将所有文件
+自定义完成后，点击 “准备文件(Prepare files)” ，我们将所有文件
 从 ``jam_files`` 文件夹复制到发行版文件夹中： ::
 
   	    ...\> cp -fr jam_files/* ../jam/.
@@ -68,7 +68,7 @@
 
   	    xcopy jam_files\* ..\jam\.  /E /H /C /I /Y
 
-要增加 Jam.py 的版本号，我们编辑以下文件：::
+要增加 Jam.py 的版本号，我们编辑以下文件 ::
 
   	    ...\> vi ../jam/__init__.py
 
@@ -76,7 +76,6 @@
 
 如果一切顺利，提交并创建一个包含更改的 Github ``pull`` 请求。
 
-对于项目维护者，要启动 Github Actions，请提供以下标签号：::
-
+对于项目维护者，要启动 Github Actions，请提供以下标签号 ::
 
   	    ...\> git push && git tag 7.0.XX && git push --tags

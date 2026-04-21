@@ -4,20 +4,17 @@ ID
 
 .. js:attribute:: ID
 
-**domain**: client 
+**范围**: client 
 
-**language**: javascript
+**语言**: javascript
 
-**class** :doc:`AbstractItem </refs/client/abstractitem_api>`
+**所属类** :doc:`AbstractItem </refs/client/abstractitem_api>`
 
 
 Description
 ===========
 
-The ID attribute is the unique in the framework id of the item
+ID 属性在项目的框架里的所有 id 中是唯一的。
 
-The ID attribute is most useful when referring to the item by number rather than 
-name. It is also used internally.
-
-
+ID 属性在按数字而不是按名称引用项目时最有用。它也在框架内部使用。
 

@@ -4,7 +4,7 @@ App class
 
 .. py:class:: App
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

@@ -4,7 +4,7 @@ AbstractItem class
 
 .. py:class:: AbstractItem
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

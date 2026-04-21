@@ -4,14 +4,14 @@
 
 
 虽然在操作系统层面通过 ``Popen`` 命令执行任意 Python 脚本是可行的，
-但我们首先演示 ** 服务端模块 [F8]** 代码的使用方法。
+但我们首先演示 **服务端模块 [F8]** 代码的使用方法。
 
 你可以调用 :doc:`server </refs/client/abstr_item/m_server>` 方法向服务端发送请求，
-以执行在实体的服务端模块中定义的函数。
+以执行在实体项的服务端模块中定义的函数。
 
 在下方示例中，我们创建了一个 jQuery 对象类型的 ``btn`` 按钮，随后通过其点击事件绑定一个函数，
-该函数会调用实体的 :doc:`server </refs/client/abstr_item/m_server>` 方法，
-运行在实体的服务端模块中定义的 ``calculate`` （计算）函数。
+该函数会调用实体项的 :doc:`server </refs/client/abstr_item/m_server>` 方法，
+运行在实体项的服务端模块中定义的 ``calculate`` 函数。
 
 客户端模块中的代码如下：
 

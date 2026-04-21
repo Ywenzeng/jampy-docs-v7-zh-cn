@@ -4,7 +4,7 @@ Detail class
 
 .. js:class:: Detail
 
-**domain**: client 
+**范围**: client 
 
 **language**: javascript
 

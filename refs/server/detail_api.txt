@@ -4,7 +4,7 @@ Detail class
 
 .. py:class:: Detail
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

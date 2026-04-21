@@ -4,7 +4,7 @@ Task class
 
 .. py:class:: Task
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

@@ -4,7 +4,7 @@ on_ext_request
 
 on_ext_request(task, request, params)
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

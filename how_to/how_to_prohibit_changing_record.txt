@@ -2,11 +2,10 @@
 如何禁止更改记录
 ===============================
 
-假设我们有一个含有 boolean 字段 “posted” 的数据表，
-如果该字段的值是 *真(true)* ，就必须禁止或删除记录
+假设我们有一个的数据表，它含有一个 boolean 类型的字段 “posted” 。
+如果该字段的值是 *真(true)* ，就必须禁止或删除记录。
 
-我们可以通过编写 :doc:`on_after_scroll </refs/client/item/on_after_scroll>` 事件处理程序，
-同时结合使用 :doc:`permissions </refs/client/item/at_permissions>` 的属性来实现。
+我们可以通过编写 :doc:`on_after_scroll </refs/client/item/on_after_scroll>` 事件处理程序，同时结合使用 :doc:`permissions </refs/client/item/at_permissions>` 的属性来实现。
 
 .. code-block:: js
 

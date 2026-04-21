@@ -2,10 +2,10 @@
 我可以在应用程序中使用其他库吗？
 ===========================================
 
-您可以添加 JavaScript 库以在客户端编程中使用它们。
+您可以添加 JavaScript 库，以在客户端编程中使用它们。
 
-最好将它们放在项目 *static* 目录的 *js* 文件夹中。
-并在 :doc:Index.html </programming/interface/index_html> 文件的 <script> 标签中使用 src 属性引用它们。
+最好将它们放在项目中 *static* 目录的 *js* 文件夹下。
+并在 :doc:`Index.html </programming/interface/index_html>` 文件的 <script> 标签中使用 src 属性引用它们。
 
 例如， :doc:`演示项目 </intro/demo_project>` 使用 Chart.js 库来创建数据仪表盘：
 
@@ -13,9 +13,9 @@
 
     <script src="/static/js/Chart.min.js"></script>
 
-在服务器端，您可以将 Python 库导入到您的模块中。
+在服务器端，您可以将 Python 库导入到您已有的模块中。
 
-例如，邮件项目中的服务器模块导入 smtplib 库来发送电子邮件：
+例如，在邮件项目的服务器模块中导入 smtplib 库来发送电子邮件：
 
 .. code-block:: py
 

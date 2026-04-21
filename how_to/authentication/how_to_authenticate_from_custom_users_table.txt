@@ -2,11 +2,11 @@
 如何通过自定义用户表进行认证
 ===========================================
 
-默认情况下，所有用户信息都存储在 admin.sqlite 数据库的一个表中。该表结构是固定的，无法更改。
+默认情况下，所有的用户信息都存储在 admin.sqlite 数据库中的一个表中。该表的结构是固定的，无法更改。
 
 本节介绍如何使用自定义用户表中的数据进行用户认证。
 
-首先，创建一个分组 **Authentication** ，选中它并添加一个名为 **Users** 的数据项，包含如下字段：
+首先，创建一个分组 **认证(Authentication)** ，选中它并添加一个名为 **用户(Users)** 的实体项，包含如下字段：
 
 .. image:: /how_to/_images/users_fields_jampy.png
 	:align: center
@@ -15,19 +15,19 @@
 
 我们不会在表中直接存储用户密码，而是在界面中使用该字段。实际存储的是加盐后的密码哈希值，保存在 password_hash 字段中。
 
-我们还创建了名为 “Roles” 的 :doc:`lookup list </admin/lookup_lists>` ，并在 “Roles” 字段定义中使用。
+我们还创建了名为 “角色(Roles)” 的 :doc:`查找列表 </admin/lookup_lists>` ，并在 “角色 “(Roles)” 字段定义中使用。
 
-我们为其添加了与 :doc:`Roles </admin/roles>` 表中相同的角色（id 和名称）。后续需要保持这些角色的同步。
+我们为其添加了与 :doc:`角色 </admin/roles>` 表中相同的角色（id 和名称）。后续需要保持这些角色的同步。
 
 .. image:: /how_to/_images/roles_lookup_list_jampy.png
 	:align: center
 	:alt: roles_lookup_list_jampy.png
 
-在 :doc:`Roles </admin/roles>` 中，需要设置只有负责该项的用户才能查看 **Users** 数据项。
+在 :doc:`角色 </admin/roles>` 中，需要设置只有负责该项的用户才能查看 **用户(Users)** 实体项。
 
-我们在 :doc:`View Form Dialog </admin/items/view_form_dialog>` 和 :doc:`Edit Form Dialog </admin/items/edit_form_dialog>` 的字段列表中移除了 password_hash 字段。
+我们在 :doc:`查看表单对话框 </admin/items/view_form_dialog>` 和 :doc:`编辑表单对话框 </admin/items/edit_form_dialog>` 的字段列表中移除了 password_hash 字段。
 
-在用户服务器模块中，定义如下 :doc:`on_apply </refs/server/item/on_apply>` 事件处理程序：
+在 **用户(Users)** 服务端模块中，定义如下 :doc:`on_apply </refs/server/item/on_apply>` 事件处理程序：
 
 .. code-block:: py
 
@@ -47,7 +47,7 @@
 
 在该事件处理程序中，我们检查是否有相同登录名的用户，如果有则抛出异常，否则用 task 的 :doc:`generate_password_hash </refs/server/task/m_generate_password_hash>` 方法生成哈希，并将密码字段设为 None。
 
-在客户端模块中，定义如下 on_field_get_text 事件处理程序。它会将密码显示为 '**********'：
+在客户端模块中，定义如下 on_field_get_text 事件处理程序。它会将密码显示为 “**********” ：
 
 .. code-block:: js
 
@@ -60,7 +60,7 @@
       }
   }
 
-最后，在任务服务器模块中定义 :doc:`on_login </refs/server/task/on_login>` 事件处理程序：
+最后，在 **任务(Task)** 的服务端模块中定义 :doc:`on_login </refs/server/task/on_login>` 事件处理程序：
 
 .. code-block:: py
 
@@ -77,5 +77,4 @@
                   'role_name': users.role.display_text
               }
 
-现在需要在 **Users** 中添加一个有权限管理用户的管理员。
-之后即可在项目 :doc:`参数 </admin/project/parameters>` 中设置安全模式（Safe mode）。
+现在需要在 **用户(Users)** 中添加一个有权限管理用户的管理员。之后即可在项目 :doc:`参数 </admin/project/parameters>` 中启用安全模式（Safe mode）。

@@ -3,7 +3,7 @@
 ========
 
 Jam.py v7 引入了路由功能。由于 Jam.py v5 是 SPA（单页应用程序），因此不需要路由。
-另一方面，例如在 Jam.py v5 中，需要实现用户注册页面。
+另一方面，例如，需要在 Jam.py v5 中实现用户注册页面。
 
 此问题的解决方案类似于 :doc:`创建注册表单 </how_to/authentication/how_to_create_registration_form>` 。
 
@@ -32,7 +32,7 @@ Jam.py v7 引入了路由功能。由于 Jam.py v5 是 SPA（单页应用程序�
 
 如前所述，使用 ``on_request`` 事件。
 
-以下代码应存在于"任务/服务器模块"中。为便于阅读，以下未包含 Python 逻辑：
+以下代码应存在于 “任务/服务器模块” 中。为便于阅读，以下未包含 Python 逻辑：
 
 .. code-block:: Python
 

@@ -2,10 +2,10 @@
 导出
 ==========
 
-点击此按钮将项目 :doc:`元数据 <metadata_file>` 导出到 zip 文件。
+点击 **导出(Export [Ctrl-E])** 按钮将项目的 :doc:`元数据 <metadata_file>` 导出到一个 zip 文件。
 
 另请参阅
-============
+-----------
 
 :doc:`导入 <import>`
 

@@ -1,9 +1,10 @@
 ========================================
-Client side (javascript) class reference
+客户端 (javascript) 的类参考
 ========================================
 
-All objects of the framework represent a :doc:`task tree </programming/task_tree>`. 
-Bellow is classes for each kind of task tree objects:
+框架的所有对象组成一个 :doc:`任务树 </programming/task_tree>` 。
+
+下面是每种任务树对象的类：
 
 .. toctree::
     :maxdepth: 1

@@ -4,8 +4,7 @@
 
 对于项目 :doc:`任务树 </programming/task_tree>` 中的每个实体项，
 在 :doc:`应用程序构建器 <index>` 的右上角有两个按钮： 
-``Client module [F7]`` （客户端模块 [F7]）
-和 ``Server module[F8]`` （服务器模块 [F8]）。
+``客户端模块(Client module [F7])`` 和 ``服务器模块(Server module[F8])`` 。
 
 
 .. image:: /admin/_images/item_btns_jampy.png
@@ -13,36 +12,29 @@
 	:alt: 调用代码编辑器按钮
 
 
-点击这些按钮将打开实体项的客户端或服务器模块的代码编辑器。
+点击这些按钮将打开实体项的客户端模块或服务器模块的代码编辑器。
 （参见 :doc:`使用模块 </programming/modules>` ）
 
 在 **编辑器** 的左侧是一个包含四个选项卡的信息窗格：
 
-* **Module** （模块）- 此选项卡显示编辑器中定义的所有事件和函数，
-  双击其中任意一项，即可将光标跳转到对应函数位置。。
-* **Events** （事件）- 显示实体项的所有已发布事件，双击可在
-  在光标当前位置为该事件添加包装代码（参见上图中的 on_before_post 事件）。
-* **Task** （任务）-  :doc:`任务树 </programming/task_tree>` ，
-  双击节点可在当前光标位置插入 item_name。
-* **Fields** （字段）- 当前实体项的字段列表，双击其中一个
-  字段可在当前光标位置输入其 field_name。
-  
-要保存更改，请点击 **OK** （确定）按钮或按 Ctrl-S。
+* **(Module)** - 此选项卡显示编辑器中定义的所有事件和函数，双击其中任意一项，即可将光标跳转到对应函数位置。
+* **事件(Events)** - 显示实体项的所有已发布事件，双击可在在光标当前位置为该事件添加包装代码（参见上图中的 on_before_post 事件）。
+* **任务(Task)** -  :doc:`任务树 </programming/task_tree>` ，双击某个节点，可在当前光标位置插入其 item_name。
+* **字段(Fields)** - 当前实体项的字段列表，双击其中一个字段可在当前光标位置输入其 field_name。
 
-要搜索项目模块，请点击 **Find in project** （在项目中查找）按钮或按
-Alt-F 以显示 :doc:`在项目中查找对话框 <project/find>`
+要保存更改，请点击 **确定(OK)** 按钮或按 Ctrl-S。
 
-Jam.py 使用 `ace 编辑器`_ 来实现其代码编辑器。更新的 Jam.py
-版本将使用 Microsoft 的 `Monaco 编辑器`_。
+要搜索项目模块，请点击 **在项目中查找(Find in project)** 按钮或按 Alt-F 以显示 :doc:`在项目中查找对话框 <project/find>`
 
-`这里是 ace 编辑器的键盘快捷键`_。
+Jam.py 使用 `ace 编辑器`_ 来实现其代码编辑器。新版本的 Jam.py 将使用 Microsoft 的 `Monaco 编辑器`_ 。
+
+这里是 `ace 编辑器的键盘快捷键`_。
 
 .. _ace 编辑器: https://ace.c9.io
 
 .. _Monaco 编辑器: https://microsoft.github.io/monaco-editor
 
-
-.. _这里是 ace 编辑器的键盘快捷键: https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts
+.. _ace 编辑器的键盘快捷键: https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts
 
 .. image:: /admin/_images/editor_jampy.png
 	:align: center

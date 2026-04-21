@@ -2,15 +2,15 @@
 保存用户所做的审计追踪/变更历史记录
 ===============================================
 
-要保存用户所做的变更历史记录，您必须指定要存储这些记录的数据项。
+要保存用户所做的变更历史记录，您必须指定要存储这些记录的实体项。
 
-为此，请打开项目参数，并点击 History item（历史项）输入框右侧的按钮：
+为此，请打开项目参数，并点击 “历史(History)” 输入框右侧的按钮：
 
 .. image:: _images/history_item_jampy.png
 	:align: center
 	:alt: 历史项
 
-在出现的对话框中，点击 Create history item（创建历史项）按钮
+在出现的对话框中，点击 “创建历史项(Create history item)” 按钮
 
 .. image:: _images/new_hist_item_jampy.png
 	:align: center
@@ -22,26 +22,24 @@
 	:align: center
 	:alt: 历史项目已创建
 
-之后，您必须设置要更改的实体项的 **Keep history** （保留历史）属性以保存其更改历史：
+之后，您必须设置要更改的实体项的 **保留历史(Keep history)** 属性以保存其更改历史：
 
 .. image:: _images/item_editor_dialog_jampy.png
 	:align: center
 	:alt: 保留历史属性
 
-要查看记录的变更历史，请点击编辑表单标题栏右侧关闭按钮左侧的图标。
+要查看记录的变更历史，请点击编辑表单标题栏上相应的的图标。
 
 .. image:: _images/invoices_hist_jampy.png
 	:align: center
 	:alt: 发票历史
 
-或者，您可以使用 
-:doc:`show_history </refs/client/item/m_show_history>` 
-方法来实现。
+或者，您可以使用 :doc:`show_history </refs/client/item/m_show_history>` 方法来实现。
 
 .. note::
 
-    当使用 apply 方法（ :doc:`客户端 </refs/client/item/m_apply>` / :doc:`服务器端 </refs/server/item/m_apply>` ）
-    将数据集更改应用到数据库时，会保存更改历史。
+    当使用 :doc:`客户端 </refs/client/item/m_apply>` / :doc:`服务器端 </refs/server/item/m_apply>` 的 apply 方法将对数据集的更改应用到数据库时，会保存更改历史。
+
     通过自定义 SQL 请求对数据库所做的更改不会保存在历史记录中。
     
 .. note::

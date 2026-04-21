@@ -4,7 +4,7 @@ on_login
 
 on_login(task, form_data, info)
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

@@ -2,24 +2,26 @@
 查找列表对话框
 =========================
 
-查找列表是一个 “整数-文本对” 列表，可用作 
+“查找列表(Look list)” 是一个 “整数-文本” 对的列表，可用作 
 :doc:`查找字段 </programming/data/lookup_fields>` 的数据源。
 
 .. note::
 
     查找列表的长度不应超过 10 条
 
+在左侧的项目树中，选择 “任务(Task)” 节点，在页面右侧点击 **查找列表(Look lists)** ，以打开 **查找列表对话框(Look lists dialog)** 。
+
 .. image:: _images/lookup_lists_jampy.png
 	:align: center
 	:alt: 查找列表对话框
 
-点击 **Edit** （编辑）/**New** （新建）按钮以编辑/创建查找列表。
+点击 **编辑(Edit)** / **新建(New)** 按钮以编辑/创建查找列表。
 
 .. image:: _images/lookup_list_jampy.png
 	:align: center
 	:alt: 查找列表
 
-然后使用 **Edit** （编辑）/**New** （新建）按钮来编辑/向列表中添加查找对。
+然后使用 **编辑(Edit)** / **新建(New)** 按钮来编辑已有的查找对/向列表中添加新的查找对。
 
 .. image:: _images/lookup_paire_jampy.png
 	:align: center

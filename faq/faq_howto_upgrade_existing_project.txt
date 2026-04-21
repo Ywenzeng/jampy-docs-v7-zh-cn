@@ -13,7 +13,7 @@
   sudo pip install --upgrade jam.py-v7
 
 
-如果您使用的是 Windows，请以管理员权限启动命令 shell 并运行以下命令：
+如果您使用的是 Windows，请以管理员权限启动 shell 命令行窗口并运行以下命令：
 
 .. code-block:: console
 

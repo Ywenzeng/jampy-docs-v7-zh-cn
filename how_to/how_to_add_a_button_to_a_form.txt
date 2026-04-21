@@ -25,7 +25,6 @@
       }
   }  
 
-在代码中，检查了实体的 :doc:`lookup_field </refs/client/item/at_lookup_field>` 属性是否存在，
-然后，（视图表单不是为了为查找字段选择一个值而被创建时）定义了两个按钮，
+在代码中，检查了实体的 :doc:`lookup_field </refs/client/item/at_lookup_field>` 属性是否存在，然后（创建视图表单不是为了为查找字段选择值时）定义了两个按钮，
 并为它们的 JQuery 点击事件分配了模块中的 ``send_email`` 和 ``print`` 函数。
 

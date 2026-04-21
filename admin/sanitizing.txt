@@ -22,8 +22,7 @@
 
   "&lt;span style='color: red'&gt;Norway&lt;/span&gt;"
 
-如您所见，符号 '<' 和 '>' 被替换为 '&lt;' 和 '&gt;'
-表格列将按以下列方式显示：
+如您所见，符号 “<” 和 “>” 被替换为 “&lt;” 和 “&gt;” 表格列将按以下列方式显示：
 
 .. image:: /admin/_images/sanitized_jampy.png
 	:align: center
@@ -31,12 +30,11 @@
 
 有两种方法可以防止转义清理。
 
-第一种是在 :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>` 的 Interface（界面）选项卡中设置 **Do not sanitize** （不转义清理）属性。
+第一种是在 :doc:`字段编辑器对话框 </admin/items/field_editor_dialog>` 的 “界面(Interface)” 选项卡中设置 **不转义清理(Do not sanitize)** 属性。
 
 .. image:: /admin/_images/fields_editr_interface_jampy.png
 	:align: center
 	:alt: do_not_sanitize_jampy.png
 
 第二种是编写
-:doc:`on_field_get_html </refs/client/item/on_field_get_html>`
-事件处理程序。如果此事件处理程序返回一个值，则该值不会被转义清理。
+:doc:`on_field_get_html </refs/client/item/on_field_get_html>` 事件处理程序。如果此事件处理程序返回一个值，则字段的值不会被转义清理。

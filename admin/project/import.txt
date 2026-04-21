@@ -2,7 +2,7 @@
 导入
 ========
 
-使用此按钮从 zip 文件导入项目 :doc:`元数据 <metadata_file>` 。
+使用 **导出(Import [Ctrl-I])** 按钮从 zip 文件导入项目的 :doc:`元数据 <metadata_file>` 。
 
 另请参阅
 ================

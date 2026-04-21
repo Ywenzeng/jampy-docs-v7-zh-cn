@@ -4,7 +4,7 @@
 
 使用 jQuery ，能够访问表单上的任意 DOM元素。
 
-在下面的示例中，在实体的客户端模块的 ``on_edit_form_created`` 事件处理程序中，
+在下面的示例中，在实体项的客户端模块的 ``on_edit_form_created`` 事件处理程序中，
 我们找到 **确定(OK)** 按钮，将其隐藏，
 并将编辑表单中 **取消(Cancel)** 按钮的文本更改为 “关闭(Close)” ：
 
@@ -28,13 +28,9 @@
 
 找到表单的元素后，就能使用 jQuery 方法对其更改。
 
-由于字段的输入框是在 :doc:`on_edit_form_created </refs/client/item/on_edit_form_created>`
-事件触发后，由 :doc:`create_inputs </refs/client/item/m_create_inputs>`方法自动创建的
-（可参考任务客户端模块中的 ``on_edit_form_created`` 事件处理器），
-因此你必须编写 :doc:`on_edit_form_shown </refs/client/item/on_edit_form_shown>` 
-事件处理器来修改输入框样式和属性。
+由于字段的输入框是在 :doc:`on_edit_form_created </refs/client/item/on_edit_form_created>` 事件触发后，由 :doc:`create_inputs </refs/client/item/m_create_inputs>` 方法自动创建的（可参考任务客户端模块中的 ``on_edit_form_created`` 事件处理器），因此你必须编写 :doc:`on_edit_form_shown </refs/client/item/on_edit_form_shown>` 事件处理器来修改输入框样式和属性。
 
-示例代码
+示例代码 ::
 
 .. code-block:: js
 
@@ -53,22 +49,20 @@
 	:alt: form_elements_style_jampy.png
 
   
-请注意：若你需要修改带有前置按钮或后置按钮的输入框（日期、日期时间、查询字段的输入框）的宽度，
-请直接设置该输入框父元素的宽度：
+请注意：若你需要修改带有前置按钮或后置按钮的输入框（日期、日期时间、查询字段的输入框）的宽度，请直接设置该输入框父元素的宽度：
 
 .. code-block:: js
 
   item.edit_form.find('input.album').parent().width('50%');
 
-更改 DOM 元素样式的另一种方法是使用 CSS。在应用程序构建器中选择任务节点后，
-“项目css ”按钮将出现在右侧窗格中。单击它，打开位于项目文件夹中的 *project.css* 文件。
+更改 DOM 元素样式的另一种方法是使用 CSS。在应用程序构建器中选择任务节点后，“project.css” 按钮将出现在右侧窗格中。单击它，打开位于项目文件夹中的 *project.css* 文件。
 您可以使用在它里面输入定义项目中 DOM 元素样式的 CSS 。
 
-项目中创建的每个实体的表单都有 css 类，使开发人员能够识别定位表单。
+项目中创建的每个实体项的表单都有 css 类，使开发人员能够识别定位表单。
 
 每个表单都有一个类来标识它的类型：“view-form”、“edit-form”、“filter-form” 或 “param-form” 。
 
-例如，以下代码将删除表单底部按钮中的图像：
+例如，以下代码将隐藏表单底部按钮中的图像：
 
 
 .. code-block:: css
@@ -91,11 +85,11 @@
   }  
 
 
-同样，每个表单有个样式类，其名称是对应实体的 :doc:`item_name </refs/client/abstr_item/at_item_name>` 属性值。
+同样，每个表单有个样式类，其名称是对应实体项的 :doc:`item_name </refs/client/abstr_item/at_item_name>` 属性值。
 
 The following code will remove images in the buttons only in the **Invoices**
 view form:
-下面的代码将删除 **发票(Invoices)** 表单里的按钮里的图像
+下面的代码将只隐藏 **发票(Invoices)** 表单中按钮的图像
 
 .. code-block:: css
 
@@ -103,12 +97,9 @@ view form:
       display: none;
   }  
 
-你可以更改表格的显示方式。
-由 :doc:`create_table </refs/client/item/m_create_table>` 方法创建的表格，
-有一个 "dbtable" 样式和一个名为实体的 :doc:`item_name </refs/client/abstr_item/at_item_name>` 属性值的样式。
-表格的每列也有一个样式，其名称是对应字段的 :doc:`field_name </refs/client/field/at_field_name>` 属性值。
-The example, the following code will display cells of the **Invoices** table
-**Customer** column bold:
+你可以更改表格的显示方式。由 :doc:`create_table </refs/client/item/m_create_table>` 方法创建的表格，有一个 “dbtable” 样式和一个以实体项的 :doc:`item_name </refs/client/abstr_item/at_item_name>` 属性值命名的样式。表格的每列也有一个样式，其名称是对应字段的 :doc:`field_name </refs/client/field/at_field_name>` 属性值。
+
+示例中，以下代码将以粗体显示 **Invoices** 表**Customer** 列中单元格的内容：
 
 .. code-block:: css
 
@@ -117,8 +108,7 @@ The example, the following code will display cells of the **Invoices** table
   }
 
 
-另一种改变字段列显示方式的方法是
-编写 :doc:`on_field_get_html </refs/client/item/on_field_get_html>` 事件处理程序。
+另一种改变字段列显示方式的方法是编写 :doc:`on_field_get_html </refs/client/item/on_field_get_html>` 事件处理程序。
 
 例如：
 

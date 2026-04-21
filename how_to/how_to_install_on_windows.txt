@@ -2,15 +2,15 @@
 如何在 Windows 上安装 Jam.py
 ================================
 
-.. admonition:: Adapted from `Django Docs`_
+.. admonition:: 改编自 `Django Docs`_
         
         以下文档参考了 `Django Docs`_.
 
 
 本文档将指导您在 Windows 上安装 Python 3.x 和 Jam.py。
 它还提供了设置虚拟环境的说明，这使得处理 Python 项目更加容易。
-这是为从事 Jam.py 项目的用户准备的初学者指南，
-但不反映在开发 Jam.py 本身的补丁时应如何安装 Jam.py。
+这只是为从事 Jam.py 项目开发的用户准备的初学者指南，
+而不是在开发 Jam.py 本身的补丁时应如何安装 Jam.py 的说明。
 
 本指南中的步骤已在 Windows 10 上测试。在其他版本中，步骤会类似。
 您需要熟悉使用 Windows 命令提示符。
@@ -20,15 +20,15 @@
 安装 Python
 ====================
 
-Jam.py 是一个 Python Web 框架，因此需要在您的机器上安装 Python。
+Jam.py 是一个 Python Web 框架，因此需要在您的机器上先安装 Python 。
 在撰写本文时，Python 3.8 是最新版本。
 
 要在您的机器上安装 Python，请访问 https://www.python.org/downloads/。
 该网站应该为您提供最新 Python 版本的下载按钮。下载可执行安装程序并运行它。
-选中 "Install launcher for all users (recommended)" 旁边的复选框，
-然后点击 "Install Now"。
+选中 “Install launcher for all users (recommended)” 旁边的复选框，
+然后点击 “Install Now” 。
 
-安装后，打开命令提示符并通过执行以下命令检查 Python 版本是否与您安装的版本匹配： ::
+安装后，打开命令提示符并通过执行以下命令检查 Python 版本是否与您安装的版本匹配  ::
 
     ...\> python --version
 
@@ -54,16 +54,16 @@ Python 生态系统中有许多管理环境和包的选项，其中一些在
 中被推荐。
 
 要为您的项目创建虚拟环境，请打开一个新的命令提示符，将当前目录切换到您要创建项目的文件夹，
-然后输入以下命令： ::
+然后输入以下命令  ::
 
     ...\> python -m venv project-name
 
-这将创建一个名为 'project-name' 的文件夹（如果它尚不存在）并设置虚拟环境内容。
-要激活环境，请运行： ::
+这将创建一个名为 “project-name” 的文件夹（如果它尚不存在）并设置虚拟环境内容。
+要激活环境，请运行  ::
 
     ...\> project-name\Scripts\activate.bat
 
-虚拟环境将被激活，您会在命令提示符旁边看到 "(project-name)" 以示区别正常环境。
+虚拟环境被激活后，您会在命令提示符旁边看到 “(project-name)” 以示区别正常环境。
 每次启动新的命令提示符时，您都需要再次激活虚拟环境。
 
 
@@ -72,14 +72,14 @@ Python 生态系统中有许多管理环境和包的选项，其中一些在
 
 可以在虚拟环境中使用 ``pip`` 轻松安装 Jam.py 。
 
-在命令提示符中，确保您的虚拟环境已激活，然后执行以下命： ::
+在命令提示符中，确保您的虚拟环境已激活，然后执行以下命  ::
 
     ...\> python -m pip install jam.py-v7
 
 
 这将下载并安装最新版本的 Jam.py 。
 
-对于 Python 3.13 及以上版本，请同时安装： ::
+对于 Python 3.13 及以上版本，请同时安装  ::
 
     ...\> python -m pip install standard-imghdr
 
@@ -92,14 +92,14 @@ Python 生态系统中有许多管理环境和包的选项，其中一些在
 常见误区
 ===============
 
-* 如果您在代理后面连接到互联网，运行命令 ``py -m pip install Jam.py`` 时可能会出现问题。
-  解决此问题，可以在命令提示符中为代理配置设置环境变量，如下所示： ::
+* 如果您使用代理连接到互联网，运行命令 ``py -m pip install Jam.py`` 时可能会出现问题。
+  解决此问题，可以在命令提示符中为代理配置设置环境变量，如下所示  ::
 
     ...\> set http_proxy=http://username:password@proxyserver:proxyport
     ...\> set https_proxy=https://username:password@proxyserver:proxyport
 
 
-* 如果您的管理员禁止设置虚拟环境，您仍然可以按以下方式安装 Jam.py ： ::
+* 如果您的管理员禁止设置虚拟环境，您仍然可以按以下方式安装 Jam.py   ::
 
     ...\> python -m pip install jam.py-v7
     
@@ -110,20 +110,20 @@ Python 生态系统中有许多管理环境和包的选项，其中一些在
   但是，运行 ``jam-project.py`` 可能会失败，因为它不在当前路径中。
   
   
-  检查安装文件夹，请运行： ::
+  检查安装文件夹，请运行  ::
 
     ...\> python -m site --user-site
 
-  输出可能类似于以下内容： ::
+  输出可能类似于以下内容  ::
 
     C:\Users\youruser\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages
 
-  将上面一行末尾的 ``site-packages`` 替换为 ``Scripts`` ： ::
+  将上面一行末尾的 ``site-packages`` 替换为 ``Scripts`` ，运行以下命令  ::
 
     ...\> dir C:\Users\youruser\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts
 
 
-  输出内容可能类似于： ::
+  输出内容可能类似于  ::
 
     ...\> Directory of C:\Users\yourser\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts
 
@@ -134,12 +134,12 @@ Python 生态系统中有许多管理环境和包的选项，其中一些在
                        2 Dir(s)  177,027,321,856 bytes free
 
 
-  在某处创建新文件夹并从中运行 ``jam-project`` ： ::
+  在某处创建新文件夹并从中运行 ``jam-project``   ::
 
     ...\> python C:\Users\youruser\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts\jam-project.py
 
 
-  运行新项目： ::
+  运行新项目  ::
 
     ...\> python server.py
 
@@ -147,11 +147,11 @@ Python 生态系统中有许多管理环境和包的选项，其中一些在
 安装 WLS
 ==============
 
-调用安装： ::
+快速启用 WSL 并安装默认的 Linux 发行版（通常为 Ubuntu） ::
 
     ...\> wsl --install
 
-输出可能类似于以下内容： ::
+输出可能类似于以下内容  ::
 
         Installing: Virtual Machine Platform
         Virtual Machine Platform has been installed.
@@ -162,4 +162,4 @@ Python 生态系统中有许多管理环境和包的选项，其中一些在
         The requested operation is successful. Changes will not be effective until the system is rebooted.
 
 
-现在，我们有了一个带有 Ubuntu 的开发环境，我们可以像在 Linux 上一样继续进行 Jam.py 安装。
+现在，我们有了一个 Ubuntu 系统下的开发环境，我们可以像在 Linux 上一样继续进行 Jam.py 安装。

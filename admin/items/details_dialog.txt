@@ -1,9 +1,8 @@
 ==========================================
-明细表对话框(Details Dialog)
+明细表对话框
 ==========================================
 
-使用此对话框设置实体项的明细表。
-请参阅 :doc:`明细表 </programming/data/details>` 。
+使用此对话框设置实体项的明细表。请参阅 :doc:`明细表 </programming/data/details>` 。
 
 .. image:: /admin/_images/details_dialog_jampy.png
 	:align: center

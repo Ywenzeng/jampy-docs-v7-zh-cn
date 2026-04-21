@@ -1,8 +1,8 @@
-==============================================================================
+==================================================================
 如何处理来自其他应用或服务的请求，或获取其数据
-==============================================================================
+==================================================================
 
-你可以通过向应用发送带有 'ext' 的 post 请求来读写应用的数据。例如：
+你可以通过向应用发送带有 “ext” 的 post 请求来读写应用的数据。例如：
 
 .. code-block:: html
 
@@ -22,24 +22,26 @@
           result = task.account_transactions.expenses(task, params)
           return result
 
-表 ``account_transactions`` 的 Task 服务器模块包含：
+表 ``account_transactions`` 的 Task 服务端模块包含：
 
 .. code-block:: py
 
   from jam.common import cur_to_str
 
   def expenses(item, params):
-      inv = item.task.account_transactions.copy()    
+      inv = item.task.account_transactions.copy()
       inv.open()
       total = 0
       for i in inv:
           total += i.actual_amount.value
-  
+
       total = cur_to_str(total)
       return(total)
 
 
 使用 Curl 命令访问应用会返回如下结果：
+
+.. code-block:: 
 
     ...\> curl -k https://your_jampy_app.com/ext/expenses -d "[]" -H  "Content-Type: application/json"
     {"result": {"status": 9, "data": "-$2590.01", "modification": 99}, "error": null}
@@ -48,7 +50,7 @@
 Curl 传递变量
 ========================
 
-在 Demo 应用中，如果在 Task 服务器模块中添加如下代码：
+在 Demo 应用中，如果在 Task 服务端模块中添加如下代码：
 
 .. code-block:: py
 
@@ -68,6 +70,8 @@ Curl 传递变量
 
 用 Curl 传递参数会返回如下结果：
 
+.. code-block::
+
     ...\> curl  http://localhost:8080/ext/bla -d '{"id": "2", "firstname": "Leonie"}' -H "Content-Type: application/json"
     {"result": {"status": 9, "data": {"id": "Leonie", "firstname": "Leonie"}, "modification": 2014}, "error": null}
 
@@ -75,7 +79,7 @@ Curl 传递变量
 处理请求中的数据
 ==============================
 
-上面同样的应用可以被其他 Jam.py 应用通过服务器模块访问：
+上面同样的应用可以被其他 Jam.py 应用通过服务端模块访问：
 
 .. code-block:: py
 

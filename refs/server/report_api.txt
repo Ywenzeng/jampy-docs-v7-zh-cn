@@ -4,7 +4,7 @@ Report class
 
 .. py:class:: Report
 
-**domain**: server
+**范围**: server
 
 **language**: python
 

@@ -12,18 +12,17 @@
 
 需要注意以下事项：
 
-#. 迁移 Jam.py v5 应用程序的最大障碍是 “编辑锁(Edit Lock)” 。
-   如果表启用了该功能，Jam.py v7 期望每个启用编辑锁的表都包含一个 `record_version`（INT）字段。
+#. 迁移 Jam.py v5 应用程序的最大障碍是 “编辑锁(Edit Lock)” 。 如果表启用了该功能，Jam.py v7 期望每个启用编辑锁的表都包含一个 `record_version` （INT）字段。
 
    迁移到 v7 时有两个选择：一是在迁移前禁用 “编辑锁”，
    二是在迁移前为相关表添加 `record_version` 字段。
 
    在数据库结构中添加该字段后，需要在应用构建器中手动添加该字段，
-   并为每个启用 “编辑锁” 的表开启 “DB Manual Mode” 。
-   “record version” 选项应设置为 `record_version` 字段。
+   并为每个启用 “编辑锁” 的表开启 “数据库手动模式(DB Manual Mode)” 。
+   “记录版本(record version)” 选项应设置为 `record_version` 字段。
 
    显然，如果禁用 “编辑锁” ，则无需任何其它额外操作。
-   项目参数中也没有创建 “Lock Item” 的选项。
+   项目参数中也没有创建 “锁定实体项(Lock Item)” 的选项。
 
 #. 下一个问题是模板。Jam.py v7 期望应用程序目录下有 **templates.html** 文件。
    由于使用了 Bootstrap 5，从 Jam.py v5 的 **index.html** 文件迁移现有模板到 **templates.html** 文件时会有一些小的差异。
@@ -35,15 +34,14 @@
 
 
 #. Jam.py v7 引入了 **计算字段(calculated field)** 。
-   现在可以在主/明细（Master/Detail）场景下，使用服务器端函数（SUM、COUNT、MIN、MAX、AVG）对表字段进行汇总。
-   用户可以根据需要，将服务器端的计算代码替换为计算字段。
+   现在可以在主/明细（Master/Detail）场景下，使用服务端函数（SUM、COUNT、MIN、MAX、AVG）对表字段进行汇总。用户可以根据需要，将服务端的计算代码替换为计算字段。
 
 
 #. Jam.py v7 现在采用 Python 依赖管理，初次安装时会自动安装所需库。
-   这与 v5 不同，v5 所有依赖都 “锁定” 在 Jam.py 分发包中，可以通过单一 ``jam`` 文件夹部署应用。
+   这与 v5 不同，v5 所有依赖都 “锁定” 在 Jam.py 分发包中，可以通过单一的 ``jam`` 文件夹部署应用。
 
 
-#. 对于 Jam.py 5.x 及以下版本的应用，将 **Task/Client** 模块代码替换为 ``Demo`` 应用或新 v7 项目的 **Task/Client** 模块代码。然后，如果 v5 **Task/Client** 模块有自定义代码，再将其补充进去。
+#. 对于 Jam.py 5.x 及以下版本的应用，将 **Task/Client** 模块代码替换为 ``Demo`` 应用或新 v7 项目的 **Task/Client** 模块代码。如果 v5 **Task/Client** 模块有自定义代码，再将其补充进去。
 
 例如，``Demo`` 应用的 **index.html** 文件内容如下：
 

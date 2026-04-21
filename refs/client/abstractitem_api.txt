@@ -1,18 +1,16 @@
 ==================
-AbstractItem class
+AbstractItem 类
 ==================
 
 .. js:class:: AbstractItem
 
-**domain**: client 
+**范围**: client 
 
 **language**: javascript
 
-AbstractItem class is the ancestor for all item objects of the 
-:doc:`task tree </programming/task_tree>`
+AbstractItem 类是 :doc:`任务树 </programming/task_tree>` 中所有实体项对象的祖先。
 
-Below the attributes and methods of the class are listed.
-
+下面列出了这个类的属性和方法。
 
 Attributes
 ==========
