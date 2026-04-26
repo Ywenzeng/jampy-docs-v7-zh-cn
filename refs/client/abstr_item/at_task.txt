@@ -2,7 +2,8 @@
 task
 ====
 
-Indicates the root of the :doc:`task tree </programming/task_tree>` that owns this item. 
+
+表示拥有该实体项的 :doc:`任务树 </programming/task_tree>` 的根节点。
 
 .. js:attribute:: task
 
@@ -15,5 +16,5 @@ Indicates the root of the :doc:`task tree </programming/task_tree>` that owns th
 Description
 ===========
 
-Use task attribute to find the root of the :doc:`task tree </programming/task_tree>` 
-of which the item is a member.
+
+使用 task 属性来引用拥有该实体项的 :doc:`任务树 </programming/task_tree>` 的根节点。

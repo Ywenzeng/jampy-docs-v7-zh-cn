@@ -14,13 +14,12 @@ filter_caption
 Description
 ===========
 
-**Filter_caption** attribute specifies the name of the filter that appears to 
-users.
+用 **Filter_caption** 属性指定过滤器显示给用户的标题。
 
 See also
 ========
 
-:doc:`Filters </programming/data/filters>`
+:doc:`过滤器 </programming/data/filters>`
 
 :doc:`filter_name <at_filter_name>`
 

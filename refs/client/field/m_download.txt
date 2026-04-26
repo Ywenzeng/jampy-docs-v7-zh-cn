@@ -13,7 +13,7 @@ download
 Description
 ===========
 
-Call ``download`` for fields of type FILE to download the file.
+在类型为 FILE 的字段上调用 ``download`` 函数来下载字段存储的文件。
 
 Example
 =======

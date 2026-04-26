@@ -13,13 +13,11 @@ warning
 Description
 ===========
 
-Use **warning** to create a modal form with the **Ok** button. 
+使用 **warning** 方法创建一个带有 **确定(Ok)** 按钮的模态表单窗体
 
-The **mess** parameter specifies the text or html content that will appear in the 
-body of the form.
+**mess** 参数指定要在表单窗体主题显示的文本或 html 内容。
 
-If **callback** function are specified it will be executed when user 
-clicks the button and then the form will be closed.
+如果指定了 **callback** 函数，它们会在用户点击了按钮后被执行，然后会自动关闭表单窗体。
 
 Example
 =======

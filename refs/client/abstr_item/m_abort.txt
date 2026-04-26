@@ -13,17 +13,16 @@ abort
 Description
 ===========
 
-Use **abort** method to throw exception. 
+使用 **abort** 方法来抛出异常。
 
-It can be usefull when you need to abort execution of some 'on_before' events.
-
+当你需要中止某些 “on_before” 事件的执行时，它会很有用。
 
 Example
 =======
 
-The following code will throw exception with the text:
+下面的代码会抛出带有文本内容的异常：
 
-execution aborted: invoice_table - a quantity value is required
+执行被中止：invoice_table - 需要一个数量值
 
 .. code-block:: js
 

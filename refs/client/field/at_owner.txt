@@ -14,10 +14,9 @@ owner
 Description
 ===========
 
-Identifies the item to which a field object belongs.
+获取字段对象所属的实体项。
 
-Check the value of the owner attribute to determine the item that uses the field 
-object to represent one of its fields. 
+检查字段的 owner 属性的值，以确定将该字段对象作为其自身来显示的实体项。
 
 Example
 =======
@@ -37,7 +36,7 @@ Example
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+:doc:`数据集 </programming/data/dataset>`
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`
 

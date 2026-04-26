@@ -14,15 +14,14 @@ Field read_only
 Description
 ===========
 
-Determines whether the field can be modified in data-aware controls.
+决定着字段在数据感知控件里是否可以被修改。
 
-Set **read_only** to **true** to prevent a field from being modified in 
-data-aware controls.
+将 **read_only** 设置为 **true** ，可以防止字段的值在数据感知控件里被修改。
 
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`
 
 :doc:`required <at_required>`
 

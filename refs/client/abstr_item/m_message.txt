@@ -13,40 +13,32 @@ message
 Description
 ===========
 
-Use **message** method to create a modal form. 
+使用 **message** 方法创建一个模态窗体表单。
 
-The **mess** parameter specifies the text or html content that will appear in the 
-body of the form. 
+用 **mess** 参数指定显示在表单中的文本或 html 内容
 
-The **options** parameter is an object with the following attributes:
+**options** 参数是一个对象，它有以下属性：
 
-* **title** - the title of the form,
-* **width** - the width of the form, the default width is 400px
-* **height** - the height of the form,
-* **margin** - use the margin attribute to define margins of the form body 
-* **text_center** - if true, the body tags will be centered, 
-  the default value is false,
-* **buttons** - an object that define buttons that will be created in the footer 
-  of the form, keys of the object are button names, values - functions, that
-  will be executed when button clicked,
-* **button_min_width** - the min width of the buttons, the default value is 100px,
-* **center_buttons** - if true, the buttons will be centered, 
-  the default value is false,
-* **close_button** - if this value is true, an application will create a close 
-  button in the upper-right corner of the form, the default value is true,
-* **close_on_escape** - if true, the form will be closed, when user press Escape,
-  the default value is true,
-* **print** - if this value is true, an application will create a print button in 
-  the upper-right corner of the form to print the body of the form, 
-  the default value is false
+* **title** - 表单的标题
+* **width** - 表单的宽度，默认值为 400px
+* **height** - 表单的高度
+* **margin** - 使用此属性来定义表单主体的外边距
+* **text_center** - 如果为 true，表单主体中的文本元素将居中显示，默认为 false 。
+* **buttons** - 一个定义了将在表单底部创建的按钮的对象，对象的键是按钮名称，值是按钮被点击时将执行的函数。
+* **button_min_width** - 按钮的宽度的最小值，默认值为 100px 。
+* **center_buttons** - 如果为 true，按钮将居中显示，默认为 false 。
+* **close_button** - 如果为 true， 应用程序将在表单窗体的右上角创建一个关闭按钮，默认为 true 。
+* **close_on_escape** -  如果为 true，当用户按下 Escape 按键时，会关闭表单窗体，默认为 true 。
+* **print** - 如果为 true，应用程序将在表单窗体的右上角创建一个打印按钮，以便打印表单的主体内容，默认为 false 。
 
-The method returns a jquery object of the form. To programmatically close the 
-form pass this object to :doc:`hide_message <m_hide_message>` method.
+该方法返回表单的一个 jquery 对象。
+要通过编程的方式关闭表单，请将返回的对象传递给 :doc:`hide_message <m_hide_message>` 方法。
 
 Examples
 ========
 
-The following code will create a yes-no-cancel dialog:
+
+下面的代码将创建一个有 “是、否、取消” 的对话框：
 
 .. code-block:: js
 
@@ -72,7 +64,8 @@ The following code will create a yes-no-cancel dialog:
             center_buttons: true}
     );
 
-The result of the code above will be:
+
+上面代码的结果如下：
 
 .. image:: _images/message_jampy.png
 	:width: 400

@@ -14,22 +14,16 @@ raw_value
 Description
 ===========
 
-Represents the data in a field object.
+表示一个字段对象中的数据。
 
-Use **raw_value** read only property to read data directly from the item dataset.
-Other properties such as 
-:doc:`value <at_value>`
-and
-:doc:`text <at_text>`
-use conversion.
-So the
-:doc:`value <at_value>`
-property converts the **null** value to **0** for the numeric fields. 
+使用 **raw_value** 只读属性直接从实体项的数据集中读取数据。
+其他属性例如 :doc:`value <at_value>` 和 :doc:`text <at_text>` 会对字段数据进行转换。
+因此， :doc:`value <at_value>` 属性将数值字段的 **null** 值转换为 **0**。
 
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`
 
 :doc:`value <at_value>`
 

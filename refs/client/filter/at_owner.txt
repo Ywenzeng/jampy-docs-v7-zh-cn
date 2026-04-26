@@ -14,8 +14,7 @@ owner
 Description
 ===========
 
-Identifies the item to which a filter object belongs.
+获取一个过滤器对象属于哪个实体项。
 
-Check the value of the owner attribute to determine the item that uses the filter 
-object to represent one of its filters. 
+检查 owner 属性的值来判断使用过滤器来显示其自身的实体项。
 

@@ -13,21 +13,20 @@ load_module
 Description
 ===========
 
-Use **load_module** method to dynamically load javascript file of an item 
-module, before executing callback.
 
-The method checks whether the module has been loaded, if not, loads the 
-module from the server, initializes the item and then executes the **callback** 
-function, otherwise just the **callback** function is executed. The item is 
-passed to the callback function as a parameter. 
+在执行回调前， **load_module** 方法将动态加载一个实体项的 javascript 文件。
 
-The request to the sever is executed asyncroniously.
+该方法检查模块是否已被加载。如果没有模块，该方法会从服务端加载模块并初始化实体项，
+然后执行 **callback** 函数，否则仅执行 **callback** 函数。
+实体项会被作为参数被传递给回调函数。
+
+发送到服务端的请求使被异步执行的。
 
 Example
 =======
 
-Bellow, the do_some_work function is executed only when an item module has been 
-loaded: 
+
+下面，只有实体项模块被加载后，才执行 do_some_work 函数：
 
 .. code-block:: js
 
@@ -42,7 +41,7 @@ loaded:
 See also
 ========
 
-:doc:`Working with modules </programming/modules>`
+:doc:`使用模块 </programming/modules>`
 
 :doc:`load_modules <m_load_modules>`
 

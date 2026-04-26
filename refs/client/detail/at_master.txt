@@ -14,7 +14,7 @@ master
 Description
 ===========
 
-Use ``master`` attribute to get reference to the master of the detail.
+使用 ``master`` 属性来获取对明细项的 *主表(master)* 的引用。
 
 See also
 ========

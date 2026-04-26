@@ -13,19 +13,14 @@ load_modules
 Description
 ===========
 
-Use **load_modules** method to dynamically load specified modules before 
-executing the **callback**.
-
-The method works the same way as 
-:doc:`load_module <m_load_module>`,
-only loads and initializes all modules of items specified in the 
-**module_array**.
+在执行 **callback** 前， **load_modules** 方法会动态加载指定的多个模块。
+该方法与 :doc:`load_module <m_load_module>` 的作用类似，不同处是会加载并初始化 **module_array** 中指定的实体项的所有模块。
 
 Example
 =======
 
-Bellow, the do_some_work function is executed only when modules of the item and 
-its owner has been loaded: 
+
+下面，只有该实体项和它父项所拥有的模块都被加载后，才执行 do_some_work 函数：
 
 .. code-block:: js
 
@@ -40,7 +35,7 @@ its owner has been loaded:
 See also
 ========
 
-:doc:`Working with modules </programming/modules>`
+:doc:`使用模块 </programming/modules>`
 
 :doc:`load_module <m_load_module>`
 

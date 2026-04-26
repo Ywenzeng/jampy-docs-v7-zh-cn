@@ -14,27 +14,16 @@ display_text
 Description
 ===========
 
-Represents the field's value as a string.
+将字段的值表示为字符串。
 
-**Display_text** property is a read-only string representation of a field's value 
-to display in a data-aware control. If an 
-:doc:`on_field_get_text </refs/client/item/on_field_get_text>` 
-event handler is assigned, **display_text** is the value returned by this event 
-handler. Otherwise, display_text is the value of the 
-:doc:`lookup_text <at_lookup_text>` 
-property for 
-:doc:`lookup fields </programming/data/lookup_fields>`
-, and 
-:doc:`text <at_text>` 
-property, converted according to the
-:doc:`language locale </admin/language_support>`
-settings,
-for other fields.
+**Display_text** 属性是字段值的只读形式的字符串表示，用于在数据感知控件中显示。
 
-**Display_text** is the string representation of the field's value property when 
-it is not being edited. When the field is being edited, the 
-:doc:`text <at_text>`
-property is used.
+如果指定了 :doc:`on_field_get_text </refs/client/item/on_field_get_text>` 事件处理程序，
+**display_text** 将是这个事件处理程序返回的值。否则， **display_text** 是 :doc:`查找字段 </programming/data/lookup_fields>` 的 :doc:`lookup_text <at_lookup_text>` 属性的值；
+其他情况下， **display_text** 是字段的 :doc:`text <at_text>` 属性值，会根据 :doc:`language locale </admin/language_support>` 的设置对其进行转换。
+
+
+当不是编辑状态时， **display_text** 是字段值的字符串形式的表示。当字段处于编辑状态时，使用 :doc:`text <at_text>` 属性的值。
 
 Example
 =======
@@ -51,9 +40,9 @@ Example
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`
 
-:doc:`Lookup fields </programming/data/lookup_fields>`
+:doc:`查找字段 </programming/data/lookup_fields>`
 
 :doc:`on_field_get_text </refs/client/item/on_field_get_text>`
 

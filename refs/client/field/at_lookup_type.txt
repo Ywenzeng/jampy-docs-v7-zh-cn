@@ -14,18 +14,13 @@ lookup_type
 Description
 ===========
 
-For 
-:doc:`lookup fields </programming/data/lookup_fields>` 
-identifies the type of the 
-:doc:`lookup_value <at_lookup_value>`,
-otherwise returns the value of 
-:doc:`field_type <at_field_type>`
-attribute.
+对于 :doc:`查找字段 </programming/data/lookup_fields>`，
+获取的是 :doc:`lookup_value <at_lookup_value>` 的类型；
+否则，返回 :doc:`field_type <at_field_type>` 属性的值。
 
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+:doc:`数据集 </programming/data/dataset>`
 
-:doc:`Fields </programming/data/fields>`
-
+:doc:`字段 </programming/data/fields>`

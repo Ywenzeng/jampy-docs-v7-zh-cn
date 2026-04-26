@@ -14,11 +14,11 @@ field_size
 Description
 ===========
 
-Identifies the size of the text field object.
+指定文本字段的大小（字符个数）。
 
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+:doc:`数据集 </programming/data/dataset>`
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`

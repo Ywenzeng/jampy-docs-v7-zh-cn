@@ -13,8 +13,7 @@ open
 Description
 ===========
 
-Call ``open`` for fields of type FILE to open the url to the file by using 
-``window.open``.
+在类型为 FILE 的字段上调用 ``open`` 函数，它会通过 ``window.open`` 方法来打开指向字段存储的文件的地址。
 
 Example
 =======

@@ -13,26 +13,20 @@ load_script
 Description
 ===========
 
-Use **load_script** method to load javascript file from the server, before 
-executing callback.
+在执行回调前， **load_script** 方法将动态地从服务端加载一个实体项的 javascript 文件。
 
-The method checks whether the file has been loaded, if not, loads 
-it from the server, executes (if specified) onload function and then executes 
-the **callback**, otherwise just the **callback** function is executed. The item 
-is passed to the callback function as a parameter. 
+该方法检查文件是否已被加载。如果没有模块，该方法会从服务端加载，再执行指定地 onload 方法，
+然后执行 **callback** 函数，否则仅执行 **callback** 函数。
+实体项会被作为参数被传递给回调函数。
 
-The **js_filename** should specify the path to javascript file relative to the 
-server directory.
+**js_filename** 应该指明 javascript 在服务端项目的目录中的相对路径。
 
-The request to the sever is executed asyncroniously.
+发送到服务端的请求使被异步执行的。
 
 Example
 =======
 
-Bellow, the do_some_work function is executed only when *lib.js* file from server 
-*js* directory has been loaded.
-
-loaded: 
+下面，只有当服务端从 *js* 目录中加载 *lib.js* 后，才会执行 do_some_work 函数：
 
 .. code-block:: js
 
@@ -47,7 +41,7 @@ loaded:
 See also
 ========
 
-:doc:`Working with modules </programming/modules>`
+:doc:`使用模块 </programming/modules>`
 
 :doc:`load_module <m_load_module>`
 

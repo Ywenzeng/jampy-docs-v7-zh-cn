@@ -14,19 +14,16 @@ field_mask
 Description
 ===========
 
-You can use **field_mask** attribute to specify the name of the field that appears to 
+您可以使用 **field_mask** 属性来指定要显示的字段名称。
 
-The mask allows a user to more easily enter fixed width input where you would 
-like them to enter the data in a certain format (dates,phone numbers, etc). 
+当您希望他们以特定格式输入数据时（日期、电话号码等），掩码允许用户更容易地输入固定宽度的内容。
 
-A mask is defined by a format made up of mask literals and mask definitions. 
-Any character not in the definitions list below is considered a mask literal. 
-Mask literals will be automatically entered for the user as they type and will 
-not be able to be removed by the user.The following mask definitions are predefined:
+掩码由掩码字面值和掩码规则组成的格式来定义。任何不在以下定义列表中的字符都被视为掩码字面值。
+掩码字面值将在用户输入时自动输入，并且用户无法删除。以下掩码规则是预定义的：
 
-* a - Represents an alpha character (A-Z,a-z)
-* 9 - Represents a numeric character (0-9)
-* `*` - Represents an alphanumeric character (A-Z,a-z,0-9)
+* a - 表示一个字母字符 (A-Z,a-z)
+* 9 - 表示一个数字字符 (0-9)
+* `*` - 表示一个字母或数字字符 (A-Z,a-z,0-9)
 
 
 Example

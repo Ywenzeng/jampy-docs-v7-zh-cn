@@ -10,8 +10,7 @@ item_name
 
 **class** :doc:`AbstractItem </refs/client/abstractitem_api>`
 
-Description
-===========
+描述
+====
 
-Specifies the name of the item as referenced in code.
-Use item_name to refer to the item in code.
+指定实体项在代码中被引用的名称，在代码中，使用 item_name 属性来引用实体项。

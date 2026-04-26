@@ -2,7 +2,8 @@
 owner
 =====
 
-Indicates the item that owns this item. 
+
+表示拥有此某个实体项的实体项（即父项）。
 
 .. js:attribute:: owner
 
@@ -15,4 +16,4 @@ Indicates the item that owns this item.
 Description
 ===========
 
-Use owner to find the owner of an item. 
+使用 owner 属性来引用某个实体项的拥有者（即父项）。

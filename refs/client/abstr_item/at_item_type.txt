@@ -13,16 +13,15 @@ item_type
 Description
 ===========
 
-Specifies the type of the item.
+指定实现项的类型。使用 type 属性来获取实现项的类型。
 
-Use the type attribute to get the type of the item. It can have one of the 
-following values: 
+实现项的类型可以是以下值：
 
-* “task”, 
-* “items”, 
-* “details”, 
-* “reports”, 
-* “item”, 
-* “detail_item”, 
-* “report”, 
+* “task”
+* “items”
+* “details”
+* “reports”
+* “item”
+* “detail_item”
+* “report”
 * “detail”

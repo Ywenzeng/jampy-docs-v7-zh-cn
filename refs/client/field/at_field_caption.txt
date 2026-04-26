@@ -14,15 +14,13 @@ field_caption
 Description
 ===========
 
-**Field_caption** attribute specifies the name of the field that appears to 
-users.
-
+**Field_caption** 属性指定要显示给用户的字段的标题。
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+:doc:`数据集 </programming/data/dataset>`
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`
 
 :doc:`field_name <at_field_name>`
 

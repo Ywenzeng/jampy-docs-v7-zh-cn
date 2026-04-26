@@ -14,13 +14,12 @@ filter_name
 Description
 ===========
 
-Specifies the name of the filter as referenced in code.
-Use **filter_name** to refer to the field in code.
+指定在代码中引用过滤器的名称。在代码中，使用 **filter_name** 来引用字段的过滤器。
 
 See also
 ========
 
-:doc:`Filters </programming/data/filters>`
+:doc:`过滤器 </programming/data/filters>`
 
 :doc:`filter_caption <at_filter_caption>`
 

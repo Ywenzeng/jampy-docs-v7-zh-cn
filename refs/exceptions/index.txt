@@ -1,14 +1,13 @@
 =================
-Jam.py exceptions
+Jam.py 异常
 =================
 
-TBA
+待定（TBA）
 
-Jam.py raises some of its own exceptions as well as standard Python exceptions.
+Jam.py 会抛出一些自己的异常以及标准的 Python 异常。
 
 
-
-Jam.py Core exceptions
+Jam.py 核心异常
 ======================
 
 

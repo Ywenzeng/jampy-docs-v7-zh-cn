@@ -13,31 +13,30 @@ alert
 Description
 ===========
 
-Use the ``alert`` method to create a pop-up message in the upper-right corner
-application that disappears after the first click on the page.
+ 使用 ``alert`` 方法，创建一个显示在应用程序右上角的消息弹出框，用鼠标在页面上任意地方单击后，它会消失。
 
 The ``mess`` parameter specifies the text that will be displayed.
+使用 ``mess`` 参数指定将要显示的文本。
 
 The ``options`` parameter is an object with the following attributes:
+``options`` 参数是一个带有下列属性的对象：
 
-* ``type`` - indicates the type of the message - its font, background color and 
-  header text, if it is not specified in the header parameters. 
-  This must be one of the following:
+* ``type`` - 指示消息的类型 ——  字体、背景颜色和标题文本，如果未指定 ``header`` 参数。
+  必须是以下之一：
 
   * 'info',
   * 'error',
   * 'success'
   
-  default value is 'info'
+  默认值是 'info'
   
-* ``header`` - specifies the header of the alert
+* ``header`` - 指定消息弹出框的标题
 
-* ``pulsate`` - if true, the header will pulsate, the default value is true
+* ``pulsate`` - 如果为 true ，标题将会闪动，默认为 true
 
-* ``show_header`` - if false, the header will not be displayed.
+* ``show_header`` - 如果为 false, 将不显示标题
 
-The methods ``alert_error`` and ``alert_success`` are the same as ``alert``
-with the corresponding ``type`` options.
+``alert_error`` 和 ``alert_success`` 和  ``alert`` 相同，它们自身就有相应的 ``type`` 类型。
 
 Example
 =======

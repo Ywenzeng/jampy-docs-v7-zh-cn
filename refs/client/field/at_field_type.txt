@@ -15,9 +15,9 @@ Description
 ===========
 
 Identifies the data type of the field object.
+指定字段对象的数据类型。
 
-Use the **field_type** attribute to learn the type of the data the field contains. 
-It is one of the following values: 
+使用 **field_type** 属性来获取字段所包含的数据的类型，其值是下列值之一：
 
 * "text", 
 * "integer", 
@@ -31,7 +31,7 @@ It is one of the following values:
 See also
 ========
 
-:doc:`Dataset </programming/data/dataset>`
+:doc:`数据集 </programming/data/dataset>`
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`
 

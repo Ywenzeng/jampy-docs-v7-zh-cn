@@ -14,16 +14,14 @@ visible
 Description
 ===========
 
+如果未指定 **filters** 选项，那么此属性为 **true** 时，
+过滤器的输入控件会被 :doc:`create_filter_inputs </refs/client/item/m_create_filter_inputs>` 方法创建。
 
-If the value of this property is **true** the input control for this filter will
-be created by the
-:doc:`create_filter_inputs </refs/client/item/m_create_filter_inputs>`
-method, if the **filters** option in not specified.
 
 See also
 ========
 
-:doc:`Filters </programming/data/filters>`
+:doc:`过滤器 </programming/data/filters>`
 
 :doc:`value <at_value>`
 

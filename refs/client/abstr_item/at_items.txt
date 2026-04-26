@@ -13,6 +13,6 @@ items
 Description
 ===========
 
-Lists all items owned by the item.
+列举出（包含）某个实体项的所有子项。
 
-Use items to access any of the item owned by this object. 
+使用 items 属性来访问实体项所拥有某个的子项。

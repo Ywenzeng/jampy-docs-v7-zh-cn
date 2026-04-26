@@ -14,22 +14,17 @@ lookup_text
 Description
 ===========
 
-Use **lookup_text** property to get the lookup value of the 
-:doc:`lookup field </programming/data/lookup_fields>` converted to string.
+使用 **lookup_text** 属性来获取 :doc:`查找字段 </programming/data/lookup_fields>` 中对应的被转换为字符串的值.
 
-If the field is 
-:doc:`lookup field </programming/data/lookup_fields>` 
-gives its lookup text, 
-otherwise gives the value of the 
-:doc:`text <at_text>`
-property
+如果字段是 :doc:`查找字段 </programming/data/lookup_fields>` ，那么 **lookup_text** 属性会获取字段对应的查找文本；
+否则，获取的是 doc:`text <at_text>` 属性的值。
 
 See also
 ========
 
-:doc:`Fields </programming/data/fields>`
+:doc:`字段 </programming/data/fields>`
 
-:doc:`Lookup fields </programming/data/lookup_fields>`
+:doc:`查找字段 </programming/data/lookup_fields>`
 
 :doc:`lookup_value <at_lookup_value>`
 

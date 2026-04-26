@@ -10,7 +10,7 @@ item_caption
 
 **class** :doc:`AbstractItem </refs/client/abstractitem_api>`
 
-Description
-===========
+描述
+====
 
-Item_caption attribute specifies the name of the item that appears to users
+item_caption 属性指定实体项在界面中显示给用户的名称

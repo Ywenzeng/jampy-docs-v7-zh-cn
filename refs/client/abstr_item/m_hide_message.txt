@@ -13,9 +13,6 @@ hide_message
 Description
 ===========
 
-Use **hide_message** method to close a modal form created by 
-:doc:`message <m_message>` method
+使用 **hide_message** 方法来关闭一个由 :doc:`message <m_message>` 方法创建的模态对话框。
 
-The **form** parameter is a JQuery object returned by 
-:doc:`message <m_message>` method.
-
+**form** 参数是一个由 :doc:`message <m_message>` 方法返回的 JQuery 对象。

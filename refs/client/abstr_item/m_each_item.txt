@@ -13,18 +13,16 @@ each_item
 Description
 ===========
 
-Use each_item method to iterate over :doc:`items <at_items>` owned by this object.
+使用 each_item 方法来迭代访问某个实体项的  :doc:`items <at_items>` 属性中的实体项。
 
-The each_item() method specifies a function to run for each child item (child item
-is passed as a parameter).
+each_item() 可以指定一个函数来对每个子项进行处理（子项作为参数传递给该函数）。
 
-You can break the each_item loop at a particular iteration by making the callback 
-function return false. 
+通过使回调函数返回 false，你能在某个特定的迭代内中断 each_item 方法的循环，
 
 Example
 =======
 
-The following code will output all catalogs of the project in a browser console:
+以下代码将在浏览器的命令行中输出项目的全部主表目录（catalogs）：
 
 .. code-block:: js
 
